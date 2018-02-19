@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter Blog",
-    author: "Kyle Mathews",
+    title: "Max Antonucci's Personal Site",
+    author: "Max Antonucci",
+    twitter: "Maxwell_Dev"
   },
   plugins: [
     {
@@ -30,6 +31,13 @@ module.exports = {
           "gatsby-remark-prismjs",
           "gatsby-remark-copy-linked-files",
           "gatsby-remark-smartypants",
+          `gatsby-transformer-yaml`,
+          {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              path: `./src/data/`,
+            },
+          },
         ],
       },
     },

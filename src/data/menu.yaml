@@ -1,0 +1,12 @@
+- menu:
+  - name: Who I Am
+    link: '/about/'
+
+  - name: Where I Worked
+    link: '/resume/'
+
+  - name: What I've Made
+    link: '/portfolio/'
+
+  - name: My Blog
+    link: '/blog/'

@@ -2,16 +2,16 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
-class AboutIndex extends React.Component {
+class PortfolioIndex extends React.Component {
   render() {
     return (
       <div>
         <p>
-          About Page!
+          Portfolio Page!
         </p>
       </div>
     )
   }
 }
 
-export default AboutIndex
+export default PortfolioIndex
