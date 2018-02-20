@@ -1,0 +1,38 @@
+@import './../styles/styles.scss';
+
+$header-els: 'h1', 'h2', 'h3', 'h4', 'h5', 'h6';
+
+body {
+  padding: 0;
+  margin: 0;
+
+  color: color(mono, darkest);
+  font-family: type(font-family, base);
+
+  background-color: color(mono, lightest);
+}
+
+code,
+kbd { font-family: type(font-family, mono); }
+
+a {
+  color: color(action);
+
+  @include hovers() { color: color(action, dark); }
+}
+
+@each $header in $header-els {
+  #{$header} { font-family: type(font-family, header); }
+}
+
+@each $label, $font-size in map-get($typography-map, font-size) {
+  #{$label} { font-size: $font-size; }
+}
+
+@each $label, $line-height in map-get($typography-map, line-height) {
+  #{$label} { line-height: strip-unit($line-height); }
+}
+
+@each $label, $margin in map-get($typography-map, margin) {
+  #{$label} { margin: $margin; }
+}

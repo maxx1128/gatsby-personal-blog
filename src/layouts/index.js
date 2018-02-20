@@ -6,6 +6,8 @@ import Helmet from 'react-helmet'
 
 import Bio from './../components/Bio'
 
+import './layout.module.scss'
+
 class Template extends React.Component {
   
   get_site_meta =() => {
@@ -18,7 +20,7 @@ class Template extends React.Component {
           is_home      = (location.pathname === '/'),
           header_link  = <Link to={'/'}>{title}</Link>
 
-    return (is_home) ? <h1>{header_link}</h1> : <h3>{header_link}</h3>
+    return (is_home) ? <h1>{header_link}</h1> : <h2>{header_link}</h2>
   }
 
   make_menu = () => {
