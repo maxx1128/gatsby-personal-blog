@@ -2,11 +2,14 @@
   - name: Who I Am
     link: '/about/'
 
-  - name: Places I've Worked
+  - name: Places I Worked
     link: '/resume/'
 
-  - name: Things I've Made
+  - name: Things I Made
     link: '/portfolio/'
 
-  - name: Thoughts I've Saved
+  - name: Articles I Wrote
+    link: '/articles/'
+
+  - name: Thoughts I Saved
     link: '/blog/'
