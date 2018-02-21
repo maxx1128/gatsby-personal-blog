@@ -1,8 +1,5 @@
-$spacing: 2rem;
+@import './../../styles/styles.scss';
 
 .item {
-  padding: $spacing;
-  margin-bottom: $spacing;
-
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid color(mono, lightest);
 }

@@ -1,0 +1,77 @@
+// All styles for content in specific blog posts
+
+@import './../styles/styles.scss';
+
+.blog_post {
+
+  max-width: breakpoint(md);
+  padding: 0 spacing();
+  margin: 0 auto;
+
+  .twitter-tweet {
+    margin-right: auto;
+    margin-bottom: spacing(double) !important;
+    margin-left: auto;
+  }
+
+  img { max-width: 100%; }
+
+  figure img { margin: 0 auto; }
+
+  blockquote {
+    padding: spacing();
+    margin: type(margin, p);
+
+    font-size: type(font-size, h3);
+    line-height: type(line-height, large);
+    font-family: type(font-family, header);
+
+    border: spacing(third) solid color(primary, darkest);
+    border-top-color: color(primary, darker);
+    border-bottom-color: color(primary, dark);
+    box-shadow: container(box-shadow, 1);
+
+    p {
+      margin: 0;
+      font-size: type(font-size, h4);
+      line-height: type(line-height, large);
+    }
+
+    @include larger-than(lg) {
+      width: 50%;
+      margin-left: spacing();
+      float: right;
+    }
+  }
+
+  blockquote cite {
+    display: block;
+
+    text-align: right;
+    font-size: type(font-size, h6);
+    font-weight: type(font-weight, bold);
+  }
+
+  .iframe-wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+    margin-bottom: spacing();
+    position: relative;
+
+    @include larger-than(md) {
+      width: 85%;
+      margin: 0 auto spacing();
+    }
+
+    embed,
+    object,
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

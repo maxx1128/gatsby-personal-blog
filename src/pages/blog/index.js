@@ -21,7 +21,7 @@ class BlogIndex extends React.Component {
                   </Link>
                 </h3>
                 <small>{post.node.frontmatter.date}</small>
-                <div className={s.item} dangerouslySetInnerHTML={{ __html: post.node.html }}></div>
+                <div className={s.item} dangerouslySetInnerHTML={{ __html: post.node.excerpt }}></div>
               </div>
             )
           }

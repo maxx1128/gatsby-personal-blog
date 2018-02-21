@@ -3,18 +3,19 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
+import s from './blog-post.module.scss'
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
 
     return (
-      <div>
+      <div className={s.blog_post}>
         <h1>{post.frontmatter.title}</h1>
         <p>
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
       </div>
     )
   }
