@@ -11,13 +11,13 @@
 }
 
 // Modular Scale variables
-$g-modular-scale--base: spacing();
-$g-modular-scale--ratio: 1.25; // Major third
+$g-modular-scale--base: rem(18px);
+$g-modular-scale--ratio: 1.2; // Major third
 
 
 // Font families
-$g-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-$g-font-family-header: 'Futura', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$g-font-family-base: 'Istok Web', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$g-font-family-header: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $g-font-family-mono: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
 
 
@@ -39,6 +39,11 @@ $typography-map: (
     h6: decimal-round(modular-scale(0), 2),
     large: decimal-round(modular-scale(0), 2),
     p: decimal-round(modular-scale(0), 2),
+    blockquote: decimal-round(modular-scale(0), 2),
+    pre: decimal-round(modular-scale(0), 2),
+    mono: decimal-round(modular-scale(0), 2),
+    ol: decimal-round(modular-scale(0), 2),
+    ul: decimal-round(modular-scale(0), 2),
     small: decimal-round(modular-scale(-1), 2),
     tiny: decimal-round(modular-scale(-2), 2)
   ),
@@ -50,12 +55,12 @@ $typography-map: (
   ),
 
   line-height: (
-    h1: 1.5,
-    h2: 1.5,
-    h3: 1.5,
-    h4: 1.5,
-    h5: 1.5,
-    h6: 1.5,
+    h1: 1.375,
+    h2: 1.375,
+    h3: 1.375,
+    h4: 1.375,
+    h5: 1.375,
+    h6: 1.375,
     p: decimal-round(modular-scale(2), 2),
     ul: decimal-round(modular-scale(2), 2),
     ol: decimal-round(modular-scale(2), 2),
@@ -64,12 +69,12 @@ $typography-map: (
   ),
 
   margin: (
-    h1: spacing(double) 0 spacing(),
-    h2: spacing(double) 0 spacing(),
-    h3: spacing(double) 0 spacing(),
-    h4: spacing(double) 0 spacing(),
-    h5: spacing(double) 0 spacing(),
-    h6: spacing(double) 0 spacing(),
+    h1: spacing(triple) 0 spacing(),
+    h2: spacing(triple) 0 spacing(),
+    h3: spacing(triple) 0 spacing(),
+    h4: spacing(triple) 0 spacing(),
+    h5: spacing(triple) 0 spacing(),
+    h6: spacing(triple) 0 spacing(),
     p: 0 0 spacing() 0,
     small: 0 0 spacing(half),
     tiny: 0 0 spacing(half)

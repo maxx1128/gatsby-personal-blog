@@ -6,7 +6,8 @@ import Helmet from 'react-helmet'
 
 import Bio from './../components/Bio'
 
-import './layout.module.scss'
+import './global.module.scss'
+import s from './layout.module.scss'
 
 class Template extends React.Component {
   
@@ -48,7 +49,8 @@ class Template extends React.Component {
   }
 
   render() {
-    const { children } = this.props,
+
+    const { children } = this.props,          
           header       = this.make_header(),
           menu         = this.make_menu(),
           bottom_meta  = this.make_bottom_meta();
@@ -57,8 +59,14 @@ class Template extends React.Component {
       <div>
         {header}
         {menu}
+
+        <h1>
+          Outside the content container!
+        </h1>
         
-        {children()}
+        <div className={s.content_container}>
+          {children()}
+        </div>
 
         {bottom_meta}
       </div>

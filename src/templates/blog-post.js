@@ -11,7 +11,9 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <div className={s.blog_post}>
-        <h1>{post.frontmatter.title}</h1>
+        <h1>
+          {post.frontmatter.title}
+        </h1>
         <p>
           {post.frontmatter.date}
         </p>
