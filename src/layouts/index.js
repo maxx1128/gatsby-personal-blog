@@ -50,10 +50,29 @@ class Template extends React.Component {
 
   render() {
 
-    const { children } = this.props,          
+    const { children } = this.props,
+          is_header    = (location.pathname === '/'),
           header       = this.make_header(),
           menu         = this.make_menu(),
           bottom_meta  = this.make_bottom_meta();
+
+    if (is_header) {
+      return ( 
+        <div>
+          {header}
+
+          <h1>
+            Custom homepage layout
+          </h1>
+
+          <p>
+            Ah that's right. I was in the middle of recreating a chess game. W-Wright! Have you lost your mind?! Focus! The defendant is the person on trial! You're his lawyer! Thank... thank you, Your Honor. No. (I know what he's gonna say, but I'll let him look smart.) Wh-What a completely foolish line of foolish thought from a thoroughly foolish fool! We were great together! We were Romeo and Juliet, Cleopatra and Mark Anthony! 
+          </p>
+
+          {menu}
+        </div>
+      )
+    }
 
     return (
       <div>

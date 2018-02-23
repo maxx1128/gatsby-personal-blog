@@ -26,7 +26,12 @@ class AboutIndex extends React.Component {
             <li>Nam constitui virtus nullo modo potesti nisi ea, quae sunt prima naturae, ut ad summam pertinentia tenebit.</li>
         </ol>
 
-        <pre>Quo modo autem optimum, si bonum praeterea nullum est? Quod totum contra est. </pre>
+        <pre>
+            Quo modo autem optimum, si bonum praeterea nullum est? Quod totum contra est. <br />
+            Quo modo autem optimum, <br />
+            Si bonum praeterea nullum est? <br />
+            Quod totum contra est.
+        </pre>
 
         <blockquote cite='http://loripsum.net'>
         Quocumque enim modo summum bonum sic exponitur, ut id vacet honestate, nec officia nec virtutes in ea ratione nec amicitiae constare possunt.

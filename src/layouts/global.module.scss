@@ -5,15 +5,37 @@ $header-els: 'h1', 'h2', 'h3', 'h4', 'h5', 'h6';
 body {
   padding: 0;
   margin: 0;
+  max-width: 100vw;
 
   color: color(mono, darkest);
   font-family: type(font-family, base);
 
   background-color: color(mono, lightest);
+
+  overflow-x: hidden;
 }
 
 code,
-kbd { font-family: type(font-family, mono); }
+kbd,
+pre {
+  color: color(mono, lightest);
+  font-family: type(font-family, mono);
+
+  background-color: color(mono, darkest);
+}
+
+code,
+kbd,
+mark { padding: 3px 4px; }
+
+pre {
+  padding: spacing();
+  max-width: 100vw;
+
+  overflow-x: scroll;
+}
+
+mark { background-color: color(secondary, lighter); }
 
 a {
   color: color(action);
