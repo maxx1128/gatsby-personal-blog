@@ -7,11 +7,14 @@ class PortfolioIndex extends React.Component {
     const project_data = get(this, 'props.data.allProjectsYaml.edges[0].node.projects');
 
     const projects = project_data.map((project, i) => (
-        <li key={i}>
-          <a href={project.link} target="_blank" rel="noopener">
-            {project.name}
-          </a>
-        </li>
+        <div key={i}>
+          <li >
+            <a href={project.link} target="_blank" rel="noopener">
+              {project.name}
+            </a>
+          </li>
+          <img src={`./${project.image}`} />
+        </div>
       )
     );
 

@@ -4,7 +4,7 @@ date         : 2017-06-21
 categories   : programming
 path         : "/fighting-off-impostor-syndrome/"
 excerpt      : All web developers will fight Impostor Syndrome at some point, and find their own way to fight back.
-featured-img : /img/posts/fighting-off-impostor-syndrome/featured.jpg
+featured-img : ./fighting-off-impostor-syndrome/featured.jpg
 ---
 
 Many things can be reliably said about almost all web developers:
@@ -22,7 +22,7 @@ But of all the blanket statements/annoying stereotypes, the worst will always be
 
 Impostor Syndrome (IS) is a feeling of not being able to accept or internalize one's successes. Basically, one isn't confident in themselves, feels like a fraud, and is afraid of being exposed. It's not exclusive to web development, but it's extremely common in it. Go ahead and [search "impostor syndrome web dev" online](https://www.google.com/search?q=web+dev+impostor+syndrome) and just see how many results pop up. [Popular and respected devs deal with it](https://davidwalsh.name/impostor-syndrome). Virtually everyone in my front-end Slack channel has talked about struggling with it. Now as the only junior dev in a company full of much more experienced ones, it's certainly hit me hard these last few months. Left unchecked it can make one's life extremely stressful, which hurts their health and their career in the long run.
 
-![Image Credit to <a href='https://www.flickr.com/photos/cogdog/7995080450/in/photolist-poP8XT-dbuSSE-SJDXMX-L6tYVG'>Alan Levine/Flickr</a>. Image has been cropped from original version.](/img/posts/fighting-off-impostor-syndrome/poser.jpg)
+![Image Credit to <a href='https://www.flickr.com/photos/cogdog/7995080450/in/photolist-poP8XT-dbuSSE-SJDXMX-L6tYVG'>Alan Levine/Flickr</a>. Image has been cropped from original version.](./poser.jpg)
 
 It's not surprising IS is such a problem for devs. It's an industry built on knowledge, full of people who will always know more than another. No matter how much someone learns there's always more, so it's hard any progress was made.
 

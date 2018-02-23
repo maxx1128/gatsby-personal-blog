@@ -4,7 +4,7 @@ date         : 2017-12-30
 icon         : at-sign
 excerpt      : "It's amazing how many worries vanish by thinking 'I have the benefit of not caring what they think.'"
 path         : "/answering-to-outselves/"
-featured-img : /img/posts/fromm-answer-themselves/quote.jpeg
+featured-img : ./fromm-answer-themselves/quote.jpeg
 ---
 
 ![From "The Art of Being" by Erich Fromm](./quote.jpeg)

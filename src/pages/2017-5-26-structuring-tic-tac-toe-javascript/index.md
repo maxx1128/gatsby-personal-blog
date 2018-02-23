@@ -5,7 +5,7 @@ categories   : programming javascript
 excerpt      : Using a favorite JavaScript pattern of mine to code a simple yet challenging game
 icon         : codepen
 path         : "/structuring-tic-tac-toe-javascript/"
-featured-img : /img/posts/structuring-tic-tac-toe/featured.png
+featured-img : ./structuring-tic-tac-toe/featured.png
 ---
 
 I recently had the pleasure of presenting at Bethel Middle School' yearly career day. It was the same fare as last year: explain front-end and back-end programming, describe my own job, show some examples, deal with students that were either too loud or too quiet, and make cryptic remarks how my sister was likely their English teacher.
