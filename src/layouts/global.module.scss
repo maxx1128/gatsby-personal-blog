@@ -2,6 +2,8 @@
 
 $header-els: 'h1', 'h2', 'h3', 'h4', 'h5', 'h6';
 
+* { box-sizing: border-box; }
+
 body {
   padding: 0;
   margin: 0;
@@ -26,7 +28,7 @@ pre {
 
 code,
 kbd,
-mark { padding: 3px 4px; }
+mark { padding: 2px 4px; }
 
 pre {
   padding: spacing();
@@ -35,7 +37,7 @@ pre {
   overflow-x: scroll;
 }
 
-mark { background-color: color(secondary, lighter); }
+mark { background-color: color(secondary, light); }
 
 a {
   color: color(action);

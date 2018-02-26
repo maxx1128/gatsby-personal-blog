@@ -1,7 +1,10 @@
 @import './../styles/styles.scss';
 
-.content_container {
-  margin: 0 auto;
-  padding: spacing();
+.wrapper {
+  margin: 0 auto spacing(double);
   max-width: breakpoint(md);
+
+  @include larger-than(md) { padding: spacing(double); }
 }
+
+.container {}

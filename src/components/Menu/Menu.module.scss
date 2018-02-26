@@ -1,0 +1,17 @@
+@import './../../styles/styles.scss';
+
+.list {
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
+  max-width: breakpoint(max);
+  flex-wrap: wrap;
+  justify-content: end;
+
+  list-style-type: none;
+}
+
+.list_item {
+  padding: spacing(half);
+  margin-left: spacing();
+}

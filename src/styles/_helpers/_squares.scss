@@ -1,0 +1,72 @@
+$border: spacing(double) solid color(mono, lightest);
+$primary: color(primary, dark);
+$secondary: color(secondary, dark);
+
+@mixin square($color, $position) {
+  display: flex;
+  padding: spacing(oneHalf);
+  align-items: center;
+  justify-content: center;
+
+  @include contra-color($color);
+
+  z-index: 1;
+
+  p { margin: 0; }
+
+  @include larger-than(md) {
+    @if ($position == 'top-left') {
+      border-right: $border;
+      border-bottom: $border;
+    } @elseif ($position == 'right') {
+      border-top: $border;
+      border-bottom: $border;
+      border-left: $border;
+    } @elseif ($position == 'left') {
+      border-top: $border;
+      border-right: $border;
+      border-bottom: $border;
+    } @else {
+      border: $border;
+    }
+  }
+}
+
+.square-primary { @include square($primary, ''); }
+.square-primary-top-left { @include square($primary, 'top-left'); }
+
+.square-secondary { @include square($secondary, ''); }
+.square-secondary-top-left { @include square($secondary, 'top-left'); }
+
+// Float classes
+@mixin square-float($direction) {
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+
+  @include larger-than(md) {
+    margin-#{$direction}: spacing(quad) * -1;
+    float: #{$direction};
+    max-width: 70%;
+
+    @if ($direction == 'right') {
+      text-align: left;
+    } @else {
+      text-align: right;
+    }
+  }
+  
+  @include larger-than(max) {
+    margin-#{$direction}: -12rem;
+    max-width: 80%;
+  }
+}
+
+.square-float-left { @include square-float('left'); }
+.square-float-right { @include square-float('right'); }
+
+.square-content {
+  padding: spacing();
+
+  @include larger-than(md) { padding-top: spacing(triple); }
+}

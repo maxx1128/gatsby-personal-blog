@@ -1,0 +1,11 @@
+
+.border-primary {
+  @include larger-than(md) {
+    padding: 0 spacing(double);
+
+    border-right: spacing(half) solid color(secondary, dark);
+    border-left: spacing(half) solid color(secondary, dark);
+  }
+
+  @include larger-than(max) { padding: 0 spacing(triple); }
+}

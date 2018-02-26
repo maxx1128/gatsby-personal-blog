@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
+import './blog-post-global.module.scss'
 import s from './blog-post.module.scss'
 
 class BlogPostTemplate extends React.Component {
@@ -10,14 +11,18 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
 
     return (
-      <div className={s.blog_post}>
-        <h1>
-          {post.frontmatter.title}
-        </h1>
-        <p>
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div className={s.wrapper}>
+        <div className={s.title}>
+          <h1 className={s.title_header}>
+            {post.frontmatter.title}
+          </h1>
+
+          <small className={s.date}>
+            {post.frontmatter.date}
+          </small>
+        </div>
+ 
+        <div className={s.content} dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     )
   }

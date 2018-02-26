@@ -1,0 +1,32 @@
+@import './../../styles/styles.scss';
+
+.wrapper {
+  display: grid;
+  padding: spacing();
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-gap: spacing();
+}
+
+.title {
+  grid-column: 1 / 9;
+}
+
+.description {
+  grid-column: 3 / 9;
+  grid-row: 3 / 5;
+
+  composes: square-primary;
+}
+
+.menu {
+  grid-column: 10 / 12;
+  grid-row: 4 / 7;
+}
+
+.photo {
+  grid-column: 9 / 11;
+  grid-row: 1 / 2;
+
+  max-height: 175px;
+}

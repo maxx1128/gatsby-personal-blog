@@ -3,11 +3,12 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Menu from './../components/Menu'
 import Helmet from 'react-helmet'
-
 import Bio from './../components/Bio'
+import profile_pic from './../components/Bio/profile-pic.png'
 
 import './global.module.scss'
 import s from './layout.module.scss'
+import s_home from './../pages/homepage/layout.module.scss'
 
 class Template extends React.Component {
   
@@ -16,6 +17,7 @@ class Template extends React.Component {
   }
 
   make_header = () => {
+
     const { location } = this.props,
           { title }    = this.get_site_meta(),
           is_home      = (location.pathname === '/'),
@@ -34,42 +36,37 @@ class Template extends React.Component {
     )
   }
 
-  make_bottom_meta = () => {
-    const { title, author, twitter } = this.get_site_meta();
-
-    return (
-      <div>
-        <Helmet title={title} />
-        <Bio
-          author={author}
-          twitter={twitter}
-        />
-      </div>
-    )
-  }
-
   render() {
+
+    console.log(get(this, 'props.data'))
 
     const { children } = this.props,
           is_header    = (location.pathname === '/'),
           header       = this.make_header(),
-          menu         = this.make_menu(),
-          bottom_meta  = this.make_bottom_meta();
+          menu         = this.make_menu();
 
     if (is_header) {
       return ( 
-        <div>
-          {header}
+        <div className={s_home.wrapper}>
+          
 
-          <h1>
-            Custom homepage layout
-          </h1>
+          <div className={s_home.title}>
+            {header}
+          </div>
 
-          <p>
-            Ah that's right. I was in the middle of recreating a chess game. W-Wright! Have you lost your mind?! Focus! The defendant is the person on trial! You're his lawyer! Thank... thank you, Your Honor. No. (I know what he's gonna say, but I'll let him look smart.) Wh-What a completely foolish line of foolish thought from a thoroughly foolish fool! We were great together! We were Romeo and Juliet, Cleopatra and Mark Anthony! 
-          </p>
+          <img className={s_home.photo}
+            src={profile_pic}
+          />
 
-          {menu}
+          <div className={s_home.description}>
+            <p>
+              Ah that's right. I was in the middle of recreating a chess game. W-Wright! Have you lost your mind?! Focus! The defendant is the person on trial! You're his lawyer! Thank... thank you, Your Honor. No. (I know what he's gonna say, but I'll let him look smart.) Wh-What a completely foolish line of foolish thought from a thoroughly foolish fool! We were great together! We were Romeo and Juliet, Cleopatra and Mark Anthony! 
+            </p>
+          </div>
+
+          <div className={s_home.menu}>
+            {menu}
+          </div>
         </div>
       )
     }
@@ -78,16 +75,12 @@ class Template extends React.Component {
       <div>
         {header}
         {menu}
-
-        <h1>
-          Outside the content container!
-        </h1>
         
-        <div className={s.content_container}>
-          {children()}
+        <div className={s.wrapper}>
+          <div className={s.container}>
+            {children()}
+          </div>
         </div>
-
-        {bottom_meta}
       </div>
     )
   }

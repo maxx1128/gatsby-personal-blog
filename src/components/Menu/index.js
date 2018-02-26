@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import s from './Menu.module.scss'
 
 class Menu extends React.Component {
 
@@ -7,7 +8,7 @@ class Menu extends React.Component {
     const menu_items = this.props.data;
 
     return menu_items.map((menu, i) => (
-        <li key={i}>
+        <li key={i} className={s.list_item}>
           <Link to={menu.link}>
             {menu.name}
           </Link>
@@ -22,7 +23,7 @@ class Menu extends React.Component {
 
     return (
       <div>
-        <ul>
+        <ul className={s.list}>
           {menu_items}
         </ul>
       </div>

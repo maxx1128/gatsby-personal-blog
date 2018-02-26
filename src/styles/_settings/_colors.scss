@@ -7,58 +7,26 @@
   }
 }
 
-// All color palettes
-
-$g-color--shade: 20%;
-$g-color--shade-2: 55%;
-
-$g-color--primary: #6ab8cc;
-$g-color--secondary: #02c04a;
-$g-color--action: #e2252a;
-$g-color--mono: #cbcbcb;
-
-
 // Map for storing all color variables
 $color-map: (
   primary: (
-    base: $g-color--primary,
-
-    light: tint($g-color--primary, $g-color--shade),
-    lighter: tint($g-color--primary, $g-color--shade-2),
-
-    dark: shade($g-color--primary, $g-color--shade),
-    darker: shade($g-color--primary, $g-color--shade-2)
+    light: #7fdbff,
+    dark: #24146f
   ),
 
   secondary: (
-    base: $g-color--secondary,
-
-    light: tint($g-color--secondary, $g-color--shade),
-    lighter: tint($g-color--secondary, $g-color--shade-2),
-
-    dark: shade($g-color--secondary, $g-color--shade),
-    darker: shade($g-color--secondary, $g-color--shade-2)
+    light: #8de3ae,
+    dark: #038911
   ),
 
   action: (
-    base: $g-color--action,
-
-    light: tint($g-color--action, $g-color--shade),
-    lighter: tint($g-color--action, $g-color--shade-2),
-
-    dark: shade($g-color--action, $g-color--shade),
-    darker: shade($g-color--action, $g-color--shade-2)
+    base: #e2252a,
+    light: #f29d9f,
+    dark: #b51e22
   ),
 
   mono: (
-    base: $g-color--mono,
-
-    light: tint($g-color--mono, $g-color--shade),
-    lighter: tint($g-color--mono, $g-color--shade-2),
-    lightest: #fbfcf7,
-
-    dark: shade($g-color--mono, $g-color--shade),
-    darker: shade($g-color--mono, $g-color--shade-2),
+    lightest: #fafaf1,
     darkest: #080401
   )
 );
