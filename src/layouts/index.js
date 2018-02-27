@@ -19,11 +19,11 @@ class Template extends React.Component {
   make_header = () => {
 
     const { location } = this.props,
-          { title }    = this.get_site_meta(),
+          { title, tagline }    = this.get_site_meta(),
           is_home      = (location.pathname === '/'),
           header_link  = <Link to={'/'}>{title}</Link>
 
-    return (is_home) ? <h1>{header_link}</h1> : <h2>{header_link}</h2>
+    return (is_home) ? <span><h1 className={s_home.header}>{header_link}</h1><small className={s_home.tagline}>{tagline}</small></span> : <h2>{header_link}</h2>
   }
 
   make_menu = () => {
@@ -38,8 +38,6 @@ class Template extends React.Component {
 
   render() {
 
-    console.log(get(this, 'props.data'))
-
     const { children } = this.props,
           is_header    = (location.pathname === '/'),
           header       = this.make_header(),
@@ -48,15 +46,13 @@ class Template extends React.Component {
     if (is_header) {
       return ( 
         <div className={s_home.wrapper}>
-          
-
           <div className={s_home.title}>
             {header}
           </div>
 
-          <img className={s_home.photo}
-            src={profile_pic}
-          />
+          <div className={s_home.menu}>
+            {menu}
+          </div>
 
           <div className={s_home.description}>
             <p>
@@ -64,9 +60,12 @@ class Template extends React.Component {
             </p>
           </div>
 
-          <div className={s_home.menu}>
-            {menu}
+          <div className={s_home.reactrix}>
           </div>
+
+          <img className={s_home.photo}
+            src={profile_pic}
+          />
         </div>
       )
     }
@@ -99,6 +98,7 @@ export const templateQuery = graphql`
     site {
       siteMetadata {
         title
+        tagline
         author
         twitter
       }

@@ -1,4 +1,4 @@
-$border: spacing(double) solid color(mono, lightest);
+$border: spacing() solid color(mono, lightest);
 $primary: color(primary, dark);
 $secondary: color(secondary, dark);
 
@@ -47,7 +47,7 @@ $secondary: color(secondary, dark);
   @include larger-than(md) {
     margin-#{$direction}: spacing(quad) * -1;
     float: #{$direction};
-    max-width: 70%;
+    max-width: 50%;
 
     @if ($direction == 'right') {
       text-align: left;
@@ -58,7 +58,7 @@ $secondary: color(secondary, dark);
   
   @include larger-than(max) {
     margin-#{$direction}: -12rem;
-    max-width: 80%;
+    max-width: 65%;
   }
 }
 

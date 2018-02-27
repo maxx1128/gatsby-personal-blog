@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Max Antonucci's Personal Site",
+    title: "Max Antonucci",
+    tagline: "Journalist turned Full-time Coder, Part-time Ponderer",
     author: "Max Antonucci",
     twitter: "Maxwell_Dev"
   },

@@ -2,7 +2,7 @@
 
 .list {
   display: flex;
-  padding: 0;
+  padding: spacing(half);
   margin: 0 auto;
   max-width: breakpoint(max);
   flex-wrap: wrap;
