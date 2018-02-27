@@ -2,7 +2,7 @@
 
 .wrapper {
   margin: 0 auto spacing(double);
-  max-width: breakpoint(md);
+  max-width: breakpoint(lg);
 
   @include larger-than(md) { padding: spacing(double); }
 }

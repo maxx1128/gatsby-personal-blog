@@ -59,13 +59,13 @@
     description: "This is an improvement on my last Pokedex built from Ruby. This time I used Ember, since I needed to get more familiar with the framework. It makes better use of the Pokemon API, despite it not being smoothly compatible with Ember's adapters. But combined with Ember Paper, overall it's a smoother, more stylish Pokedex with more functions and information to look through."
     link: https://emberdex.herokuapp.com/
 
-  - name: Ace Attorney Lorem Ipsum Generator
+  - name: Ace Attorney Ipsum
     date: 2017/06/01
     image: ace-attorney-lorem-ipsum.png
     description: "I'm a huge fan of the Phoenix Wright series, but was upset to see there wasn't a Lorem Ipsum generator for it. So I found the WikiQuote page for the series, took the best lines I could find, and made a Node.js Lorem Ipsum generator with them. Now template sites can fill empty space with the voices of Wright, Edgeworth, Maya, and (most of) the whole cast."
     link: http://www.aceattorneyipsum.com/
 
-  - name: '"What Eeveelution are You" Quiz'
+  - name: 'What Eeveelution are You'
     date: 2015/10/15
     image: eeveelutions.png
     description: 'I made this quiz to better understand the Angular framework, specifically its data-binding, Angular functions, and displaying the right views. Plus I used Flexbox to better control the responsiveness of certain elements with less CSS.'

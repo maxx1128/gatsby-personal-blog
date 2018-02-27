@@ -1,0 +1,73 @@
+@import './../../styles/styles.scss';
+
+.wrapper {}
+
+.title {
+  padding-left: spacing();
+  margin-top: 0;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectHeader { margin: 0; }
+
+.project {
+  margin-bottom: spacing();
+
+  text-align: center;
+  text-decoration: none;
+
+  composes: square-primary;
+
+  &:nth-of-type(odd) { background-color: color(secondary, dark); }
+}
+
+.projectImage { display: none; }
+
+@include larger-than(md) {
+  .projectGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 90px);
+    grid-gap: spacing(half);
+
+    &:not(:first-of-type) { margin-top: rem(-90px); }
+  }
+
+  .project {
+    margin: 0;
+    justify-content: space-between;
+
+    // Image on right side
+    &:nth-of-type(even) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      flex-direction: row-reverse;
+
+      text-align: left;
+
+      .projectImage { margin-left: spacing(oneHalf); }
+    }
+
+    // Image on left side
+    &:nth-of-type(odd) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 4;
+
+      text-align: right;
+
+      .projectImage { margin-right: spacing(oneHalf); }
+    }
+  }
+
+  .projectImage {
+    display: block;
+    margin: spacing(oneHalf) * -1;
+    width: auto;
+    max-height: 145%;
+  }
+}
+

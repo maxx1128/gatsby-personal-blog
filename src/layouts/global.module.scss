@@ -45,6 +45,9 @@ a {
   @include hovers() { color: color(action, dark); }
 }
 
+ol,
+ul { list-style-position: inside; }
+
 @each $header in $header-els {
   #{$header} { font-family: type(font-family, header); }
 }

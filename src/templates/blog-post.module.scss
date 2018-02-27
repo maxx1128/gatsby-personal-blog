@@ -3,7 +3,10 @@
 @import './../styles/styles.scss';
 
 .wrapper {
-  composes: border-primary;
+  margin: 0 auto;
+  max-width: breakpoint(md);
+
+  composes: border-secondary;
 }
 
 .title {
