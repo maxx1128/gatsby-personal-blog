@@ -1,3 +1,35 @@
 @import './../../styles/styles.scss';
 
-.item {}
+.container {
+}
+
+.post {
+  display: block;
+  padding: spacing() spacing() spacing() spacing(double);
+  margin-bottom: spacing(double);
+
+  color: color(mono, dark);
+  text-decoration: none;
+
+  border-width: 0 spacing(half) 0 spacing(half);
+  border-style: solid;
+  border-color: color(secondary);
+
+  transition: 0.25s border-width;
+
+  &:nth-of-type(3n + 1) { border-color: color(primary); }
+
+  @include hovers() {
+    color: color(mono, dark);
+
+    border-width: spacing(quart) spacing() spacing(quart) spacing();
+
+    transition: 0.75s border-width;
+  }
+}
+
+.postTitle {
+  margin-top: 0;
+
+  color: color(action);
+}

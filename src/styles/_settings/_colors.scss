@@ -10,23 +10,20 @@
 // Map for storing all color variables
 $color-map: (
   primary: (
-    light: #7fdbff,
-    dark: #24146f
+    base: #266082
   ),
 
   secondary: (
-    light: #8de3ae,
-    dark: #038911
+    base: #0e823a
   ),
 
   action: (
     base: #e2252a,
-    light: #f29d9f,
     dark: #b51e22
   ),
 
   mono: (
-    lightest: #fafaf1,
-    darkest: #080401
+    light: #fbfcf7,
+    dark: #080401
   )
 );

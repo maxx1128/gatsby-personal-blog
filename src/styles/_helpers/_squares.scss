@@ -1,6 +1,6 @@
-$border: spacing() solid color(mono, lightest);
-$primary: color(primary, dark);
-$secondary: color(secondary, dark);
+$border: spacing() solid color(mono, light);
+$primary: color(primary);
+$secondary: color(secondary);
 
 @mixin square($color, $position) {
   display: flex;
@@ -47,18 +47,22 @@ $secondary: color(secondary, dark);
   @include larger-than(md) {
     margin-#{$direction}: spacing(quad) * -1;
     float: #{$direction};
-    max-width: 50%;
+    max-width: 60%;
 
     @if ($direction == 'right') {
+      margin-left: spacing();
+
       text-align: left;
     } @else {
+      margin-right: spacing();
+
       text-align: right;
     }
   }
   
   @include larger-than(max) {
     margin-#{$direction}: -12rem;
-    max-width: 65%;
+    max-width: 70%;
   }
 }
 

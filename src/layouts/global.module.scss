@@ -9,10 +9,10 @@ body {
   margin: 0;
   max-width: 100vw;
 
-  color: color(mono, darkest);
+  color: color(mono, dark);
   font-family: type(font-family, base);
 
-  background-color: color(mono, lightest);
+  background-color: color(mono, light);
 
   overflow-x: hidden;
 }
@@ -20,10 +20,10 @@ body {
 code,
 kbd,
 pre {
-  color: color(mono, lightest);
+  color: color(mono, light);
   font-family: type(font-family, mono);
 
-  background-color: color(mono, darkest);
+  background-color: color(mono, dark);
 }
 
 code,
@@ -37,7 +37,11 @@ pre {
   overflow-x: scroll;
 }
 
-mark { background-color: color(secondary, light); }
+mark {
+  color: color(mono, light);
+
+  background-color: color(secondary);
+}
 
 a {
   color: color(action);

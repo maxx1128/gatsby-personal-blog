@@ -39,7 +39,7 @@ $typography-map: (
     h6: decimal-round(modular-scale(0), 2),
     large: decimal-round(modular-scale(0), 2),
     p: decimal-round(modular-scale(0), 2),
-    blockquote: decimal-round(modular-scale(0), 2),
+    blockquote: decimal-round(modular-scale(3), 2),
     pre: decimal-round(modular-scale(0), 2),
     mono: decimal-round(modular-scale(0), 2),
     ol: decimal-round(modular-scale(0), 2),
@@ -51,7 +51,7 @@ $typography-map: (
   font-weight: (
     bold: 700,
     base: 400,
-    light: 100
+    light: 300
   ),
 
   line-height: (

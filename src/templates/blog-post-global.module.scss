@@ -9,7 +9,7 @@
 hr {
   margin: spacing(oneHalf) 0;
 
-  border: 1.5px solid color(secondary, dark);
+  border: 1.5px solid color(secondary);
 
   @include larger-than(md) {
     margin-right: spacing(double);
@@ -35,12 +35,12 @@ blockquote {
 
   &:nth-of-type(odd) {
     @include square-float('right');
-    @include square(color(secondary, dark), 'right');
+    @include square(color(secondary), 'right');
   }
 
   &:nth-of-type(even) {
     @include square-float('left');
-    @include square(color(secondary, dark), 'left');
+    @include square(color(secondary), 'left');
   }
 
   margin: spacing(double) 0;

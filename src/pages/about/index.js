@@ -10,13 +10,13 @@ class AboutIndex extends React.Component {
       <div className={s.wrapper}>
 
         <div className={s.title}>
-          <h1>
+          <h1 className={s.header}>
             About Me
           </h1>
 
-          <h4>
+          <h5 className={s.subheader}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </h4>
+          </h5>
         </div>
 
         <div className={s.content}>

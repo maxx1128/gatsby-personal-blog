@@ -2,26 +2,29 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
+import ResumeItem from './../../components/ResumeItem'
+
 class ResumeIndex extends React.Component {
   render() {
     const resume_data = get(this, 'props.data.allResumeYaml.edges[0].node.resume');
 
     const resume = resume_data.map((resume, i) => (
-        <li key={i}>
-          {resume.title} at <strong>{resume.company}</strong>
-        </li>
+        <ResumeItem
+          key={i}
+          data={resume}
+        />
       )
     );
 
     return (
       <div>
-        <p>
+        <h1>
           Resume Page!
-        </p>
+        </h1>
 
-        <ul>
+        <section>
           {resume}
-        </ul>
+        </section>
       </div>
     )
   }

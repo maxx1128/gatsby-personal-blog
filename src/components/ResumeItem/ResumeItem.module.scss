@@ -1,0 +1,132 @@
+@import './../../styles/styles.scss';
+
+.container {
+  display: grid;
+  margin-bottom: spacing();
+  grid-template-columns: 1fr;
+}
+
+.title { margin-top: 0; }
+
+.role {
+  margin-top: spacing(oneHalf);
+
+  font-weight: type(font-weight, light);
+}
+
+.stack {
+  padding: 0;
+  margin: auto 0 0;
+
+  list-style-type: none;
+}
+
+.name,
+.meta,
+.description {
+  padding: spacing();
+
+  color: color(mono, light);
+
+  p { margin: 0; }
+}
+
+.name,
+.meta { background-color: color(primary); }
+
+.name {}
+
+.meta {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.time {
+  padding-top: spacing();
+  margin-top: auto;
+
+  font-style: italic;
+}
+
+.description { background-color: color(secondary); }
+
+@include larger-than(md) {
+  $indent: spacing(double);
+  $indent-neg: $indent * -1;
+
+  .container {
+    margin-bottom: spacing(triple);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, minmax(40px, auto));
+  }
+
+  .name,
+  .meta,
+  .description { padding: spacing(oneHalf); }
+
+  .name {
+    padding-bottom: $indent + spacing();
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 1;
+  }
+
+  .meta {
+    padding-top: 0;
+    padding-right: $indent + spacing();
+    margin-top: spacing() * -1;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+  }
+
+  .stack {
+    padding-right: spacing(oneHalf);
+    margin-right: auto;
+    margin-bottom: spacing();
+
+    border-right: spacing(quart) solid color(mono, light);
+  }
+
+  .description {
+    margin: $indent-neg $indent $indent $indent-neg;
+    grid-column: 3 / span 4;
+    grid-row: 2 / span 1;
+
+    border: $border;
+
+    z-index: 1;
+
+    p { margin: 0; }
+  }
+
+  .container:nth-of-type(even) {
+    text-align: right;
+
+    .name,
+    .meta { background-color: color(secondary); }
+
+    .name { grid-column: span 5 / 7; }
+
+    .meta {
+      padding-right: spacing(oneHalf);
+      padding-left: $indent + spacing(oneHalf);
+      grid-column: span 2 / 7;
+    }
+
+    .stack {
+      padding-right: 0;
+      padding-left: spacing(oneHalf);
+      margin-right: 0;
+      margin-left: auto;
+
+      border-right-width: 0;
+      border-left: spacing(quart) solid color(mono, light);
+    }
+
+    .description {
+      margin: $indent-neg $indent-neg $indent $indent;
+      grid-column: span 4 / 5;
+
+      background-color: color(primary);
+    }
+  }
+}

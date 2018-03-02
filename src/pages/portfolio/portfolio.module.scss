@@ -22,7 +22,7 @@
 
   composes: square-primary;
 
-  &:nth-of-type(odd) { background-color: color(secondary, dark); }
+  &:nth-of-type(odd) { background-color: color(secondary); }
 }
 
 .projectImage { display: none; }
@@ -49,6 +49,8 @@
 
       text-align: left;
 
+      border-right-width: 0; 
+
       .projectImage { margin-left: spacing(oneHalf); }
     }
 
@@ -58,6 +60,8 @@
       grid-row: 2 / 4;
 
       text-align: right;
+
+      border-left-width: 0; 
 
       .projectImage { margin-right: spacing(oneHalf); }
     }

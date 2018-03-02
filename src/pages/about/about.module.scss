@@ -7,9 +7,11 @@
 
 .title {
   composes: square-float-left square-primary-top-left;
-
-  h1 { margin-top: 0; }
 }
+
+.header { margin-top: 0; }
+
+.subheader { margin-bottom: 0; }
 
 .intro {}
 
