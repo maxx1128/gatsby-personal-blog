@@ -4,9 +4,7 @@ import s from './ResumeItem.module.scss'
 const ResumeItem = ({ data }) => {
   const stack_list = data.stack.map(item =>{
     return (
-      <li>
-        {item}
-      </li>
+      `${item}, `
     );
   });
 
@@ -20,6 +18,10 @@ const ResumeItem = ({ data }) => {
         <h6 className={s.role}>
           <strong>{data.title}</strong>
         </h6>
+
+        <small>
+          {data.start} - {data.end}
+        </small>
       </div>
       
       <div className={s.description}>
@@ -28,16 +30,10 @@ const ResumeItem = ({ data }) => {
         </p>
       </div>
 
-      <div className={s.meta}>
-        <ul className={s.stack}>
+      <div className={s.stack}>
+        <small>
           {stack_list}
-        </ul>
-
-        <div className={s.time}>
-          <small>
-            {data.start} - {data.end}
-          </small>
-        </div>
+        </small>
       </div>
     </article>
   )
