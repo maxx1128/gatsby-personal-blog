@@ -5,17 +5,17 @@ import chunk from 'lodash/chunk'
 
 import s from './portfolio.module.scss'
 
+import Project from './../../components/Project'
+
 class PortfolioIndex extends React.Component {
   render() {
     const project_data = get(this, 'props.data.allProjectsYaml.edges[0].node.projects');
 
     const projects = project_data.map((project, i) => (
-      <a href={project.link} target="_blank" rel="noopener" className={s.project} key={i}>
-        {<img className={s.projectImage} src="http://via.placeholder.com/400x400" />}
-        <h4 className={s.projectHeader}>
-          {project.name}
-        </h4>
-      </a>
+      <Project
+        key={i}
+        data={project}
+      />
     ));
 
     const grouped_projects = chunk(projects, 2).map((group) => (

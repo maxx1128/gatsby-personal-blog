@@ -12,21 +12,6 @@
   flex-direction: column;
 }
 
-.projectHeader { margin: 0; }
-
-.project {
-  margin-bottom: spacing();
-
-  text-align: center;
-  text-decoration: none;
-
-  composes: square-primary;
-
-  &:nth-of-type(odd) { background-color: color(secondary); }
-}
-
-.projectImage { display: none; }
-
 @include larger-than(md) {
   .projectGroup {
     display: grid;
@@ -35,50 +20,6 @@
     grid-gap: spacing(half);
 
     &:not(:first-of-type) { margin-top: rem(-90px); }
-  }
-
-  .project {
-    $indent-neg: spacing(double) * -1;
-
-    margin: 0;
-    justify-content: space-between;
-
-    .projectImage { margin-bottom: $indent-neg; }
-
-    // Image on right side
-    &:nth-of-type(even) {
-      grid-column: 1 / 2;
-      grid-row: 1 / 3;
-      flex-direction: row-reverse;
-
-      text-align: left;
-
-      .projectImage {
-        margin-right: $indent-neg;
-        margin-left: spacing();
-      }
-    }
-
-    // Image on left side
-    &:nth-of-type(odd) {
-      grid-column: 2 / 3;
-      grid-row: 2 / 4;
-
-      text-align: right;
-
-      .projectImage {
-        margin-right: spacing(oneHalf);
-        margin-left: $indent-neg;
-      }
-    }
-  }
-
-  .projectImage {
-    display: block;
-    margin: spacing(oneHalf) * -1;
-    width: auto;
-    max-height: 145%;
-    align-self: flex-end;
   }
 }
 
