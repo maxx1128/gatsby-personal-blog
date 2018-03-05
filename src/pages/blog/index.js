@@ -1,30 +1,45 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
+import chunk from 'lodash/chunk'
 
 import s from './blog_listing.module.scss';
+import twoRow from './../../layouts/twoRows.module.scss'
+
+import BlogLink from './../../components/BlogLink'
 
 class BlogIndex extends React.Component {
   render() {
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const post_data = get(this, 'props.data.allMarkdownRemark.edges')
+
+    const posts_list = post_data.map((post, i) => {
+      if (post.node.path !== '/404/') {
+        const title = get(post, 'node.frontmatter.title') || post.node.path
+
+        return (
+          <BlogLink
+            key={post.node.frontmatter.path}
+            to={post.node.frontmatter.path}
+            title={title}
+            date={post.node.frontmatter.date}
+            excerpt={post.node.excerpt}
+          />
+        )
+      }
+    });
+
+    const group_classes = `${twoRow.wrapper} ${s.twoRow_override}`;
+
+    const grouped_posts = chunk(posts_list, 2).map((group) => (
+      <div className={group_classes}>
+        {group}
+      </div>
+    ));
 
     return (
-      <div className={s.container}>
-        {posts.map(post => {
-          if (post.node.path !== '/404/') {
-            const title = get(post, 'node.frontmatter.title') || post.node.path
-            return (
-              <Link className={s.post} key={post.node.frontmatter.path} to={post.node.frontmatter.path} >
-                <h3 className={s.postTitle}>
-                  {post.node.frontmatter.title}
-                </h3>
-                <small>{post.node.frontmatter.date}</small>
-                <div className={s.item} dangerouslySetInnerHTML={{ __html: post.node.excerpt }}></div>
-              </Link>
-            )
-          }
-        })}
-      </div>
+      <section className={s.container}>
+        {grouped_posts}
+      </section>
     )
   }
 }
@@ -44,7 +59,7 @@ export const pageQuery = graphql`
           html
           frontmatter {
             path
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
           }
           frontmatter {
             title

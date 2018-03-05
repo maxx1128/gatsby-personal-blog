@@ -26,8 +26,6 @@
 
     // Image on right side
     &:nth-of-type(even) {
-      grid-column: 1 / 2;
-      grid-row: 1 / 3;
       flex-direction: row-reverse;
 
       text-align: left;
@@ -40,9 +38,6 @@
 
     // Image on left side
     &:nth-of-type(odd) {
-      grid-column: 2 / 3;
-      grid-row: 2 / 4;
-
       text-align: right;
 
       .image {

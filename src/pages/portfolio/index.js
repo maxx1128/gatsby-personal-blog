@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import chunk from 'lodash/chunk'
 
 import s from './portfolio.module.scss'
+import twoRow from './../../layouts/twoRows.module.scss'
 
 import Project from './../../components/Project'
 
@@ -19,7 +20,7 @@ class PortfolioIndex extends React.Component {
     ));
 
     const grouped_projects = chunk(projects, 2).map((group) => (
-      <div className={s.projectGroup}>
+      <div className={twoRow.wrapper}>
         {group}
       </div>
     ));

@@ -6,20 +6,3 @@
   padding-left: spacing();
   margin-top: 0;
 }
-
-.projectContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-@include larger-than(md) {
-  .projectGroup {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 90px);
-    grid-gap: spacing(half);
-
-    &:not(:first-of-type) { margin-top: rem(-90px); }
-  }
-}
-
