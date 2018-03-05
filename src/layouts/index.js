@@ -72,6 +72,11 @@ class Template extends React.Component {
 
     return (
       <div>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>My Title</title>
+        </Helmet>
+
         {header}
         {menu}
         

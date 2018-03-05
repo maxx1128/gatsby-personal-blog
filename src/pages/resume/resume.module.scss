@@ -1,0 +1,30 @@
+@import './../../styles/styles.scss';
+
+.section { padding-bottom: spacing(); }
+
+@include larger-than(md) {
+  .section {
+    display: flex;
+    padding-bottom: 0;
+  }
+
+  .section_title {
+    padding-right: spacing(oneHalf);
+    padding-bottom: spacing(triple);
+    margin: 0;
+    flex: 0 0 175px;
+
+    text-align: right;
+    font-style: italic;
+    font-weight: type(font-weight, light);
+
+    border-right: spacing(third) solid color(secondary);
+  }
+
+  .section_content {
+    padding-bottom: spacing(triple);
+    padding-left: spacing(oneHalf);
+  }
+
+  .edu_school { margin-top: 0; }
+}

@@ -1,6 +1,6 @@
 @import './../../styles/styles.scss';
 
-.container { margin-bottom: spacing(triple); }
+$random-blog-item-wrapper: '.container:nth-of-type(4n + 1)';
 
 .banner {
   position: relative;
@@ -13,7 +13,7 @@
   border-bottom: $border;
   background-color: color(secondary);
 
-  .container:nth-of-type(3n + 1) & { background-color: color(primary); }
+  #{$random-blog-item-wrapper} & { background-color: color(primary); }
 
   @include hovers() { color: color(mono, light); }
 }
@@ -49,12 +49,16 @@
 
   z-index: 1;
 
-  .container:nth-of-type(3n + 1) & {
+  #{$random-blog-item-wrapper} & {
     background-color: color(secondary);
   }
 }
 
-.excerpt { padding: 0 spacing(); }
+.excerpt {
+  padding: 0 spacing();
+
+  #{$random-blog-item-wrapper} & { border-color: color(primary); }
+}
 
 @include larger-than(sm) {
   .banner { padding-right: spacing(quad); }
@@ -71,6 +75,8 @@
   .banner {
     padding-right: spacing(triple);
     padding-left: spacing(oneHalf);
+
+    border-bottom-width: 0;
   }
 
   .icon {
@@ -79,8 +85,7 @@
   }
 
   .excerpt {
-    padding: spacing(half) spacing();
-    margin-left: 15%;
+    padding: spacing();
 
     border-left: spacing(half) solid color(secondary);
   }

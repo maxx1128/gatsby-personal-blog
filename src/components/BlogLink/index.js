@@ -2,10 +2,12 @@ import React from 'react';
 import Link from 'gatsby-link'
 import s from './BlogLink.module.scss'
 
-const BlogLink = ({ to, title, date, excerpt }) => {
+const BlogLink = ({ to, title, date, excerpt, classes }) => {
+
+  const class_group = `${s.container} ${classes}`;
 
   return (
-    <article className={s.container}>
+    <article className={class_group}>
       <Link to={to} className={s.banner}>
         <h4 className={s.title}>
           {title}

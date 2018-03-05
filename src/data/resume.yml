@@ -38,17 +38,6 @@
     end: May 2015
     description: "I help the team work on the front-end development of web projects for clients. This includes creating the framework, design and responsive grids for websites, and developing the functionality for Wordpress sites with HTML, CSS, Sass, Javascript, Breakpoint and Grunt.js."
 
-  - title: Lead Tech and Innovation Producer
-    stack:
-      - "Drupal"
-      - "jQuery"
-      - "Angular"
-    company: The NewsHouse
-    icon: zap
-    start: May 2014
-    end: May 2015
-    description: "For my senior year at Syracuse University, I'll be helping produce news and feature stories at the Newshouse online publication, focusing on finding digitally innovative ways to present and share them."
-
   - title: Social Media and Web Management Intern
     stack:
       - "WordPress"

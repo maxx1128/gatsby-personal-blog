@@ -4,7 +4,6 @@ import get from 'lodash/get'
 import chunk from 'lodash/chunk'
 
 import s from './blog_listing.module.scss';
-import twoRow from './../../layouts/twoRows.module.scss'
 
 import BlogLink from './../../components/BlogLink'
 
@@ -23,22 +22,15 @@ class BlogIndex extends React.Component {
             title={title}
             date={post.node.frontmatter.date}
             excerpt={post.node.excerpt}
+            classes={s.blogItem}
           />
         )
       }
     });
 
-    const group_classes = `${twoRow.wrapper} ${s.twoRow_override}`;
-
-    const grouped_posts = chunk(posts_list, 2).map((group) => (
-      <div className={group_classes}>
-        {group}
-      </div>
-    ));
-
     return (
       <section className={s.container}>
-        {grouped_posts}
+        {posts_list}
       </section>
     )
   }

@@ -4,8 +4,6 @@
   display: flex;
   margin-bottom: spacing(oneHalf);
   flex-direction: column;
-
-  color: color(mono, light);
 }
 
 .name,
@@ -26,7 +24,18 @@
   $indent: spacing(oneHalf);
   $indent-neg: $indent * -1;
 
-  .container { padding: 0 $indent; }
+  .container {
+    padding: 0 $indent;
+
+    color: color(mono, light);
+  }
+
+  .role {
+    margin-top: spacing(oneHalf);
+    margin-bottom: 0;
+
+    font-style: italic;
+  }
 
   .name,
   .stack { background-color: color(primary); }

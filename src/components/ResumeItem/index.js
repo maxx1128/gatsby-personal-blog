@@ -15,13 +15,9 @@ const ResumeItem = ({ data }) => {
           {data.company}
         </h3>
 
-        <h6 className={s.role}>
-          <strong>{data.title}</strong>
-        </h6>
-
-        <small>
-          {data.start} - {data.end}
-        </small>
+        <p className={s.role}>
+          <strong>{data.title}</strong> from {data.start} - {data.end}
+        </p>
       </div>
       
       <div className={s.description}>
