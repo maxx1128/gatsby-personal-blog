@@ -2,16 +2,29 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
+import s from './articles.module.scss';
+
 class ArticlesIndex extends React.Component {
+
   render() {
     const article_data = get(this, 'props.data.allArticlesYaml.edges[0].node.articles');
 
     const articles = article_data.map((article, i) => (
-        <li key={i}>
-          <a href={article.link} target="_blank" rel="noopener">
-            {article.name}
+        <div className={s.container}>
+          <a className={s.link} href={article.link} target="_blank" rel="noopener">
+            <h4 className={s.header}>
+              {article.name}
+            </h4>
           </a>
-        </li>
+
+          <tiny className={s.date}>
+            Posted on {article.date}
+          </tiny>
+
+          <p className={s.description}>
+            {article.description}
+          </p>
+        </div>
       )
     );
 
@@ -40,6 +53,7 @@ export const articleQuery = graphql`
             name
             date
             link
+            description
           }
         } 
       }
