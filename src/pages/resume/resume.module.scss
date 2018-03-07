@@ -2,6 +2,14 @@
 
 .section { padding-bottom: spacing(); }
 
+.section_title { display: none; }
+
+.section_secondary {
+  composes: section;
+
+  @include smaller-than(md) { display: none; }
+}
+
 @include larger-than(md) {
   .section {
     display: flex;
@@ -11,6 +19,7 @@
   .section_title {
     $width: rem(175px);
 
+    display: block;
     padding-right: spacing(oneHalf);
     padding-bottom: spacing(triple);
     margin: 0;

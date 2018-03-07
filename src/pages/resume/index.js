@@ -21,7 +21,7 @@ class ResumeIndex extends React.Component {
 
       return (
         <span key={i}>
-          {skills_list} <br />
+          - {skills_list} <br />
         </span>
       )
     });
@@ -32,13 +32,11 @@ class ResumeIndex extends React.Component {
   get_activities_awards = () => {
     const aa_data = get(this, 'props.data.allActivitiesAwardsYaml.edges[0].node.activities_awards');
 
-    const aa = aa_data.map(function(aa_item, i) {
-      return (
-        <span key={i}>
-          {aa_item} <br />
-        </span>
-      )
-    });
+    const aa = aa_data.map((aa_item, i) => (
+      <span key={i}>
+        <small>{aa_item}</small> <br />
+      </span>
+    ));
 
     return aa;
   }
@@ -71,7 +69,7 @@ class ResumeIndex extends React.Component {
           </section>
         </div>
 
-        <div className={s.section}>
+        <div className={s.section_secondary}>
           <h4 className={s.section_title}>
             Skills
           </h4>
@@ -82,14 +80,14 @@ class ResumeIndex extends React.Component {
           </section>
         </div>
 
-        <div className={s.section}>
+        <div className={s.section_secondary}>
           <h4 className={s.section_title}>
             Education
           </h4>
           <section className={s.section_content}>
-            <h6 className={s.edu_school}>
+            <h5 className={s.edu_school}>
               Syracuse University, S.I. Newhouse School of Public Communications
-            </h6>
+            </h5>
             <p>
               B.S. - Newspaper and Online Journalism (May 2015) <br />
               Minor - Information and Technology (May 2015)
@@ -97,7 +95,7 @@ class ResumeIndex extends React.Component {
           </section>
         </div>
 
-        <div className={s.section}>
+        <div className={s.section_secondary}>
           <h4 className={s.section_title}>
             Activities <br />
             & Awards

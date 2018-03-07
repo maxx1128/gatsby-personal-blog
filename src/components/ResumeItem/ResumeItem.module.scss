@@ -2,8 +2,18 @@
 
 .container {
   display: flex;
+  padding-bottom: spacing(oneHalf);
   margin-bottom: spacing(oneHalf);
   flex-direction: column;
+
+  border-bottom: spacing(third) solid color(secondary);
+  
+  &:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    border-bottom-width: 0;
+  }
 }
 
 .name,
@@ -18,7 +28,7 @@
   p { margin: 0; }
 }
 
-.stack {}
+.role { margin-bottom: 0; }
 
 @include larger-than(md) {
   $indent: spacing(oneHalf);
@@ -28,11 +38,12 @@
     padding: 0 $indent;
 
     color: color(mono, light);
+
+    border-bottom-width: 0;
   }
 
   .role {
     margin-top: spacing(oneHalf);
-    margin-bottom: 0;
 
     font-style: italic;
   }

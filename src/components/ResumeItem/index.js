@@ -2,10 +2,11 @@ import React from 'react';
 import s from './ResumeItem.module.scss'
 
 const ResumeItem = ({ data }) => {
-  const stack_list = data.stack.map(item =>{
-    return (
-      `${item}, `
-    );
+  
+  const stack_list = data.stack.map(function(item, i) {
+    const last_item = (i === data.stack.length - 1);
+
+    return !last_item ? `${item}, ` : item;
   });
 
   return (
