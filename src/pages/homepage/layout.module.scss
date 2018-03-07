@@ -9,9 +9,7 @@
   min-height: 100vh;
 }
 
-.title {
-  border: $border;
-}
+.title { border: $border; }
 
 .header { margin: 0 0 spacing(third); }
 
@@ -31,15 +29,18 @@
   z-index: -1;
 }
 
-.menu {
-  
-}
+.menu {}
 
 .photo {
+  border: 3px solid color(mono, dark);
+  background-color: color(mono, light);
+}
+
+.photo_wrapper {
   display: none;
   margin: 0 auto;
 
-  border: 3px solid color(mono, dark);
+  border: $border;
   background-color: color(mono, light);
 }
 
@@ -70,8 +71,8 @@
     grid-row: 4 / 7;
   }
 
-  .photo {
-    display: block;
+  .photo_wrapper {
+    display: flex;
     grid-column: 4 / 5;
     grid-row: 4 / 5;
   }
@@ -105,7 +106,7 @@
     border-left: spacing(half) solid color(primary);
   }
 
-  .photo {
+  .photo_wrapper {
     grid-column: 10 / 12;
     grid-row: 1 / 3;
   }

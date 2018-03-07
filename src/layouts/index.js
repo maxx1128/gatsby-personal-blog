@@ -58,16 +58,18 @@ class Template extends React.Component {
 
           <div className={s_home.description}>
             <p>
-              Ah that's right. I was in the middle of recreating a chess game. W-Wright! Have you lost your mind?! Focus! The defendant is the person on trial! You're his lawyer! Thank... thank you, Your Honor. No. (I know what he's gonna say, but I'll let him look smart.) Wh-What a completely foolish line of foolish thought from a thoroughly foolish fool! We were great together! We were Romeo and Juliet, Cleopatra and Mark Anthony! 
+              I’m Max Antonucci, a front-end developer living and working in New Haven, CT. I studied journalism in school for a love of writing. I switched to front-end development halfway through for a similar love of coding. I keep breathing because of my love of oxygen. I’m a curious freethinker and passionate puzzle-solver. However I have a serious daydreaming habit and don’t have telekinetic powers. No one is perfect, after all.
             </p>
           </div>
 
           <div className={s_home.reactrix}>
           </div>
 
-          <img className={s_home.photo}
-            src={profile_pic}
-          />
+          <div className={s_home.photo_wrapper}>
+            <img className={s_home.photo}
+              src={profile_pic}
+            />
+          </div>
         </div>
       )
     }
