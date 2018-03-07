@@ -9,10 +9,13 @@
   }
 
   .section_title {
+    $width: rem(175px);
+
     padding-right: spacing(oneHalf);
     padding-bottom: spacing(triple);
     margin: 0;
-    flex: 0 0 175px;
+    max-width: $width;
+    flex: 0 0 $width;
 
     text-align: right;
     font-style: italic;

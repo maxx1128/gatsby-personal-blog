@@ -7,10 +7,46 @@ import s from './resume.module.scss'
 import ResumeItem from './../../components/ResumeItem'
 
 class ResumeIndex extends React.Component {
-  render() {
-    const resume_data = get(this, 'props.data.allResumeYaml.edges[0].node.resume');
+  
+  get_skills = () => {
     const skills_data = get(this, 'props.data.allSkillsYaml.edges[0].node.skills');
-    const activities_awards_data = get(this, 'props.data.allActivitiesAwardsYaml.edges[0].node.activities_awards');
+
+    const skills = skills_data.map(function(skill_group, i) {
+      
+      const skills_list = skill_group.map(function(skill_item, i) {
+        const last_item = (i === skill_group.length - 1);
+
+        return !last_item ? `${skill_item}, ` : skill_item;
+      });
+
+      return (
+        <span key={i}>
+          {skills_list} <br />
+        </span>
+      )
+    });
+
+    return skills;
+  }
+
+  get_activities_awards = () => {
+    const aa_data = get(this, 'props.data.allActivitiesAwardsYaml.edges[0].node.activities_awards');
+
+    const aa = aa_data.map(function(aa_item, i) {
+      return (
+        <span key={i}>
+          {aa_item} <br />
+        </span>
+      )
+    });
+
+    return aa;
+  }
+
+  render() {
+    const resume_data = get(this, 'props.data.allResumeYaml.edges[0].node.resume'),
+          skills = this.get_skills(),
+          activities_awards = this.get_activities_awards();
 
     const resume = resume_data.map((resume, i) => (
         <ResumeItem
@@ -41,7 +77,7 @@ class ResumeIndex extends React.Component {
           </h4>
           <section className={s.section_content}>
             <p>
-              {skills_data}
+              {skills}
             </p>
           </section>
         </div>
@@ -68,7 +104,7 @@ class ResumeIndex extends React.Component {
           </h4>
           <section className={s.section_content}>
             <p>
-              {activities_awards_data}
+              {activities_awards}
             </p>
           </section>
         </div>

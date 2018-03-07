@@ -5,7 +5,6 @@
   padding: spacing(half);
   margin: 0 auto;
   max-width: breakpoint(max);
-  flex-wrap: wrap;
   justify-content: end;
 
   list-style-type: none;
@@ -14,4 +13,16 @@
 .list_item {
   padding: spacing(half);
   margin-left: spacing();
+}
+
+.vertical {
+  flex-direction: column;
+
+  text-align: right;
+}
+
+.horizontal {
+  flex-wrap: wrap;
+
+  text-align: left;
 }

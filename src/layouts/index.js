@@ -18,20 +18,22 @@ class Template extends React.Component {
 
   make_header = () => {
 
-    const { location } = this.props,
-          { title, tagline }    = this.get_site_meta(),
-          is_home      = (location.pathname === '/'),
-          header_link  = <Link to={'/'}>{title}</Link>
+    const { location }       = this.props,
+          { title, tagline } = this.get_site_meta(),
+          is_home            = (location.pathname === '/'),
+          header_link        = <Link to={'/'}>{title}</Link>;
 
     return (is_home) ? <span><h1 className={s_home.header}>{header_link}</h1><small className={s_home.tagline}>{tagline}</small></span> : <h2>{header_link}</h2>
   }
 
   make_menu = () => {
-    const menu_data = get(this, 'props.data.allMenuYaml.edges[0].node.menu');
+    const menu_data = get(this, 'props.data.allMenuYaml.edges[0].node.menu'),
+          is_vertical = ((location.pathname === '/') ? true : false);
 
     return (
       <Menu
         data={menu_data}
+        vertical={is_vertical}
       />
     )
   }
@@ -39,11 +41,11 @@ class Template extends React.Component {
   render() {
 
     const { children } = this.props,
-          is_header    = (location.pathname === '/'),
+          is_homepage  = (location.pathname === '/'),
           header       = this.make_header(),
           menu         = this.make_menu();
 
-    if (is_header) {
+    if (is_homepage) {
       return ( 
         <div className={s_home.wrapper}>
           <div className={s_home.title}>

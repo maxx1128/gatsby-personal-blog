@@ -17,13 +17,21 @@ class Menu extends React.Component {
     );
   }
 
+  get_menu_classes = () => {
+    const is_vertical = this.props.vertical,
+          vertical_classes = is_vertical ? s.vertical : s.horizontal;
+
+    return `${s.list} ${is_vertical ? s.vertical : s.horizontal}`;
+  }
+
   render() {
 
-    const menu_items = this.make_menu_items()
+    const menu_items = this.make_menu_items(),
+          classes = this.get_menu_classes();
 
     return (
-      <div>
-        <ul className={s.list}>
+      <div className={s.container}>
+        <ul className={classes}>
           {menu_items}
         </ul>
       </div>
