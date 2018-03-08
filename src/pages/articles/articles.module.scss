@@ -22,3 +22,5 @@
 }
 
 .description { margin-bottom: 0; }
+
+.content { composes: square-content; }

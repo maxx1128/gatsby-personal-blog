@@ -3,6 +3,6 @@
 .wrapper {}
 
 .title {
-  padding-left: spacing();
+  composes: square-content;
   margin-top: 0;
 }

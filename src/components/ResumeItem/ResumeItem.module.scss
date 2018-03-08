@@ -18,7 +18,7 @@
 
 .name,
 .description,
-.stack { padding: spacing(); }
+.stack { padding: spacing() 0; }
 
 .name {}
 
@@ -41,6 +41,10 @@
 
     border-bottom-width: 0;
   }
+
+  .name,
+  .description,
+  .stack { padding: spacing(); }
 
   .role {
     margin-top: spacing(oneHalf);

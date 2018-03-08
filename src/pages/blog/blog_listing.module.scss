@@ -13,6 +13,7 @@
   }
 
   .blogItem {
+    padding: 0 spacing();
     grid-column: span 1;
     grid-row: span 1;
   }
@@ -20,4 +21,6 @@
 
 @include larger-than(lg) {
   .container { grid-gap: spacing(double); }
+
+  .blogItem { padding: 0; }
 }

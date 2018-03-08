@@ -20,57 +20,58 @@ class AboutIndex extends React.Component {
         </div>
 
         <div className={s.content}>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <i>Restinguet citius, si ardentem acceperit.</i> Quid enim de amicitia statueris utilitatis causa expetenda vides. Cum audissem Antiochum, Brute, ut solebam, cum M. Summus dolor plures dies manere non potest? <code>Duo Reges: constructio interrete.</code> Sed tu istuc dixti bene Latine, parum plane. Avaritiamne minuis? Proclivi currit oratio. <mark>Quorum altera prosunt, nocent altera.</mark> <i>Id enim natura desiderat.</i> </p>
+            <p>Hello, you’ve reached the About Page of Max Antonucci. I’m likely not here right now, so please read the following major info about myself and leave a issue or pull request after the footer.</p>
 
-            <h3>Cum autem in quo sapienter dicimus, id a primo rectissime dicitur.</h3>
+            <h3 id="im-a-coder">I’m a Coder</h3>
 
-            <p>Sed plane dicit quod intellegit. Qua tu etiam inprudens utebare non numquam. Quid nunc honeste dicit? Naturales divitias dixit parabiles esse, quod parvo esset natura contenta. </p>
+            <p>Some backstory: I originally studied journalism in college, but halfway through I started front-end programming and got gradually immersed in it. I wound up doing more coding than writing during my studies, until it was all I wanted to focus on (and getting paid for). Two days after graduation, I was working full-time as a developer.</p>
 
-            <h3>Scisse enim te quis coarguere possit?</h3>
-
-            <p>Teneo, inquit, finem illi videri nihil dolere. <b>Qui ita affectus, beatum esse numquam probabis;</b> Bonum incolumis acies: misera caecitas. <a href='http://loripsum.net/' target='_blank'>Tu quidem reddes;</a> Sin aliud quid voles, postea. <code>Paria sunt igitur.</code> Sed fac ista esse non inportuna; Quid autem habent admirationis, cum prope accesseris? <a href='http://loripsum.net/' target='_blank'>Certe non potest.</a> </p>
-
-            <ol>
-                <li>Cuius tanta tormenta sunt, ut in iis beata vita, si modo dolor summum malum est, esse non possit.</li>
-                <li>Hic ego: Pomponius quidem, inquam, noster iocari videtur, et fortasse suo iure.</li>
-                <li>Egone non intellego, quid sit don Graece, Latine voluptas?</li>
-                <li>Nam constitui virtus nullo modo potesti nisi ea, quae sunt prima naturae, ut ad summam pertinentia tenebit.</li>
-            </ol>
-
-            <pre>
-                Quo modo autem optimum, si bonum praeterea nullum est? Quod totum contra est. <br />
-                Quo modo autem optimum, <br />
-                Si bonum praeterea nullum est? <br />
-                Quod totum contra est.
-            </pre>
-
-            <blockquote cite='http://loripsum.net'>
-                Quocumque enim modo summum bonum sic exponitur, ut id vacet honestate, nec officia nec virtutes in ea ratione nec amicitiae constare possunt.
-            </blockquote>
-
-            <h4>Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus</h4>
-
-            <p>Respondent extrema primis, media utrisque, omnia omnibus. Cave putes quicquam esse verius. Itaque ad tempus ad Pisonem omnes. Qui autem esse poteris, nisi te amor ipse ceperit? </p>
+            <p>My biggest focus now is still front-end development, for several reasons: combining logic and creativity, making cool-looking components, always learning more, and the confused looks of people watching me work. I focus most on:</p>
 
             <ul>
-                <li>Tollenda est atque extrahenda radicitus.</li>
-                <li>Nam prius a se poterit quisque discedere quam appetitum earum rerum, quae sibi conducant, amittere.</li>
-                <li>Ut aliquid scire se gaudeant?</li>
+              <li>The big three: HTML, CSS and Javascript.</li>
+              <li>Preprocessors such as Nunjucks, Liquid, Pug, and Sass.</li>
+              <li>Ember is my current JavaScript framework of choice, for both its focus on proven conventions and I use it heavily in my current job.</li>
+              <li>I’ve got a special love of Sass architecture. So far my favorite system combines ITCSS, BEM, and mapping global variables. However, I’m becoming a fast fan of Atomic CSS.</li>
+              <li>Webpack and Gulp.js to automate builds, optimizations, added functions, testing, and balancing my checkbook. They do it all.</li>
+              <li>Jekyll for static-site generation. You’d be amazed how often it works better than WordPress.</li>
+              <li>Front-end Architecture and Atomic Design for organized, scalable code. I’m a big fan of <a href="http://patternlab.io/">PatternLab.io</a> for this.</li>
+              <li>Basic UI and UX design.</li>
             </ul>
 
-            <p>Tum Piso: Quoniam igitur aliquid omnes, quid Lucius noster? Nemo nostrum istius generis asotos iucunde putat vivere. Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus; Paria sunt igitur. Quis istud possit, inquit, negare? Ergo illi intellegunt quid Epicurus dicat, ego non intellego? Hoc dixerit potius Ennius: Nimium boni est, cui nihil est mali. <b>Efficiens dici potest.</b> Est, ut dicis, inquam. Quid enim est a Chrysippo praetermissum in Stoicis? </p>
+            <p>In some of my free time I’m building my JavaScript fundamentals with Node, Express, and React.</p>
 
-            <h5>Scisse enim te quis coarguere possit?</h5>
+            <h3 id="im-a-writer">I’m a Writer</h3>
 
-            <blockquote cite='http://loripsum.net'>
-                Quocumque enim modo summum bonum sic exponitur, ut id vacet honestate, nec officia nec virtutes in ea ratione nec amicitiae constare possunt.
-            </blockquote>
+            <p>While coding is what ultimately stuck with me, I still enjoyed studying journalism. I wrote for the Daily Orange and did technical-focused features for The NewsHouse, as well as some data and visual reporting. My main thing was features on tough topics like religion and gun control, since I enjoy exploring hard topics most people like to avoid. As you can imagine, this helped my writing but not my social life. I later wrote opinion columns on traveling abroad and politics.</p>
 
-            <p>Teneo, inquit, finem illi videri nihil dolere. <b>Qui ita affectus, beatum esse numquam probabis;</b> Bonum incolumis acies: misera caecitas. <a href='http://loripsum.net/' target='_blank'>Tu quidem reddes;</a> Sin aliud quid voles, postea. <code>Paria sunt igitur.</code> Sed fac ista esse non inportuna; Quid autem habent admirationis, cum prope accesseris? <a href='http://loripsum.net/' target='_blank'>Certe non potest.</a> </p>
+            <p>Today my writing is sadly limited to my blog, though I’d like to write serious articles again someday.</p>
 
-            <h6>Cur, nisi quod turpis oratio est?</h6>
+            <h3 id="im-a-freethinker">I’m a Freethinker</h3>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <i>Restinguet citius, si ardentem acceperit.</i> Quid enim de amicitia statueris utilitatis causa expetenda vides. Cum audissem Antiochum, Brute, ut solebam, cum M. Summus dolor plures dies manere non potest? <code>Duo Reges: constructio interrete.</code> Sed tu istuc dixti bene Latine, parum plane. Avaritiamne minuis? Proclivi currit oratio. <mark>Quorum altera prosunt, nocent altera.</mark> <i>Id enim natura desiderat.</i> </p>
+            <p>My most prized possessions actually <strong>aren’t</strong> my laptop, my laptop backups, or my laptop stickers. It’s my ability to think and imagine freely. They’re unique traits among humans that are important to embrace. Otherwise we risk losing our very humanity.</p>
+
+            <p>Don’t be surprised if a good chunk of what I write, or especially tweet, has a philosophical edge. Asking unexpected questions and questioning unexpected things are ultimately our best weapons as people. Do we truly have free will? Is human nature innately positive or negative? How much can we trust our memories and perceptions? Can we tell when others are unconsciously manipulating our thoughts and decisions? Perhaps most importantly, what’s a moral way to live life?</p>
+
+            <p>If the sky is falling, what was holding it up in the first place? Is it falling because of something we did or something we need to figure out? Is it a warning, an apocalypse, or the start of a horrible B movie?</p>
+
+            <p>These, and more, are the thoughts that keep me up at night. I’ll send a press release about them all later.</p>
+
+            <h4 id="random-facts-about-me-you-may-enjoy">Random Facts About Me You May Enjoy</h4>
+
+            <ol>
+              <li><strong>I enjoy boxing in the mornings.</strong> It’s better to get all that aggression out before any meetings. Punching bags don’t have any chances to poison my lunch in the late morning after hitting them in the chest.</li>
+              <li><strong>I’m obsessed with the Phoenix Wright Franchise.</strong> Formal clothes aside, what’s not to love about people who generate pure awesome from a mix of logic, murders, magic lie-detecting superpowers, inane legal systems, and yelling? Nothing.</li>
+              <li><strong>I’m an active “Maker”.</strong> New Haven has MakeHaven, a “maker space” with lots of tools for making crafts for fun and profit. My current favorites are the sewing machines and the laser cutters. They also have button machines, but I’ve already made dozens with my own.</li>
+            </ol>
+
+            <h3 id="a-summary-of-me">A Summary of Me</h3>
+
+            <p>As you can tell from the above (because I know you didn’t skip to the end) I am a nerd with a budding coding career, offbeat sense of humor, a love of being intellectual, and requisite love of wine. But I like what I do and what I think about, despite knowing I’ll <em>always</em> have more to do in both. If anything, the fact that I need to keep learning is why I enjoy coding.</p>
+
+            <p>Also I don’t drink coffee. Seems unimportant, but I assumed there’s a law about coffee jokes in these things.</p>
+
+            <p>All done! You may now half-heartedly chuckle and navigate to another page here or elsewhere on the web.</p>
         </div>
       </div>
     )

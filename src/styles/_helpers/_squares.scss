@@ -77,7 +77,7 @@ $secondary: color(secondary);
   align-items: flex-start;
 
   @include larger-than(md) {
-    max-width: 65%;
+    max-width: 85%;
     margin-right: 80%;
     align-items: flex-end;
     float: none;

@@ -1,5 +1,7 @@
 @import './../../styles/styles.scss';
 
+.wrapper { composes: square-content; }
+
 .section { padding-bottom: spacing(); }
 
 .section_title { display: none; }

@@ -30,13 +30,13 @@ class ArticlesIndex extends React.Component {
 
     return (
       <div>
-        <p>
-          Articles Page!
-        </p>
+        <div className={s.content}>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde nihil, harum nesciunt nobis qui dolores earum illum autem id voluptatibus nemo dignissimos rem at necessitatibus aspernatur saepe dolore sunt, eos.
+          </p>
 
-        <ul>
           {articles}
-        </ul>
+        </div>
       </div>
     )
   }

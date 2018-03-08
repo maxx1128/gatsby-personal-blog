@@ -56,9 +56,11 @@ class ResumeIndex extends React.Component {
 
     return (
       <div className={s.wrapper}>
-        <h1 className={s.title}>
-          Resume Page!
-        </h1>
+        <div className={s.intro}>
+          <h1 className={s.title}>
+            Resume Page!
+          </h1>
+        </div>
 
         <div className={s.section}>
           <h4 className={s.section_title}>
