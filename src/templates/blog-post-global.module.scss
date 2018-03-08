@@ -1,6 +1,6 @@
 @import './../styles/styles.scss';
 
-.twitter-tweet {
+twitterwidget {
   margin-right: auto;
   margin-bottom: spacing(double) !important;
   margin-left: auto;
@@ -21,7 +21,7 @@ img { max-width: 100%; }
 
 figure img { margin: 0 auto; }
 
-blockquote {
+blockquote:not([class]) {
   margin: spacing(double) 0;
 
   font-size: type(font-size, h3);
@@ -46,7 +46,7 @@ blockquote {
   margin: spacing(double) 0;
 }
 
-blockquote cite {
+blockquote:not([class]) cite {
   display: block;
 
   text-align: right;

@@ -69,8 +69,19 @@ $secondary: color(secondary);
 .square-float-left { @include square-float('left'); }
 .square-float-right { @include square-float('right'); }
 
-.square-content {
-  padding: spacing();
+.square-title {
+  @include square-float('left');
+  @include square($primary, 'top-left');
 
-  @include larger-than(md) { padding-top: spacing(triple); }
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include larger-than(md) {
+    max-width: 65%;
+    margin-right: 80%;
+    align-items: flex-end;
+    float: none;
+  }
 }
+
+.square-content { padding: spacing(); }

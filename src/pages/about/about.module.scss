@@ -4,12 +4,11 @@
   composes: border-secondary;
 }
 
-
 .title {
-  composes: square-float-left square-primary-top-left;
+  composes: square-title;
 }
 
-.header { margin-top: 0; }
+.header { margin: 0; }
 
 .subheader { margin-bottom: 0; }
 

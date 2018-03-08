@@ -10,7 +10,7 @@
 }
 
 .title {
-  composes: square-float-left square-primary-top-left;
+  composes: square-title;
 }
 
 .title_header { margin: 0 0 spacing(double); }

@@ -50,7 +50,13 @@ a {
 }
 
 ol,
-ul { list-style-position: inside; }
+ul {
+  margin-top: 0;
+
+  list-style-position: inside;
+
+  li { margin-bottom: spacing(third); }
+}
 
 @each $header in $header-els {
   #{$header} { font-family: type(font-family, header); }
