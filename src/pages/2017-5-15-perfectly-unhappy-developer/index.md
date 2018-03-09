@@ -11,6 +11,8 @@ To this day, one of my favorite online articles is The Oatmeal's comic on being 
 
 But I've found the real reason: I'm not a happy person either.
 
+![Staring down at shattered glass.](./featured.png)
+
 This doesn't mean I'm miserable or don't like my life. But the parts of my life I enjoy the most don't fit common definitions of happiness.
 
 I remember going to a typical party event in college. There was a big crowd of students, a band playing music, alcohol passed around, and lots of visible skin. It all felt pleasant, but I didn't feel happy. Instead I felt stale and self-indulgent. I was zoning out in my own little world. I'm not saying it was boring and others should have felt that way. That's how I reacted to it.
@@ -39,6 +41,8 @@ All these meet my definition of meaningful, so I'm drawn back to them. But they 
 They make me feel frustrated and inadequate, insecure and lost. 
 
 They make me feel astounded and intrigued, busy and complex.
+
+![A surreal landscape view over an island.](./space.jpg)
 
 They make me feel like a human going headfirst into the turmoil of existence. Seeing a spectrum of ideas and feelings that push me up, drag me down, and toss me somewhere else. To find something new. To struggle with a new obstacle. To discover a new strength.
 
