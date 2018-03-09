@@ -1,9 +1,7 @@
 import React from 'react';
 import s from './project.module.scss'
 
-const Project = ({ data }) => {
-  
-  const image = "http://via.placeholder.com/400x400";
+const Project = ({ data, image }) => {
 
   return (
     <a href={data.link} target="_blank" rel="noopener" className={s.container}>
