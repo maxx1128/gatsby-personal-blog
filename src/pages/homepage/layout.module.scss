@@ -6,7 +6,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: spacing(half);
-  min-height: 100vh;
+  
+  @include larger-than(md) { min-height: 100vh; }
 }
 
 .title { border: $border; }
@@ -100,6 +101,7 @@
   }
 
   .menu {
+    padding-left: spacing(half);
     grid-column: 11 / 13;
     grid-row: 6 / 8;
 

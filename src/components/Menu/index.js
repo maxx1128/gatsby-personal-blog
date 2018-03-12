@@ -4,6 +4,22 @@ import s from './Menu.module.scss'
 
 class Menu extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      expanded: false
+    }
+  }
+
+  toggle_expansion = () => {
+    let current_exp = this.state.expanded,
+        new_exp     = !current_exp;
+
+    this.setState({
+      expanded: new_exp
+    });
+  }
+
   make_menu_items = () => {
     const menu_items = this.props.data;
 
@@ -19,9 +35,10 @@ class Menu extends React.Component {
 
   get_menu_classes = () => {
     const is_vertical = this.props.vertical,
-          vertical_classes = is_vertical ? s.vertical : s.horizontal;
+          vertical_classes = is_vertical ? s.vertical : s.horizontal,
+          expanded_classes = this.state.expanded ? s.expanded : s.collapsed;
 
-    return `${s.list} ${is_vertical ? s.vertical : s.horizontal}`;
+    return `${s.list} ${vertical_classes} ${expanded_classes}`;
   }
 
   render() {
@@ -31,6 +48,9 @@ class Menu extends React.Component {
 
     return (
       <div className={s.container}>
+        <span className={s.toggle} onClick={() => this.toggle_expansion()}>
+          Toggle
+        </span>
         <ul className={classes}>
           {menu_items}
         </ul>

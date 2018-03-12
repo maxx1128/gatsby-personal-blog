@@ -4,7 +4,7 @@ $secondary: color(secondary);
 
 @mixin square($color, $position) {
   display: flex;
-  padding: spacing(oneHalf);
+  padding: spacing(oneHalf) spacing();
   align-items: center;
   justify-content: center;
 
@@ -15,6 +15,8 @@ $secondary: color(secondary);
   p { margin: 0; }
 
   @include larger-than(md) {
+    padding: spacing(oneHalf);
+
     @if ($position == 'top-left') {
       border-right: $border;
       border-bottom: $border;
@@ -61,7 +63,7 @@ $secondary: color(secondary);
   }
   
   @include larger-than(max) {
-    margin-#{$direction}: -12rem;
+    margin-#{$direction}: -8rem;
     max-width: 70%;
   }
 }

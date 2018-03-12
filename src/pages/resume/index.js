@@ -57,9 +57,9 @@ class ResumeIndex extends React.Component {
     return (
       <div className={s.wrapper}>
         <div className={s.intro}>
-          <h1 className={s.title}>
-            Resume Page!
-          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem molestiae, molestias, provident distinctio accusantium alias laboriosam. Ab neque voluptates est, earum vitae ipsum minima ratione iure exercitationem sunt! Facilis, numquam?
+          </p>
         </div>
 
         <div className={s.section}>

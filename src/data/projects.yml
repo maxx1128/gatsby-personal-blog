@@ -1,4 +1,10 @@
 - projects:
+  - name: SeeClickFix
+    date: 2017/10/15
+    image: 'seeclickfix'
+    description: "My first big project for SeeClickFix was developing their new marketing site. While several people worked on the design, the front-end code with Jekyll was almost entirely done by me. It uses a few Material Web Components, Pa11y to test for accessibility, and the CSS was built on ITCSS and BEM. It was a major upgrade from the previous version, and was very fun to create!"
+    link: https://seeclickfix.com/
+
   - name: Puzzle Pieces
     date: 2017/12/17
     image: 'puzzle_pieces'
@@ -46,12 +52,6 @@
     image: 'longform_parallax_effect'
     description: 
     link: https://codepen.io/max1128/pen/pbaxpK
-
-  - name: SeeClickFix
-    date: 2017/10/15
-    image: 'seeclickfix'
-    description: "My first big project for SeeClickFix was developing their new marketing site. While several people worked on the design, the front-end code with Jekyll was almost entirely done by me. It uses a few Material Web Components, Pa11y to test for accessibility, and the CSS was built on ITCSS and BEM. It was a major upgrade from the previous version, and was very fun to create!"
-    link: https://seeclickfix.com/
 
   - name: EmberDex
     date: 2017/09/17

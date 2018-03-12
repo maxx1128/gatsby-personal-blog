@@ -8,6 +8,7 @@ import profile_pic from './../components/Bio/profile-pic.png'
 
 import './global.module.scss'
 import s from './layout.module.scss'
+import s_header from './header.module.scss'
 import s_home from './../pages/homepage/layout.module.scss'
 
 class Template extends React.Component {
@@ -16,14 +17,32 @@ class Template extends React.Component {
     return get(this, 'props.data.site.siteMetadata')
   }
 
-  make_header = () => {
+  make_title = () => {
 
     const { location }       = this.props,
           { title, tagline } = this.get_site_meta(),
           is_home            = (location.pathname === '/'),
           header_link        = <Link to={'/'}>{title}</Link>;
 
-    return (is_home) ? <span><h1 className={s_home.header}>{header_link}</h1><small className={s_home.tagline}>{tagline}</small></span> : <h2>{header_link}</h2>
+    return (is_home) ? (
+      <span>
+        <h1 className={s_home.header}>
+          {header_link}
+        </h1>
+        <small className={s_home.tagline}>
+          {tagline}
+        </small>
+      </span>
+    ) : (
+      <span className={s_header.title}>
+        <h2 className={s_header.titleText}>
+          {header_link}
+        </h2>
+        <small className={s_home.tagline}>
+          {tagline}
+        </small>
+      </span>
+    )
   }
 
   make_menu = () => {
@@ -38,18 +57,33 @@ class Template extends React.Component {
     )
   }
 
+  make_header = () => {
+    const title       = this.make_title(),
+          menu        = this.make_menu();
+
+    return (
+      <header className={s_header.container}>
+        {title}
+        <div className={s_header.menu}>
+          {menu}
+        </div>
+      </header>
+    );
+  }
+
   render() {
 
     const { children } = this.props,
           is_homepage  = (location.pathname === '/'),
-          header       = this.make_header(),
-          menu         = this.make_menu();
+          title        = this.make_title(),
+          menu         = this.make_menu(),
+          header       = this.make_header();
 
     if (is_homepage) {
       return ( 
         <div className={s_home.wrapper}>
           <div className={s_home.title}>
-            {header}
+            {title}
           </div>
 
           <div className={s_home.menu}>
@@ -82,7 +116,6 @@ class Template extends React.Component {
         </Helmet>
 
         {header}
-        {menu}
         
         <div className={s.wrapper}>
           <div className={s.container}>
