@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import Menu from './../components/Menu'
 import Helmet from 'react-helmet'
 import Bio from './../components/Bio'
+import Footer from './../components/Footer'
 import profile_pic from './../components/Bio/profile-pic.png'
 
 import './global.module.scss'
@@ -71,13 +72,24 @@ class Template extends React.Component {
     );
   }
 
+  make_footer = () => {
+    const social_data = get(this, 'props.data.allSocialYaml.edges[0].node.social');
+
+    return (
+      <Footer
+        social_links={social_data}
+      />
+    );
+  }
+
   render() {
 
     const { children } = this.props,
           is_homepage  = (location.pathname === '/'),
           title        = this.make_title(),
           menu         = this.make_menu(),
-          header       = this.make_header();
+          header       = this.make_header(),
+          footer       = this.make_footer();
 
     if (is_homepage) {
       return ( 
@@ -122,6 +134,10 @@ class Template extends React.Component {
             {children()}
           </div>
         </div>
+
+        <div>
+          {footer}
+        </div>
       </div>
     )
   }
@@ -151,6 +167,18 @@ export const templateQuery = graphql`
           menu {
             name
             link
+          }
+        } 
+      }
+    }
+    allSocialYaml {
+      edges {
+        node {
+          social {
+            name
+            url
+            icon
+            text
           }
         } 
       }
