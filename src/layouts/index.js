@@ -18,11 +18,15 @@ class Template extends React.Component {
     return get(this, 'props.data.site.siteMetadata')
   }
 
+  is_homepage = () => {
+    return (this.props.location.pathname === '/');
+  }
+
   make_title = () => {
 
     const { location }       = this.props,
           { title, tagline } = this.get_site_meta(),
-          is_home            = (location.pathname === '/'),
+          is_home            = this.is_homepage(),
           header_link        = <Link to={'/'}>{title}</Link>;
 
     return (is_home) ? (
@@ -48,7 +52,7 @@ class Template extends React.Component {
 
   make_menu = () => {
     const menu_data = get(this, 'props.data.allMenuYaml.edges[0].node.menu'),
-          is_vertical = ((location.pathname === '/') ? true : false);
+          is_vertical = this.is_homepage();
 
     return (
       <Menu
@@ -85,7 +89,7 @@ class Template extends React.Component {
   render() {
 
     const { children } = this.props,
-          is_homepage  = (location.pathname === '/'),
+          is_homepage  = this.is_homepage(),
           title        = this.make_title(),
           menu         = this.make_menu(),
           header       = this.make_header(),
