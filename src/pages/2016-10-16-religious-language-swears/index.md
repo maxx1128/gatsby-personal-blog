@@ -3,7 +3,7 @@ title:  "Swears, Religion, and the Zoo"
 date:   2016-10-16
 path:   "/language-swears-religion/"
 excerpt: Common language influences us a lot. Could our swear words affect our beliefs?
-featured-img: ./religious-language-swears/featured.png
+featured-img: ./featured.png
 ---
 
 Lately I've been fascinated by language, and this led me to ask one big question: why is there so much religion in swear words?

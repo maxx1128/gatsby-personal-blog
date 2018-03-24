@@ -4,7 +4,7 @@ date         : 2017-12-30
 icon         : at-sign
 excerpt      : "It's amazing how many worries vanish by thinking 'I have the benefit of not caring what they think.'"
 path         : "/answering-to-outselves/"
-featured-img : ./fromm-answer-themselves/quote.jpeg
+featured-img : ./quote.jpeg
 ---
 
 It's amazing how many worries of mine vanish by thinking **"I have the benefit of not caring what they think."**

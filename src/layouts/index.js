@@ -10,11 +10,11 @@ import profile_pic from './../components/Bio/profile-pic.png'
 import './global.module.scss'
 import s from './layout.module.scss'
 import s_header from './header.module.scss'
-import s_home from './../pages/homepage/layout.module.scss'
+import s_home from './homepage.module.scss'
 
 class Template extends React.Component {
   
-  get_site_meta =() => {
+  get_site_meta = () => {
     return get(this, 'props.data.site.siteMetadata')
   }
 
@@ -122,28 +122,28 @@ class Template extends React.Component {
           </div>
         </div>
       )
-    }
+    } else {
+      return (
+        <div>
+          <Helmet>
+              <meta charSet="utf-8" />
+              <title>My Title</title>
+          </Helmet>
 
-    return (
-      <div>
-        <Helmet>
-            <meta charSet="utf-8" />
-            <title>My Title</title>
-        </Helmet>
+          {header}
+          
+          <div className={s.wrapper}>
+            <div className={s.container}>
+              {children()}
+            </div>
+          </div>
 
-        {header}
-        
-        <div className={s.wrapper}>
-          <div className={s.container}>
-            {children()}
+          <div>
+            {footer}
           </div>
         </div>
-
-        <div>
-          {footer}
-        </div>
-      </div>
-    )
+      )
+    }
   }
 }
 
