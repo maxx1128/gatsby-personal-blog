@@ -1,4 +1,9 @@
 - articles:
+  - name: How EmberConf Reenergized the Little City in my Head
+    date: "03/20/2018"
+    link: https://blog.seeclickfix.com/how-emberconf-reenergized-the-little-city-in-my-head-ef3c9cd07505
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+
   - name: How to Refactor an Anime Newsletter
     date: "01/28/2018"
     link: https://dev.to/maxwell_dev/how-to-refactor-an-anime-newsletter-2f63
