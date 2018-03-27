@@ -11,6 +11,14 @@
 
 .title {
   composes: square-title;
+
+  position: relative;
+  margin: 0;
+  max-width: 100%;
+
+  @include larger-than(md) { padding-right: calc(100px + #{spacing(double)}); }
+
+  @include larger-than(lg) { padding-right: calc(100px + #{spacing()}); }
 }
 
 .title_header { margin: 0 0 spacing(double); }
@@ -18,3 +26,20 @@
 .date { font-style: italic; }
 
 .content { composes: square-content; }
+
+.icon {
+  composes: square-secondary;
+
+  position: absolute;
+  top: spacing() * -1;
+  right: spacing() * -1;
+  display: none;
+  padding: spacing();
+
+  @include larger-than(md) { display: block; }
+
+  @include larger-than(lg) {
+    top: spacing(double) * -1;
+    right: spacing(double) * -1;
+  }
+}

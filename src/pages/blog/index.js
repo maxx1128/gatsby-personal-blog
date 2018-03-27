@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import chunk from 'lodash/chunk'
 
-import s from './blog_listing.module.scss';
+import s from './blog_listing.module.scss'
 
 import BlogLink from './../../components/BlogLink'
 
@@ -13,11 +13,13 @@ class BlogIndex extends React.Component {
 
     const posts_list = post_data.map((post, i) => {
       if (post.node.path !== '/404/') {
-        const title = get(post, 'node.frontmatter.title') || post.node.path
+        const title = get(post, 'node.frontmatter.title') || post.node.path,
+              icon = get(post, 'node.frontmatter.icon') || 'camera'
 
         return (
           <BlogLink
             key={post.node.frontmatter.path}
+            icon={icon}
             to={post.node.frontmatter.path}
             title={title}
             date={post.node.frontmatter.date}
@@ -46,11 +48,10 @@ export const pageQuery = graphql`
           excerpt
           html
           frontmatter {
+            title
+            icon
             path
             date(formatString: "MMMM DD, YYYY")
-          }
-          frontmatter {
-            title
           }
         }
       }

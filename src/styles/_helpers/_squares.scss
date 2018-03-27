@@ -54,11 +54,11 @@ $secondary: color(secondary);
     @if ($direction == 'right') {
       margin-left: spacing();
 
-      text-align: left;
+      // text-align: left;
     } @else {
       margin-right: spacing();
 
-      text-align: right;
+      // text-align: right;
     }
   }
   
@@ -81,7 +81,6 @@ $secondary: color(secondary);
   @include larger-than(md) {
     max-width: 85%;
     margin-right: 80%;
-    align-items: flex-end;
     float: none;
   }
 }

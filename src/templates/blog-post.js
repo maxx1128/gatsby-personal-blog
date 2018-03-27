@@ -2,17 +2,25 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
+import Icon from './../components/FeatherIcon'
 
 import './blog-post-global.module.scss'
 import s from './blog-post.module.scss'
 
 class BlogPostTemplate extends React.Component {
   render() {
+
     const post = this.props.data.markdownRemark
 
     return (
       <div className={s.wrapper}>
         <div className={s.title}>
+          <Icon
+            type={post.frontmatter.icon}
+            size={60}
+            classes={s.icon}
+          />
+
           <h1 className={s.title_header}>
             {post.frontmatter.title}
           </h1>
@@ -37,6 +45,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        icon
         date(formatString: "MMMM DD, YYYY")
       }
     }
