@@ -74,9 +74,10 @@
 
 .wisdom {
   display: inline-block;
-  padding: spacing(half);
+  padding: spacing(half) spacing();
   margin-bottom: spacing();
 
+  text-align: center;
   font-style: italic;
   font-size: type(font-size, small);
   color: color(mono, light);
@@ -86,5 +87,7 @@
   @include larger-than(md) {
     margin-right: spacing();
     margin-bottom: 0;
+
+    text-align: left;
   }
 }
