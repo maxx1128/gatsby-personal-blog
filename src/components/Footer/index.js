@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Icon from './../FeatherIcon'
 
-import s from './Footer.module.scss';
+import s from './Footer.module.scss'
 
 class Footer extends React.Component {
 
@@ -13,7 +14,10 @@ class Footer extends React.Component {
     return social_links.map((social, i) => (
         <li key={i} className={s.social_link_item}>
           <a href={social.url} target="_blank" className={s.social_link}>
-            I
+            <Icon
+              type={social.icon}
+              size={20}
+            />
           </a>
         </li>
       )
