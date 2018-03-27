@@ -48,7 +48,7 @@
 @include larger-than(md) {
   .wrapper {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, minmax(30px, auto));
+    grid-template-rows: repeat(3, minmax(30px, auto)) 1fr repeat(2, minmax(30px, auto));
   }
 
   .title {
@@ -82,7 +82,7 @@
 @include larger-than(lg) {
   .wrapper {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, minmax(30px, auto));
+    grid-template-rows: repeat(2, minmax(30px, auto)) 1fr repeat(5, minmax(30px, auto));
   }
 
   .title {
