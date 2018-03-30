@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import s from './Menu.module.scss'
+import Icon from './../FeatherIcon'
 
 class Menu extends React.Component {
 
@@ -41,15 +42,27 @@ class Menu extends React.Component {
     return `${s.list} ${vertical_classes} ${expanded_classes}`;
   }
 
+  get_menu_icon = () => {
+    const icon = this.state.expanded ? 'minus' : 'plus'
+
+    return (
+      <Icon
+        type={icon}
+        size={32}
+      />
+    )
+  }
+
   render() {
 
     const menu_items = this.make_menu_items(),
-          classes = this.get_menu_classes();
+          classes = this.get_menu_classes(),
+          icon = this.get_menu_icon();
 
     return (
       <div className={s.container}>
         <span className={s.toggle} onClick={() => this.toggle_expansion()}>
-          Toggle
+          {icon}
         </span>
         <ul className={classes}>
           {menu_items}

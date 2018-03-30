@@ -17,6 +17,8 @@ class FeatherIcon extends React.Component {
     else if (icon_type === "at-sign") { return (<Icon.AtSign size={size}/>) } 
     else if (icon_type === "twitter") { return (<Icon.Twitter size={size}/>) } 
     else if (icon_type === "github") { return (<Icon.Github size={size}/>) } 
+    else if (icon_type === "plus") { return (<Icon.Plus size={size}/>) } 
+    else if (icon_type === "minus") { return (<Icon.Minus size={size}/>) } 
     else if (icon_type === "linkedin") { return (<Icon.Linkedin size={size}/>) } 
     else { return (<Icon.Edit3 size={size}/>) }
   }

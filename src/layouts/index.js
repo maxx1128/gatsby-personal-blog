@@ -30,23 +30,23 @@ class Template extends React.Component {
           header_link        = <Link to={'/'}>{title}</Link>;
 
     return (is_home) ? (
-      <span>
+      <div>
         <h1 className={s_home.header}>
           {header_link}
         </h1>
         <small className={s_home.tagline}>
           {tagline}
         </small>
-      </span>
+      </div>
     ) : (
-      <span className={s_header.title}>
+      <div className={s_header.title}>
         <h2 className={s_header.titleText}>
           {header_link}
         </h2>
         <small className={s_home.tagline}>
           {tagline}
         </small>
-      </span>
+      </div>
     )
   }
 
@@ -104,6 +104,7 @@ class Template extends React.Component {
             url_path={this.props.location.pathname}
             tagline={tagline}
           />
+          
           <div className={s_home.title}>
             {title}
           </div>

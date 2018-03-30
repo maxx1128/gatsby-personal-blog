@@ -3,22 +3,24 @@
 $header-border-width: spacing(third);
 
 .container {
-  display: grid;
+  display: flex;
   margin: 0 auto spacing();
   max-width: breakpoint(max);
-  grid-template-columns: repeat(3, auto) repeat(3, 1fr);
-  grid-template-rows: auto;
+  align-items: center;
+  justify-content: space-between;
 
-  @include larger-than(md) { margin-bottom: spacing(double); }
+  @include larger-than(md) {
+    padding-left: spacing();
+    margin-bottom: spacing(double);
+    flex-wrap: wrap;
+  }
 }
 
 .title {
   padding: spacing(half) spacing();
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 1;
 
   @include larger-than(md) {
-    border-right: $header-border-width solid color(primary);
+    border-left: $header-border-width solid color(primary);
   }
 }
 
@@ -30,9 +32,6 @@ $header-border-width: spacing(third);
 
 .menu {
   padding: spacing(quart);
-  margin-top: spacing(quart);
-  grid-column: 2 / span 5;
-  grid-row: 2 / span 1;
 
   @include larger-than(md) {
     border-left: $header-border-width solid color(secondary);

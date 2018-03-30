@@ -2,6 +2,10 @@
 
 .content {
   composes: border-secondary;
-
+  padding: 0 spacing();
   margin-bottom: spacing(double);
+
+  @include larger-than(md) {
+    padding: 0 spacing(oneHalf);
+  }
 }
