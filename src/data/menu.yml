@@ -1,15 +1,15 @@
 - menu:
-  - name: Who I Am
+  - name: About
     link: '/about/'
 
-  - name: Places I Worked
+  - name: Resume
     link: '/resume/'
 
-  - name: Projects I Made
+  - name: Portfolio
     link: '/portfolio/'
 
-  - name: Articles I Wrote
+  - name: Articles
     link: '/articles/'
 
-  - name: Thoughts I Saved
+  - name: Blog
     link: '/blog/'

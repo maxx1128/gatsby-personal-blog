@@ -10,11 +10,14 @@
 }
 
 .title {
-  composes: square-title;
-
   position: relative;
-  margin: 0;
-  max-width: 100%;
+  padding: spacing(oneHalf);
+  margin-bottom: spacing(oneHalf);
+  max-width: breakpoint(lg);
+
+  color: color(mono, light);
+
+  background-color: color(primary);
 
   @include larger-than(md) { padding-right: calc(100px + #{spacing(double)}); }
 

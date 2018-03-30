@@ -3,8 +3,11 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 
 import s from './resume.module.scss'
+import s_page from './../../layouts/page.module.scss'
 
 import ResumeItem from './../../components/ResumeItem'
+import Head from './../../components/Head'
+import Title from './../../components/Title'
 
 class ResumeIndex extends React.Component {
   
@@ -44,7 +47,9 @@ class ResumeIndex extends React.Component {
   render() {
     const resume_data = get(this, 'props.data.allResumeYaml.edges[0].node.resume'),
           skills = this.get_skills(),
-          activities_awards = this.get_activities_awards();
+          activities_awards = this.get_activities_awards(),
+          title = "Places I've Worked",
+          tagline = "Where I've worked, what I've learned, and the tools I did it all with.";
 
     const resume = resume_data.map((resume, i) => (
         <ResumeItem
@@ -55,12 +60,25 @@ class ResumeIndex extends React.Component {
     );
 
     return (
-      <div className={s.wrapper}>
-        <div className={s.intro}>
+      <div>
+        <Head
+          title={title}
+          url_path={this.props.location.pathname}
+          tagline={tagline}
+        />
+
+        <Title
+          title={title}
+          tagline={tagline}
+        />
+
+        <div className={s_page.content}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem molestiae, molestias, provident distinctio accusantium alias laboriosam. Ab neque voluptates est, earum vitae ipsum minima ratione iure exercitationem sunt! Facilis, numquam?
           </p>
         </div>
+
+        <br /><br />
 
         <div className={s.section}>
           <h4 className={s.section_title}>

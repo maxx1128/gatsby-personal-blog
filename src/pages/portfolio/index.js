@@ -4,8 +4,11 @@ import get from 'lodash/get'
 import chunk from 'lodash/chunk'
 
 import s from './portfolio.module.scss'
+import s_page from './../../layouts/page.module.scss'
 
 import Project from './../../components/Project'
+import Head from './../../components/Head'
+import Title from './../../components/Title'
 
 import ace_attorney_lorem_ipsum from "./images/ace_attorney_lorem_ipsum.png";
 import ace_attorney_staff_grid from "./images/ace_attorney_staff_grid.png";
@@ -41,7 +44,9 @@ const images = {
 
 class PortfolioIndex extends React.Component {
   render() {
-    const project_data = get(this, 'props.data.allProjectsYaml.edges[0].node.projects');
+    const title = "Projects I've Made",
+          tagline = "A collection of conspicious code I've created for companies, classrooms, or for creativity's sake.",
+          project_data = get(this, 'props.data.allProjectsYaml.edges[0].node.projects');
 
     const projects = project_data.map((project, i) => (
       <Project
@@ -58,11 +63,24 @@ class PortfolioIndex extends React.Component {
     ));
 
     return (
-      <div className={s.wrapper}>
-        <h1 className={s.title}>
-          Portfolio Page!
-        </h1>
+      <div>
+        <Head
+          title={title}
+          url_path={this.props.location.pathname}
+          tagline={tagline}
+        />
 
+        <Title
+          title={title}
+          tagline={tagline}
+        />
+
+        <div className={s_page.content}>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde nihil, harum nesciunt nobis qui dolores earum illum autem id voluptatibus nemo dignissimos rem at necessitatibus aspernatur saepe dolore sunt, eos.
+          </p>
+        </div>
+        
         <div className={s.projectContainer}>
           {grouped_projects}
         </div>

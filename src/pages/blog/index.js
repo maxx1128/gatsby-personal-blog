@@ -4,12 +4,17 @@ import get from 'lodash/get'
 import chunk from 'lodash/chunk'
 
 import s from './blog_listing.module.scss'
+import s_page from './../../layouts/page.module.scss'
 
+import Head from './../../components/Head'
+import Title from './../../components/Title'
 import BlogLink from './../../components/BlogLink'
 
 class BlogIndex extends React.Component {
   render() {
-    const post_data = get(this, 'props.data.allMarkdownRemark.edges')
+    const post_data = get(this, 'props.data.allMarkdownRemark.edges'),
+          title = "Thoughts I've Saved",
+          tagline = "We all have thoughts. I wrote some here for safekeeping.";
 
     const posts_list = post_data.map((post, i) => {
       if (post.node.path !== '/404/') {
@@ -23,7 +28,7 @@ class BlogIndex extends React.Component {
             to={post.node.frontmatter.path}
             title={title}
             date={post.node.frontmatter.date}
-            excerpt={post.node.excerpt}
+            excerpt={post.node.frontmatter.excerpt || post.node.excerpt}
             classes={s.blogItem}
           />
         )
@@ -31,9 +36,28 @@ class BlogIndex extends React.Component {
     });
 
     return (
-      <section className={s.container}>
-        {posts_list}
-      </section>
+      <div>
+        <Head
+          title={title}
+          url_path={this.props.location.pathname}
+          tagline={tagline}
+        />
+
+        <Title
+          title={title}
+          tagline={tagline}
+        />
+
+        <div className={s_page.content}>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptate repellendus saepe. Dignissimos fugiat hic, quasi quas, illo pariatur libero facere odit cumque saepe, porro quisquam obcaecati temporibus consequuntur voluptatum.
+          </p>
+        </div>
+
+        <section className={s.container}>
+          {posts_list}
+        </section>
+      </div>
     )
   }
 }
@@ -51,6 +75,7 @@ export const pageQuery = graphql`
             title
             icon
             path
+            excerpt
             date(formatString: "MMMM DD, YYYY")
           }
         }

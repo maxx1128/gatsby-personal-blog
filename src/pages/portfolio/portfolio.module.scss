@@ -1,12 +1,5 @@
 @import './../../styles/styles.scss';
 
-.wrapper {}
-
-.title {
-  composes: square-content;
-  margin-top: 0;
-}
-
 @include larger-than(md) {
   .two_row {
     display: grid;

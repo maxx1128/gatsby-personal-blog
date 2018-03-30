@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Menu from './../components/Menu'
-import Helmet from 'react-helmet'
+import Head from './../components/Head'
 import Bio from './../components/Bio'
 import Footer from './../components/Footer'
 import profile_pic from './../components/Bio/profile-pic.png'
@@ -89,6 +89,7 @@ class Template extends React.Component {
   render() {
 
     const { children } = this.props,
+          { tagline }  = this.get_site_meta(),
           is_homepage  = this.is_homepage(),
           title        = this.make_title(),
           menu         = this.make_menu(),
@@ -98,6 +99,11 @@ class Template extends React.Component {
     if (is_homepage) {
       return ( 
         <div className={s_home.wrapper}>
+          <Head
+            title={"My homepage!"}
+            url_path={this.props.location.pathname}
+            tagline={tagline}
+          />
           <div className={s_home.title}>
             {title}
           </div>
@@ -125,11 +131,6 @@ class Template extends React.Component {
     } else {
       return (
         <div>
-          <Helmet>
-              <meta charSet="utf-8" />
-              <title>My Title</title>
-          </Helmet>
-
           {header}
           
           <div className={s.wrapper}>

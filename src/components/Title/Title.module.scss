@@ -1,13 +1,7 @@
 @import './../../styles/styles.scss';
 
-.wrapper { composes: border-secondary; }
-
 .title { composes: square-title; }
 
 .header { margin: 0; }
 
 .subheader { margin-bottom: 0; }
-
-.intro {}
-
-.content { composes: square-content; }

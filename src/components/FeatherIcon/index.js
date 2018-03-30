@@ -3,9 +3,6 @@ import * as Icon from 'react-feather'
 import s from './FeatherIcon.module.scss'
 
 class FeatherIcon extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   get_icon = () => {
     const icon_type = this.props.type

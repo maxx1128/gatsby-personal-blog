@@ -11,13 +11,7 @@
 
   &:nth-of-type(odd) { background-color: color(secondary); }
 
-  transition: color 0.25s;
-
-  @include hovers() {
-    color: color(action);
-
-    transition: color 0.5s;
-  }
+  @include hovers() { color: color(mono, light); }
 }
 
 .header { margin: 0; }
@@ -26,7 +20,7 @@
 
 @include larger-than(md) {
   .container {
-    $indent-neg: spacing(double) * -1;
+    $indent-neg: spacing(oneHalf) * -2;
 
     margin: 0;
     justify-content: space-between;
@@ -59,8 +53,11 @@
   .image {
     display: block;
     margin: spacing(oneHalf) * -1;
-    width: auto;
-    max-height: 145%;
+    width: 100%;
+    max-width: 60%;
+    // height: auto;
     align-self: flex-end;
+
+    border: $border;
   }
 }

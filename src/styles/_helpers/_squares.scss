@@ -72,16 +72,17 @@ $secondary: color(secondary);
 .square-float-right { @include square-float('right'); }
 
 .square-title {
-  @include square-float('left');
-  @include square($primary, 'top-left');
+  padding: spacing(oneHalf);
+  margin-bottom: spacing(oneHalf);
+  max-width: breakpoint(lg);
 
-  flex-direction: column;
-  align-items: flex-start;
+  color: color(mono, light);
+
+  background-color: color(primary);
 
   @include larger-than(md) {
-    max-width: 85%;
-    margin-right: 80%;
-    float: none;
+    margin-right: (spacing() * -1);
+    margin-left: (spacing() * -1);
   }
 }
 

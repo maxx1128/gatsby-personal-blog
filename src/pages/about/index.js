@@ -2,24 +2,31 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
-import s from './about.module.scss'
+import s_page from './../../layouts/page.module.scss'
+
+import Head from './../../components/Head'
+import Title from './../../components/Title'
 
 class AboutIndex extends React.Component {
   render() {
+    
+    const title = "Who I Am",
+          tagline = "The story of my life, give or take a few years";
+
     return (
-      <div className={s.wrapper}>
+      <div>
+        <Head
+          title={title}
+          url_path={this.props.location.pathname}
+          tagline={tagline}
+        />
 
-        <div className={s.title}>
-          <h1 className={s.header}>
-            About Me
-          </h1>
+        <Title
+          title={title}
+          tagline={tagline}
+        />
 
-          <h5 className={s.subheader}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </h5>
-        </div>
-
-        <div className={s.content}>
+        <div className={s_page.content}>
             <p>Hello, you’ve reached the About Page of Max Antonucci. I’m likely not here right now, so please read the following major info about myself and leave a issue or pull request after the footer.</p>
 
             <h3 id="im-a-coder">I’m a Coder</h3>

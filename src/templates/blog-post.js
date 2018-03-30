@@ -7,13 +7,15 @@ import Icon from './../components/FeatherIcon'
 import './blog-post-global.module.scss'
 import s from './blog-post.module.scss'
 
+import Head from './../components/Head'
+
 class BlogPostTemplate extends React.Component {
   render() {
 
     const post = this.props.data.markdownRemark
 
     return (
-      <div className={s.wrapper}>
+      <div>
         <div className={s.title}>
           <Icon
             type={post.frontmatter.icon}
@@ -29,8 +31,16 @@ class BlogPostTemplate extends React.Component {
             {post.frontmatter.date}
           </small>
         </div>
- 
-        <div className={s.content} dangerouslySetInnerHTML={{ __html: post.html }} />
+
+        <div className={s.wrapper}>
+          <Head
+            title={post.frontmatter.title}
+            url_path={this.props.location.pathname}
+            tagline={post.frontmatter.excerpt || post.excerpt}
+          />
+   
+          <div className={s.content} dangerouslySetInnerHTML={{ __html: post.html }} />
+        </div>
       </div>
     )
   }
@@ -43,8 +53,10 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
+      excerpt
       frontmatter {
         title
+        excerpt
         icon
         date(formatString: "MMMM DD, YYYY")
       }

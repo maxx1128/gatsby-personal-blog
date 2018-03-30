@@ -3,11 +3,17 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 
 import s from './articles.module.scss';
+import s_page from './../../layouts/page.module.scss'
+
+import Head from './../../components/Head'
+import Title from './../../components/Title'
 
 class ArticlesIndex extends React.Component {
 
   render() {
-    const article_data = get(this, 'props.data.allArticlesYaml.edges[0].node.articles');
+    const article_data = get(this, 'props.data.allArticlesYaml.edges[0].node.articles'),
+          title = "Pieces I've Written",
+          tagline = "A collection of articles and blog posts I've thrown into the internet void.";
 
     const articles = article_data.map((article, i) => (
         <div className={s.container}>
@@ -30,13 +36,24 @@ class ArticlesIndex extends React.Component {
 
     return (
       <div>
-        <div className={s.content}>
+        <Head
+          title={title}
+          url_path={this.props.location.pathname}
+          tagline={tagline}
+        />
+
+        <Title
+          title={title}
+          tagline={tagline}
+        />
+
+        <div className={s_page.content}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde nihil, harum nesciunt nobis qui dolores earum illum autem id voluptatibus nemo dignissimos rem at necessitatibus aspernatur saepe dolore sunt, eos.
           </p>
-
-          {articles}
         </div>
+
+        {articles}
       </div>
     )
   }
