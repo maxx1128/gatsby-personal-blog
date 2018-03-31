@@ -12,7 +12,7 @@ class Head extends React.Component {
           url = `https://www.maxwellantonucci.com${this.props.url_path}`,
           tagline = this.props.tagline || 'TAGLINE HERE',
           descr = this.props.descr || tagline,
-          image = this.props.image || profilePic; 
+          image = `https://www.maxwellantonucci.com${(this.props.image || profilePic)}`; 
 
     return (
       <Helmet>

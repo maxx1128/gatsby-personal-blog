@@ -2,7 +2,7 @@
 title:  "Swears, Religion, and the Zoo"
 date:   2016-10-16
 path:   "/language-swears-religion/"
-excerpt: Common language influences us a lot. Could our swear words affect our beliefs?
+excerpt: "Common language influences us a lot. Could our swear words affect our beliefs?"
 featured-img: ./featured.png
 ---
 
