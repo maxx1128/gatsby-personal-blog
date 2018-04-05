@@ -8,8 +8,5 @@
   - name: Portfolio
     link: '/portfolio/'
 
-  - name: Articles
-    link: '/articles/'
-
-  - name: Blog
-    link: '/blog/'
+  - name: Writing
+    link: '/writing/'

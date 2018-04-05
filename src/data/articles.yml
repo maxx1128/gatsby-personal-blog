@@ -1,85 +1,90 @@
 - articles:
+  - name: The Career Adventures of Johnny JavaScript 
+    date: "2018-04-05"
+    link: https://dev.to/maxwell_dev/the-career-adventures-of-johnny-javascript-1cc3
+    description: "What if instead of 'The Adventures of Johnny Bunko,' he had been a programmer by the name of Johnny JavaScript? How would these six career essentials have changed?"
+
   - name: How EmberConf Reenergized the Little City in my Head
-    date: "03/20/2018"
+    date: "2018-03-20"
     link: https://blog.seeclickfix.com/how-emberconf-reenergized-the-little-city-in-my-head-ef3c9cd07505
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: How to Refactor an Anime Newsletter
-    date: "01/28/2018"
+    date: "2018-01-28"
     link: https://dev.to/maxwell_dev/how-to-refactor-an-anime-newsletter-2f63
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: Building the new SeeClickFix Website
-    date: "10/24/2017"
+    date: "2017-10-24"
     link: https://blog.seeclickfix.com/building-the-new-seeclickfix-website-1b6795d8f0c4
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: Take Notes on Everything
-    date: "10/31/2017"
+    date: "2017-10-31"
     link: https://dev.to/maxwell_dev/takes-notes-on-everything-3io
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: The Git Rebase Introduction I Wish I'd Had 
-    date: "09/24/2017"
+    date: "2017-09-24"
     link: https://dev.to/maxwell_dev/the-git-rebase-introduction-i-wish-id-had
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: Three Helpful Rules for Junior Devs 
-    date: "08/28/2017"
+    date: "2017-08-28"
     link: https://dev.to/maxwell_dev/three-helpful-rules-for-junior-devs
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: How to Make an Anime Newsletter 
-    date: "07/30/2017"
+    date: "2017-07-30"
     link: https://dev.to/maxwell_dev/how-to-make-an-anime-newsletter
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: Tips for Making Maintainable Pattern Libraries
-    date: "02/17/2017"
+    date: "2017-02-17"
     link: http://newhaven.io/blog/tips-maintainable-pattern-libraries/
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: Juice Jam 2014
-    date: "08/17/2014"
+    date: "2014-08-17"
     link: https://storify.com/newshouse/juice-jam-2014
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: Networking with Twitter
-    date: "08/12/2014"
+    date: "2014-08-12"
     link: http://www.slideshare.net/MaxwellAntonucci/twitter-for-networking
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: '#HealthCareHeroes'
-    date: "08/07/2014"
+    date: "2014-08-07"
     link: https://vimeo.com/102849451
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: No Developer is an Island
-    date: "04/27/2015"
+    date: "2015-04-27"
     link: http://internation.mower.com/no-developer-island/
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: Recapping the Tech Curve
-    date: "03/29/2014"
+    date: "2014-03-29"
     link: http://syracusespj.syr.edu/2014/03/29/recapping-tech-curve/
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: Conscience of Society
-    date: "03/27/2013"
+    date: "2013-03-27"
     link: http://dailyorange.com/2013/03/conscience-of-society-professor-alejandro-garcia-recognized-for-35-years-at-su-awarded-2013-daniel-and-mary-lou-rubenstein-social-justice-award/
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: With Open Arms
-    date: "02/27/2013"
+    date: "2013-02-27"
     link: http://dailyorange.com/2013/02/with-open-arms/
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: 'Stephen Barton, panel of experts open discussion on gun control'
-    date: "02/20/2013"
+    date: "2013-02-20"
     link: http://dailyorange.com/2013/02/stephen-barton-panel-of-experts-open-discussion-on-gun-control/
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
 
   - name: Such Great Heights
-    date: "08/28/2012"
+    date: "2012-08-28"
     link: http://dailyorange.com/2012/08/such-great-heights-local-organization-helps-students-reach-new-levels-of-achievement/
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."

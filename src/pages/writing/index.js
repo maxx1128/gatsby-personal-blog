@@ -10,11 +10,17 @@ import Head from './../../components/Head'
 import Title from './../../components/Title'
 import BlogLink from './../../components/BlogLink'
 
-class BlogIndex extends React.Component {
-  render() {
-    const post_data = get(this, 'props.data.allMarkdownRemark.edges'),
-          title = "Thoughts I've Saved",
-          tagline = "We all have thoughts. I wrote some here for safekeeping.";
+class WritingIndex extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      expanded: false
+    }
+  }
+
+  get_blog_posts = () => {
+    const post_data = get(this, 'props.data.allMarkdownRemark.edges');
 
     const posts_list = post_data.map((post, i) => {
       if (post.node.path !== '/404/') {
@@ -31,9 +37,49 @@ class BlogIndex extends React.Component {
             excerpt={post.node.frontmatter.excerpt || post.node.excerpt}
             classes={s.blogItem}
           />
-        )
+        );
       }
     });
+
+    return posts_list;
+  }
+
+  get_articles = () => {
+    const article_data = get(this, 'props.data.allArticlesYaml.edges[0].node.articles');
+
+    const articles = article_data.map((article, i) => (
+        <BlogLink
+          key={i}
+          icon={'link'}
+          to={article.link}
+          title={article.name}
+          date={article.date}
+          excerpt={article.description}
+          classes={s.blogItem}
+          external={true}
+        />
+      )
+    );
+
+    return articles;
+  }
+
+  get_all_writing = () => {
+    const blog_posts = this.get_blog_posts(),
+          articles = this.get_articles(),
+          all_writing = blog_posts.concat(articles);
+
+    all_writing.sort(function(a, b){
+      return new Date(b.props.date) - new Date(a.props.date)
+    });
+
+    return all_writing;
+  }
+
+  render() {
+    const title = "Thoughts I've Saved",
+          tagline = "We all have thoughts. I wrote some here for safekeeping.",
+          writing = this.get_all_writing();
 
     return (
       <div>
@@ -55,17 +101,17 @@ class BlogIndex extends React.Component {
         </div>
 
         <section className={s.container}>
-          {posts_list}
+          {writing}
         </section>
       </div>
     )
   }
 }
 
-export default BlogIndex
+export default WritingIndex
 
 export const pageQuery = graphql`
-  query BlogQuery {
+  query WritingQuery {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
@@ -76,9 +122,21 @@ export const pageQuery = graphql`
             icon
             path
             excerpt
-            date(formatString: "MMMM DD, YYYY")
+            date
           }
         }
+      }
+    }
+    allArticlesYaml {
+      edges {
+        node {
+          articles {
+            name
+            date
+            link
+            description
+          }
+        } 
       }
     }
   }
