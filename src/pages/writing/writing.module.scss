@@ -1,0 +1,54 @@
+@import './../../styles/styles.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-gap: spacing(triple);
+}
+
+@include larger-than(md) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blogItem {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@include larger-than(lg) {
+  .container { grid-gap: spacing(double); }
+}
+
+.form_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: none;
+  padding: spacing(half) 0;
+  flex-direction: column;
+
+  @include larger-than(md) {
+    display: flex;
+  }
+
+  &:not(:last-of-type) {
+    padding-right: spacing(oneHalf);
+    margin-right: spacing(oneHalf);
+
+    border-right: 2px solid color(secondary);
+  }
+}
+
+.radio_label {
+  margin-bottom: spacing(half);
+
+  cursor: pointer;
+
+  input { margin-right: spacing(third); }
+}

@@ -9,7 +9,7 @@ const BlogLink = ({ to, title, date, excerpt, classes, icon, external }) => {
         date_obj = new Date(date),
         months = ["January","Februrary","March","April","May","June","July","August","September","October","November","December"],
         month = months[(date_obj.getMonth() + 0)],
-        formatted_date = `${month} ${date_obj.getDay()}, ${date_obj.getFullYear()}`;
+        formatted_date = `${month} ${date_obj.getUTCDate()}, ${date_obj.getFullYear()}`;
 
   const component_content = (
     <div>

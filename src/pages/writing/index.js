@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import chunk from 'lodash/chunk'
 
-import s from './blog_listing.module.scss'
+import s from './writing.module.scss'
 import s_page from './../../layouts/page.module.scss'
 
 import Head from './../../components/Head'
@@ -15,7 +15,8 @@ class WritingIndex extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      expanded: false
+      order: 'desc',
+      group: 'all'
     }
   }
 
@@ -65,15 +66,38 @@ class WritingIndex extends React.Component {
   }
 
   get_all_writing = () => {
+
     const blog_posts = this.get_blog_posts(),
           articles = this.get_articles(),
-          all_writing = blog_posts.concat(articles);
+          all_writing = blog_posts.concat(articles),
+          order = this.state.order,
+          group = this.state.group;
 
-    all_writing.sort(function(a, b){
-      return new Date(b.props.date) - new Date(a.props.date)
+    let filtered_articles;
+
+    all_writing.sort(function(a, b) {
+      if (order === 'desc') {
+        return new Date(b.props.date) - new Date(a.props.date);
+      } else {
+        return new Date(a.props.date) - new Date(b.props.date);
+      }
     });
 
-    return all_writing;
+    if (group === 'articles') {
+      filtered_articles = all_writing.filter(item => item.props.external);
+    } else if (group === 'blog') {
+      filtered_articles = all_writing.filter(item => !item.props.external);
+    }
+
+    return (filtered_articles || all_writing);
+  }
+
+  update_order_filter = (order) => {
+    this.setState({ order: order });
+  }
+
+  update_group_filter = (group) => {
+    this.setState({ group: group });
   }
 
   render() {
@@ -98,6 +122,54 @@ class WritingIndex extends React.Component {
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptate repellendus saepe. Dignissimos fugiat hic, quasi quas, illo pariatur libero facere odit cumque saepe, porro quisquam obcaecati temporibus consequuntur voluptatum.
           </p>
+
+          <div className={s.form_wrapper}>
+            <form className={s.form}>
+              <label for="all" className={s.radio_label}>
+                <input type="radio" value="all"
+                  id="all"
+                  checked={this.state.group === 'all'}
+                  onChange={() => this.update_group_filter('all')}
+                />
+                Show All
+              </label>
+              <label for="articles" className={s.radio_label}>
+                <input type="radio" value="articles"
+                  id="articles"
+                  checked={this.state.group === 'articles'}
+                  onChange={() => this.update_group_filter('articles')}
+                />
+                Articles
+              </label>
+              <label for="blog" className={s.radio_label}>
+                <input type="radio" value="blog"
+                  id="blog"
+                  checked={this.state.group === 'blog'}
+                  onChange={() => this.update_group_filter('blog')}
+                />
+                Blog Posts
+              </label>
+            </form>
+
+            <form className={s.form}>
+              <label for="desc" className={s.radio_label}>
+                <input type="radio" value="desc"
+                  id="desc"
+                  checked={this.state.order === 'desc'}
+                  onChange={() => this.update_order_filter('desc')}
+                />
+                Newest
+              </label>
+              <label for="asc" className={s.radio_label}>
+                <input type="radio" value="asc"
+                  id="asc"
+                  checked={this.state.order === 'asc'}
+                  onChange={() => this.update_order_filter('asc')}
+                />
+                Oldest
+              </label>
+            </form>
+          </div>
         </div>
 
         <section className={s.container}>
