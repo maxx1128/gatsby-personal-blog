@@ -120,7 +120,7 @@ class WritingIndex extends React.Component {
 
         <div className={s_page.content}>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptate repellendus saepe. Dignissimos fugiat hic, quasi quas, illo pariatur libero facere odit cumque saepe, porro quisquam obcaecati temporibus consequuntur voluptatum.
+            I still have some journalist in me, so I enjoy writing - both personal pieces here and professional (to some extent) ones elsewhere. I've grouped my favorites here, added filters for your convenience, and invite you to enrich your mind with them. Armchair and green tea not included.
           </p>
 
           <div className={s.form_wrapper}>

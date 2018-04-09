@@ -74,7 +74,7 @@ class ResumeIndex extends React.Component {
 
         <div className={s_page.content}>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem molestiae, molestias, provident distinctio accusantium alias laboriosam. Ab neque voluptates est, earum vitae ipsum minima ratione iure exercitationem sunt! Facilis, numquam?
+            As a full-time adult, I have my own resume with an online version here. I can't bedazzle it like the copies I print, but it still has all the same info - companies, schools, skills, experience, and activities galore. Recruiters or stalkers who want more info can check out my <a href="https://www.linkedin.com/in/maxwellantonucci/" target="_blank">LinkedIn</a> profile.
           </p>
         </div>
 

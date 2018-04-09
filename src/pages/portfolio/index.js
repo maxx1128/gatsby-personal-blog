@@ -77,7 +77,7 @@ class PortfolioIndex extends React.Component {
 
         <div className={s_page.content}>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde nihil, harum nesciunt nobis qui dolores earum illum autem id voluptatibus nemo dignissimos rem at necessitatibus aspernatur saepe dolore sunt, eos.
+            All projects of mine, big and small, are welcome to my portfolio page! Keep in mind that some, especially those hosted elsewhere, may be updated or taken down overtime. Chances are I'm too busy making new additions to catch them all. You can always find a more up-to-date look at my current work on my <a href="http://codepen.io/max1128/" target="_blank">CodePen</a> and <a href="https://github.com/maxx1128" target="_blank">Github</a> profiles.
           </p>
         </div>
         
