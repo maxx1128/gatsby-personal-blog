@@ -1,0 +1,9 @@
+@import './../../../styles/styles.scss';
+
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hiddenChar { opacity: 0; }

@@ -5,7 +5,7 @@ class Homepage extends React.Component {
     return (
       <div>        
         <p>
-          DO NOT DELETE THIS FILE
+          Homepage!
         </p>
       </div>
     )

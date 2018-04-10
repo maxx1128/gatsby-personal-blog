@@ -5,6 +5,7 @@ import Menu from './../components/Menu'
 import Head from './../components/Head'
 import Bio from './../components/Bio'
 import Footer from './../components/Footer'
+import Reactrix from './../components/Reactrix'
 import profile_pic from './../components/Bio/profile-pic.png'
 
 import './global.module.scss'
@@ -120,6 +121,7 @@ class Template extends React.Component {
           </div>
 
           <div className={s_home.reactrix}>
+            <Reactrix />
           </div>
 
           <div className={s_home.photo_wrapper}>
