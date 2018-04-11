@@ -5,39 +5,29 @@ class Stream extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      string_frag: '',
-      index:  0
+      styles: {}
     }
   }
 
-  decorate_string_frag = (string) => {
-    let char_array = [...string];
+  componentWillMount = () => { this.set_random_left_position(); }
 
-    char_array.map((char) => {
-      return (
-        <span className={s.character}>
-          {char}
-        </span>
-      );
+  set_random_left_position = () => {
+    const position = `${Math.floor(Math.random() * 90) + 5}%`;
+
+    const styles = { left: position };
+
+    console.log(styles);
+
+    this.setState({
+      styles: styles
     });
-
-    return char_array;
   }
 
-  update_string_frag = () => {
-    const { index }        = this.state,
-          { string }       = this.props,
-          limit            = 7,
-          filler           = '♣'.repeat(limit);
-
-    const ready_string = (string + filler).replace(/\s/g, '♣'),
-          string_array = ready_string.split("").reverse(),
-          string_frag  = string_array.splice(index, limit),
-          new_index    = ((((index * -1) + limit) + 1) === ready_string.length) ? limit : index - 1;
-
-    let final_frag = string_frag.map((char, index) => {
-
-      const classes = (char === '♣') ? s.hiddenChar : '';
+  create_stream_array = () => {
+    const string_array = (this.props.string).replace(/\s/g, '♣').split("").reverse();
+          
+    const vertical_string = string_array.map((char, index) => {
+      const classes = (char === '♣') ? s.hiddenChar : s.VisibleChar;
 
       return (
         <span key={index} className={classes}>
@@ -46,22 +36,19 @@ class Stream extends Component {
       );
     });
 
-    this.setState({
-      string_frag: final_frag,
-      index: new_index
-    })
+    return vertical_string;
   }
-
-  componentWillMount = () => { this.update_string_frag() }
 
   render() {
     setTimeout(function() {
-      this.update_string_frag();
-    }.bind(this), 175);
+      this.set_random_left_position();
+    }.bind(this), 10000);
+
+    const string = this.create_stream_array();
 
     return (
-      <span className={s.container}>
-        {this.state.string_frag}
+      <span className={s.container} style={this.state.styles}>
+        {string}
       </span>
     );
   }

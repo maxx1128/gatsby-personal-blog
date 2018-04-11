@@ -1,9 +1,42 @@
 @import './../../../styles/styles.scss';
 
+@keyframes stream_down {
+   0% { top: -250%; }
+
+  97% {
+    top: 100%;
+    opacity: 1;
+  }
+
+  98% {
+    top: 100%;
+    opacity: 0;
+  }
+
+  99% {
+    top: -250%;
+    opacity: 0;
+  }
+   
+  100% {
+    top: -250%;
+    opacity: 1;
+  }
+}
+
+// animation: fade_in_out $animation_time infinite;
+// animation-delay: $animation_delay / 2;
+
 .container {
+  position: absolute;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+
+  animation: stream_down 10s linear infinite;
 }
+
+.visibleChar,
+.hiddenChar { flex: 1 1 12.5%; }
 
 .hiddenChar { opacity: 0; }
