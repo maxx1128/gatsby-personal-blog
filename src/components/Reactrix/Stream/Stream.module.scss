@@ -1,39 +1,41 @@
 @import './../../../styles/styles.scss';
 
 @keyframes stream_down {
-   0% { top: -250%; }
-
-  97% {
-    top: 100%;
-    opacity: 1;
-  }
-
-  98% {
-    top: 100%;
+  0% {
+    transform: translateY(0);
     opacity: 0;
   }
+
+  1% { opacity: 0; }
+
+  10% { opacity: 1; }
+
+  90% { opacity: 1; }
 
   99% {
-    top: -250%;
+    transform: translateY(125%);
     opacity: 0;
   }
-   
+
   100% {
-    top: -250%;
-    opacity: 1;
+    transform: translateY(0%);
+    opacity: 0;
   }
 }
 
-// animation: fade_in_out $animation_time infinite;
-// animation-delay: $animation_delay / 2;
-
 .container {
   position: absolute;
+  bottom: 100%;
+
   display: inline-flex;
   flex-direction: column;
   align-items: center;
 
-  animation: stream_down 10s linear infinite;
+  opacity: 0;
+  transform: translateY(0);
+  animation-name: stream_down;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .visibleChar,

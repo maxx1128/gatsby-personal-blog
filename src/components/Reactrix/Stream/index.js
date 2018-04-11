@@ -1,25 +1,53 @@
 import React, { Component } from 'react';
 import s from './Stream.module.scss'
 
+// Single source of truth for the animation length
+
 class Stream extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      styles: {}
+      styles: {},
+      callback: this.anim_length
     }
   }
 
-  componentWillMount = () => { this.set_random_left_position(); }
+  anim_length = 20000
 
-  set_random_left_position = () => {
-    const position = `${Math.floor(Math.random() * 90) + 5}%`;
+  get_random_left_position = () => `${Math.floor(Math.random() * 90) + 5}%`
+  get_random_font_size = () => `${Math.floor(Math.random() * 2) + 0.5}rem`
 
-    const styles = { left: position };
+  componentWillMount = () => {
+    const position = this.get_random_left_position(),
+          font_size = this.get_random_font_size(),
+          delay = Math.floor(Math.random() * 10) + 1,
+          callback = (delay * 1000) + this.anim_length;
 
-    console.log(styles);
+    const styles = {
+      left: position,
+      'animationDuration': `${this.anim_length / 1000}s`,
+      'animationDelay': `${delay}s`,
+      'fontSize': font_size
+    };
 
     this.setState({
-      styles: styles
+      styles: styles,
+      callback: callback
+    });
+  }
+
+  update_styles = () => {
+    const position = this.get_random_left_position(),
+          font_size = this.get_random_font_size();
+
+    let styles = this.state.styles;
+
+    styles['left'] = position;
+    styles['fontSize'] = font_size;
+
+    this.setState({
+      styles: styles,
+      callback: this.anim_length
     });
   }
 
@@ -41,8 +69,8 @@ class Stream extends Component {
 
   render() {
     setTimeout(function() {
-      this.set_random_left_position();
-    }.bind(this), 10000);
+      this.update_styles();
+    }.bind(this), this.state.callback);
 
     const string = this.create_stream_array();
 
