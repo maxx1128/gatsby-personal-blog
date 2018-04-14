@@ -1,0 +1,39 @@
+{
+  "defaults": {
+    "hideElements": ""
+  },
+  "urls": [
+    {
+      "url": "http://localhost:8000/",
+      "hideElements": ""
+    },
+    {
+      "url": "http://localhost:8000/about/",
+      "hideElements": ""
+    },
+    {
+      "url": "http://localhost:8000/resume/",
+      "hideElements": ""
+    },
+    {
+      "url": "http://localhost:8000/portfolio/",
+      "hideElements": ""
+    },
+    {
+      "url": "http://localhost:8000/writing/",
+      "hideElements": ""
+    },
+    {
+      "url": "http://localhost:8000/answering-to-outselves/",
+      "hideElements": ""
+    },
+    {
+      "url": "http://localhost:8000/perfectly-unhappy-developer/",
+      "hideElements": ""
+    },
+    {
+      "url": "http://localhost:8000/death-dogs-distance/",
+      "hideElements": ""
+    }
+  ]
+}
