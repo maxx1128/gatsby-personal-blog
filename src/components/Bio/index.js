@@ -1,6 +1,6 @@
 import React from 'react'
 
-import profilePic from './profile-pic.png'
+import profilePic from './profile-pic.jpg'
 import s from './Bio.module.scss'
 
 class Bio extends React.Component {

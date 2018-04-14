@@ -1,7 +1,7 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
 
-import profilePic from './../Bio/profile-pic.png'
+import profilePic from './../Bio/profile-pic.jpg'
 
 // Needs at least title, url, and tagline. descr and image are optional
 

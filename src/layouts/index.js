@@ -6,7 +6,7 @@ import Head from './../components/Head'
 import Bio from './../components/Bio'
 import Footer from './../components/Footer'
 import Reactrix from './../components/Reactrix'
-import profile_pic from './../components/Bio/profile-pic.png'
+import profile_pic from './../components/Bio/profile-pic.jpg'
 
 import './global.module.scss'
 import s from './layout.module.scss'
