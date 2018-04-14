@@ -127,6 +127,7 @@ class Template extends React.Component {
           <div className={s_home.photo_wrapper}>
             <img className={s_home.photo}
               src={profile_pic}
+              alt="Cartoon version of myself I use for my avatar"
             />
           </div>
         </div>
