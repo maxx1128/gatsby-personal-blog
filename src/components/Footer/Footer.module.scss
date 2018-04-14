@@ -72,6 +72,10 @@
   }
 }
 
+.social_link_descr {
+  @include screenreader;
+}
+
 .wisdom {
   display: inline-block;
   padding: spacing(half) spacing();

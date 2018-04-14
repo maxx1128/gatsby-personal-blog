@@ -13,11 +13,15 @@ class Footer extends React.Component {
 
     return social_links.map((social, i) => (
         <li key={i} className={s.social_link_item}>
-          <a href={social.url} target="_blank" className={s.social_link}>
+          <a href={social.url} target="_blank" rel="noopener" className={s.social_link}>
             <Icon
               type={social.icon}
               size={20}
             />
+
+            <span className={s.social_link_descr}>
+              Link to my {social.name} profile
+            </span>
           </a>
         </li>
       )
