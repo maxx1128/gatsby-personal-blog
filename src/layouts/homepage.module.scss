@@ -3,24 +3,34 @@
 .wrapper {
   display: grid;
   padding: spacing(half);
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr minmax(auto, 115px);
   grid-template-rows: auto;
   grid-gap: spacing(half);
   
   @include larger-than(md) { min-height: 100vh; }
 }
 
-.title { border: $border; }
+.title {
+  border: $border;
+}
 
-.header { margin: 0 0 spacing(third); }
+.header {
+  margin: 0 0 spacing(third);
+
+  @include smaller-than(md) { font-size: type(font-size, h4); }
+}
 
 .tagline {
   margin: 0;
   font-style: italic;
+
+  @include smaller-than(md) { display: none; }
 }
 
 .description {
   composes: square-primary;
+
+  grid-column: 1 / -1;
 }
 
 .reactrix {
@@ -31,7 +41,7 @@
   z-index: -1;
 }
 
-.menu {}
+.menu { align-self: center; }
 
 .photo {
   border: 3px solid color(mono, dark);
@@ -58,8 +68,12 @@
   }
 
   .menu {
+    padding-left: spacing(half);
+    margin-left: spacing();
     grid-column: 1 / 5;
     grid-row: 2 / 3;
+
+    border-left: spacing(half) solid color(primary);
   }
 
   .description {
@@ -106,8 +120,6 @@
     padding-left: spacing(half);
     grid-column: 11 / 13;
     grid-row: 6 / 8;
-
-    border-left: spacing(half) solid color(primary);
   }
 
   .photo_wrapper {

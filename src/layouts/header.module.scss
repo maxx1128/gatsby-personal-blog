@@ -4,7 +4,7 @@ $header-border-width: spacing(third);
 
 .container {
   display: flex;
-  margin: 0 auto spacing();
+  margin: 0 auto;
   max-width: breakpoint(max);
   align-items: center;
   justify-content: space-between;
@@ -28,6 +28,8 @@ $header-border-width: spacing(third);
   margin: 0;
 
   & a { text-decoration: none; }
+
+  @include smaller-than(md) { font-size: type(font-size, h5); }
 }
 
 .menu {
