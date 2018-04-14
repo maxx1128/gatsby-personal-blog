@@ -1,6 +1,6 @@
 {
   "defaults": {
-    "hideElements": "iframe[style='display: none;']"
+    "hideElements": "iframe[style='display: none;'], #rufous-sandbox"
   },
   "urls": [
     {
@@ -19,7 +19,7 @@
       "url": "http://localhost:8000/writing/"
     },
     {
-      "url": "http://localhost:8000/answering-to-outselves/"
+      "url": "http://localhost:8000/answering-to-ourselves/"
     },
     {
       "url": "http://localhost:8000/perfectly-unhappy-developer/"

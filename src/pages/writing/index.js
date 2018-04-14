@@ -124,7 +124,7 @@ class WritingIndex extends React.Component {
           </p>
 
           <div className={s.form_wrapper}>
-            <form className={s.form}>
+            <div className={s.form}>
               <label for="all" className={s.radio_label}>
                 <input type="radio" value="all"
                   id="all"
@@ -149,9 +149,9 @@ class WritingIndex extends React.Component {
                 />
                 Blog Posts
               </label>
-            </form>
+            </div>
 
-            <form className={s.form}>
+            <div className={s.form}>
               <label for="desc" className={s.radio_label}>
                 <input type="radio" value="desc"
                   id="desc"
@@ -168,7 +168,7 @@ class WritingIndex extends React.Component {
                 />
                 Oldest
               </label>
-            </form>
+            </div>
           </div>
         </div>
 

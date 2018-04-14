@@ -3,7 +3,7 @@ title        : "Answering to Ourselves"
 date         : 2017-12-30
 icon         : at-sign
 excerpt      : "It's amazing how many worries vanish by thinking 'I have the benefit of not caring what they think.'"
-path         : "/answering-to-outselves/"
+path         : "/answering-to-ourselves/"
 featured-img : ./quote.jpeg
 ---
 
