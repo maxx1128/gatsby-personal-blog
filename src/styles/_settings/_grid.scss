@@ -15,7 +15,6 @@ $g-grid-columns: 12;
 $breakpoint-map: (
   xs: 0px,
   sm: rem(480px),
-  md: rem(760px),
-  lg: rem(960px),
-  max: rem(1100px)
+  md: rem(720px),
+  lg: rem(960px)
 );

@@ -80,51 +80,53 @@ class ResumeIndex extends React.Component {
 
         <br /><br />
 
-        <div className={s.section}>
-          <h4 className={s.section_title}>
-            Experience
-          </h4>
-          <section className={s.section_content}>
-            {resume}
-          </section>
-        </div>
+        <div className={s_page.content_large}>
+          <div className={s.section}> 
+            <h4 className={s.section_title}>
+              Experience
+            </h4>
+            <section className={s.section_content}>
+              {resume}
+            </section>
+          </div>
 
-        <div className={s.section_secondary}>
-          <h4 className={s.section_title}>
-            Skills
-          </h4>
-          <section className={s.section_content}>
-            <p>
-              {skills}
-            </p>
-          </section>
-        </div>
+          <div className={s.section_secondary}>
+            <h4 className={s.section_title}>
+              Skills
+            </h4>
+            <section className={s.section_content}>
+              <p>
+                {skills}
+              </p>
+            </section>
+          </div>
 
-        <div className={s.section_secondary}>
-          <h4 className={s.section_title}>
-            Education
-          </h4>
-          <section className={s.section_content}>
-            <h5 className={s.edu_school}>
-              Syracuse University, S.I. Newhouse School of Public Communications
-            </h5>
-            <p>
-              B.S. - Newspaper and Online Journalism (May 2015) <br />
-              Minor - Information and Technology (May 2015)
-            </p>
-          </section>
-        </div>
+          <div className={s.section_secondary}>
+            <h4 className={s.section_title}>
+              Education
+            </h4>
+            <section className={s.section_content}>
+              <h5 className={s.edu_school}>
+                Syracuse University, S.I. Newhouse School of Public Communications
+              </h5>
+              <p>
+                B.S. - Newspaper and Online Journalism (May 2015) <br />
+                Minor - Information and Technology (May 2015)
+              </p>
+            </section>
+          </div>
 
-        <div className={s.section_secondary}>
-          <h4 className={s.section_title}>
-            Activities <br />
-            & Awards
-          </h4>
-          <section className={s.section_content}>
-            <p>
-              {activities_awards}
-            </p>
-          </section>
+          <div className={s.section_secondary}>
+            <h4 className={s.section_title}>
+              Activities <br />
+              & Awards
+            </h4>
+            <section className={s.section_content}>
+              <p>
+                {activities_awards}
+              </p>
+            </section>
+          </div>
         </div>
       </div>
     )

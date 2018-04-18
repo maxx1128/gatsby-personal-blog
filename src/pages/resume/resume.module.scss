@@ -36,6 +36,8 @@
   .section_content {
     padding-bottom: spacing(triple);
     padding-left: spacing(oneHalf);
+
+    .section:last-of-type & { padding-bottom: 0; }
   }
 
   .edu_school { margin-top: 0; }

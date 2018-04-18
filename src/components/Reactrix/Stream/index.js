@@ -20,7 +20,7 @@ class Stream extends Component {
   componentWillMount = () => {
     const position = this.get_random_left_position(),
           font_size = this.get_random_font_size(),
-          delay = Math.floor(Math.random() * 10) + 1,
+          delay = Math.floor(Math.random() * 5) + 1,
           callback = (delay * 1000) + this.anim_length;
 
     const styles = {

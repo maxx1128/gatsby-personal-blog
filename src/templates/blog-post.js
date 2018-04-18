@@ -16,20 +16,22 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <div>
-        <div className={s.title}>
-          <Icon
-            type={post.frontmatter.icon}
-            size={60}
-            classes={s.icon}
-          />
+        <div className={s.title_wrapper}>
+          <div className={s.title}>
+            <Icon
+              type={post.frontmatter.icon}
+              size={60}
+              classes={s.icon}
+            />
 
-          <h1 className={s.title_header}>
-            {post.frontmatter.title}
-          </h1>
+            <h1 className={s.title_header}>
+              {post.frontmatter.title}
+            </h1>
 
-          <small className={s.date}>
-            {post.frontmatter.date}
-          </small>
+            <small className={s.date}>
+              {post.frontmatter.date}
+            </small>
+          </div>
         </div>
 
         <div className={s.wrapper}>

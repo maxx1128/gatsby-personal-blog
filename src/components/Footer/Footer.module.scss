@@ -4,7 +4,7 @@
   display: flex;
   padding: spacing(half) spacing();
   margin: 0 auto spacing();
-  max-width: breakpoint(max);
+  max-width: breakpoint(lg);
   flex-direction: column;
 
   @include larger-than(md) {

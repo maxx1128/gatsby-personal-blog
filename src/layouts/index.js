@@ -9,7 +9,6 @@ import Reactrix from './../components/Reactrix'
 import profile_pic from './../components/Bio/profile-pic.jpg'
 
 import './global.module.scss'
-import s from './layout.module.scss'
 import s_header from './header.module.scss'
 import s_home from './homepage.module.scss'
 
@@ -137,15 +136,9 @@ class Template extends React.Component {
         <div>
           {header}
           
-          <div className={s.wrapper}>
-            <div className={s.container}>
-              {children()}
-            </div>
-          </div>
+          {children()}
 
-          <div>
-            {footer}
-          </div>
+          {footer}
         </div>
       )
     }

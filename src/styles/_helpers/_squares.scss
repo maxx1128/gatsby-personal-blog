@@ -62,7 +62,7 @@ $secondary: color(secondary);
     }
   }
   
-  @include larger-than(max) {
+  @include larger-than(lg) {
     margin-#{$direction}: -8rem;
     max-width: 70%;
   }
@@ -74,17 +74,10 @@ $secondary: color(secondary);
 .square-title {
   padding: spacing(oneHalf) spacing();
   margin-bottom: spacing(oneHalf);
-  max-width: breakpoint(lg);
 
   color: color(mono, light);
 
   background-color: color(primary);
 
-  @include larger-than(md) {
-    padding: spacing(oneHalf);
-    margin-right: (spacing() * -1);
-    margin-left: (spacing() * -1);
-  }
+  @include larger-than(md) { padding: spacing() spacing(half); }
 }
-
-.square-content { padding: spacing(); }

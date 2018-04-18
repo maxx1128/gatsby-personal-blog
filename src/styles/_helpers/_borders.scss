@@ -1,9 +1,0 @@
-
-.border-secondary {
-  @include larger-than(md) {
-    padding: 0 spacing(double);
-
-    border-right: spacing(third) solid color(secondary);
-    border-left: spacing(third) solid color(secondary);
-  }
-}

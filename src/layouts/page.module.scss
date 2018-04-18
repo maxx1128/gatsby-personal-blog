@@ -1,11 +1,14 @@
 @import './../styles/styles.scss';
 
 .content {
-  composes: border-secondary;
   padding: 0 spacing();
-  margin-bottom: spacing(double);
+  margin: 0 auto spacing(double);
+  max-width: breakpoint(md);
 
-  @include larger-than(md) {
-    padding: 0 spacing(oneHalf);
-  }
+  @include larger-than(md) { padding: 0 spacing(half); }
+}
+
+.content_large {
+  composes: content;
+  max-width: breakpoint(lg);
 }

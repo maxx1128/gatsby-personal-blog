@@ -169,10 +169,10 @@ class WritingIndex extends React.Component {
                 Oldest
               </label>
             </div>
-          </div>
+          </div>          
         </div>
 
-        <section className={s.container}>
+        <section className={`${s.container} ${s_page.content_large}`}>
           {writing}
         </section>
       </div>

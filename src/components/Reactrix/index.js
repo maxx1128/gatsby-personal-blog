@@ -14,6 +14,8 @@ class Reactrix extends Component {
         <Stream string="Work with your thoughts, not against them" />
         <Stream string="All we have is our right to feel lost" />
         <Stream string="When humans are made into commodities, what can conversations be but trivial?" />
+        <Stream string="Hello my name is Max!" />
+        <Stream string="Hello my name is Max Lorem Ipsum Dolor Sin Emet!" />
       </div>
     );
   }

@@ -5,19 +5,21 @@
 .wrapper {
   margin: 0 auto;
   max-width: breakpoint(md);
-
-  composes: border-secondary;
 }
 
-.title {
-  position: relative;
-  padding: spacing(oneHalf);
-  margin-bottom: spacing(oneHalf);
-  max-width: breakpoint(lg);
+.title_wrapper {
+  margin-bottom: spacing();
 
   color: color(mono, light);
 
   background-color: color(primary);
+}
+
+.title {
+  position: relative;
+  padding: spacing();
+  margin: 0 auto;
+  max-width: breakpoint(md);
 
   @include larger-than(md) { padding-right: calc(100px + #{spacing(double)}); }
 
@@ -28,7 +30,7 @@
 
 .date { font-style: italic; }
 
-.content { composes: square-content; }
+.content { padding: spacing(); }
 
 .icon {
   composes: square-secondary;
@@ -39,10 +41,10 @@
   display: none;
   padding: spacing();
 
-  @include larger-than(md) { display: block; }
-
-  @include larger-than(lg) {
+  @include larger-than(md) {
     top: spacing(double) * -1;
     right: spacing(double) * -1;
+
+    display: block;
   }
 }

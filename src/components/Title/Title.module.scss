@@ -1,6 +1,13 @@
 @import './../../styles/styles.scss';
 
-.title { composes: square-title; }
+.title_wrapper { composes: square-title; }
+
+.title {
+  margin: 0 auto;
+  max-width: breakpoint(md);
+
+  @include larger-than(md) { padding: 0 spacing(half); }
+}
 
 .header { margin: 0; }
 

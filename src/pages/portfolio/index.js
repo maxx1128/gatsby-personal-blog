@@ -81,7 +81,7 @@ class PortfolioIndex extends React.Component {
           </p>
         </div>
         
-        <div className={s.projectContainer}>
+        <div className={`${s.projectContainer} ${s_page.content_large}`}>
           {grouped_projects}
         </div>
       </div>
