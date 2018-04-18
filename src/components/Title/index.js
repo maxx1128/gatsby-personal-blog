@@ -10,9 +10,9 @@ const BlogLink = ({ title, tagline }) => {
           {title}
         </h1>
 
-        <h5 className={s.subheader}>
+        <h4 className={s.subheader}>
           {tagline}
-        </h5>
+        </h4>
       </div>
     </div>
   )

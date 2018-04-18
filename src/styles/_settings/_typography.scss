@@ -11,7 +11,7 @@
 }
 
 // Modular Scale variables
-$g-modular-scale--base: rem(18px);
+$g-modular-scale--base: rem(19px);
 $g-modular-scale--ratio: 1.2; // Major third
 
 
@@ -75,7 +75,7 @@ $typography-map: (
     h4: spacing(triple) 0 spacing(),
     h5: spacing(triple) 0 spacing(),
     h6: spacing(triple) 0 spacing(),
-    p: 0 0 spacing() 0,
+    p: 0 0 spacing(oneHalf) 0,
     small: 0 0 spacing(half),
     tiny: 0 0 spacing(half)
   )
