@@ -115,7 +115,7 @@ class Template extends React.Component {
 
           <div className={s_home.description}>
             <p>
-              I’m Max Antonucci, a front-end developer living and working in New Haven, CT. I studied journalism in school for a love of writing. I switched to front-end development halfway through for a similar love of coding. I keep breathing because of my love of oxygen. I’m a curious freethinker and passionate puzzle-solver. However I have a serious daydreaming habit and don’t have telekinetic powers. No one is perfect, after all.
+              I’m Max Antonucci, a front-end developer living and working in New Haven, CT. I code, read, make, philosophize, box, and sometimes breathe. Most of all, I write.
             </p>
           </div>
 
@@ -126,7 +126,7 @@ class Template extends React.Component {
           <div className={s_home.photo_wrapper}>
             <img className={s_home.photo}
               src={profile_pic}
-              alt="Cartoon version of myself I use for my avatar"
+              alt="Cartoon version of myself for my avatar"
             />
           </div>
         </div>

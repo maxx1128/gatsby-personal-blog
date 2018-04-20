@@ -7,84 +7,79 @@
   - name: How EmberConf Reenergized the Little City in my Head
     date: "2018-03-20"
     link: https://blog.seeclickfix.com/how-emberconf-reenergized-the-little-city-in-my-head-ef3c9cd07505
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "When I arrived at Ember Conference 2018, my goals were typical. But I found something more important for my, or anyone’s, long-term success as a developer."
 
   - name: How to Refactor an Anime Newsletter
     date: "2018-01-28"
     link: https://dev.to/maxwell_dev/how-to-refactor-an-anime-newsletter-2f63
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "I revisit my first real Node program to refactor it with more ES6 syntax, asynchronous functions, and anime wallpaper feeds."
 
   - name: Building the new SeeClickFix Website
     date: "2017-10-24"
     link: https://blog.seeclickfix.com/building-the-new-seeclickfix-website-1b6795d8f0c4
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "As you’ve (hopefully) seen by now, we have completely overhauled the SeeClickFix homepage and corporate website. I share my favorite code from the new site."
 
   - name: Take Notes on Everything
     date: "2017-10-31"
     link: https://dev.to/maxwell_dev/takes-notes-on-everything-3io
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "With so much to keep learning as a junior dev, I've remembered not to trust my brain to hold onto all the new info."
 
   - name: The Git Rebase Introduction I Wish I'd Had 
     date: "2017-09-24"
     link: https://dev.to/maxwell_dev/the-git-rebase-introduction-i-wish-id-had
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "If you don't know what rebasing in Git is, read this before it's too late. Especially if you love cupcakes!"
 
   - name: Three Helpful Rules for Junior Devs 
     date: "2017-08-28"
     link: https://dev.to/maxwell_dev/three-helpful-rules-for-junior-devs
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "Part of being a junior dev is controlling the overwhelming pressure I put on myself to learn as much as possible."
 
   - name: How to Make an Anime Newsletter 
     date: "2017-07-30"
     link: https://dev.to/maxwell_dev/how-to-make-an-anime-newsletter
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "For my first web project that wasn't a website, I broke down a goal that involved Node, scheduled functions, the Twitter API, and a feed of anime wallpapers."
 
   - name: Tips for Making Maintainable Pattern Libraries
     date: "2017-02-17"
     link: http://newhaven.io/blog/tips-maintainable-pattern-libraries/
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "It's easy to see why pattern libraries are useful, but tough to successfully maintain them over time. "
 
   - name: Juice Jam 2014
     date: "2014-08-17"
     link: https://storify.com/newshouse/juice-jam-2014
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "Some Storify coverage of Syracuse University's 2014 Juice Jam concert."
 
   - name: Networking with Twitter
     date: "2014-08-12"
     link: http://www.slideshare.net/MaxwellAntonucci/twitter-for-networking
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "A SlideShare from my AmeriCares internship on using Twitter for career networking."
 
   - name: '#HealthCareHeroes'
     date: "2014-08-07"
     link: https://vimeo.com/102849451
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
-
-  - name: No Developer is an Island
-    date: "2015-04-27"
-    link: http://internation.mower.com/no-developer-island/
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "Exploring how helping people plant gardens after a disaster can make you one of the #HealthCareHeroes."
 
   - name: Recapping the Tech Curve
     date: "2014-03-29"
     link: http://syracusespj.syr.edu/2014/03/29/recapping-tech-curve/
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "The Syracuse SPJ hosted our first of two events for the Spring 2014 semester, the Tech Curve panel."
 
   - name: Conscience of Society
     date: "2013-03-27"
     link: http://dailyorange.com/2013/03/conscience-of-society-professor-alejandro-garcia-recognized-for-35-years-at-su-awarded-2013-daniel-and-mary-lou-rubenstein-social-justice-award/
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "Professor Alejandro Garcia’s own altruistic actions are being recognized with the 2013 Daniel and Mary Lou Rubenstein Social Justice Award."
 
   - name: With Open Arms
     date: "2013-02-27"
     link: http://dailyorange.com/2013/02/with-open-arms/
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "Vast spiritual opportunities lie within campus Chapel; Hendricks illuminates need for diversity."
 
   - name: 'Stephen Barton, panel of experts open discussion on gun control'
     date: "2013-02-20"
     link: http://dailyorange.com/2013/02/stephen-barton-panel-of-experts-open-discussion-on-gun-control/
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "The gun control discussion has officially begun at Syracuse University, with the 'Guns and America: Joining the Conversation' event."
 
   - name: Such Great Heights
     date: "2012-08-28"
     link: http://dailyorange.com/2012/08/such-great-heights-local-organization-helps-students-reach-new-levels-of-achievement/
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repellat id dicta consequatur quidem libero odit deleniti quibusdam autem omnis neque, saepe est quos velit veniam assumenda."
+    description: "On Point For College helps students reach new levels of achievement"
