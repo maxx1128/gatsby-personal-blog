@@ -52,7 +52,7 @@ class AboutIndex extends React.Component {
           </p>
 
           <p>
-            In the future I hope to keep writing as much as possible. Writing code, blog posts, notes, maybe even fiction. I don't use Twitter as much, but I'll write more tweets too. The only things I don't want to write are restraining orders, online comments, or erotic fanfiction. Those aside, <strong>I'll be writing until I write my will.</strong>
+            In the future I hope to keep writing as much as possible. Writing code, blog posts, notes, maybe even fiction. I don't use Twitter as much, but I'll write more tweets too. The only things I don't want to write are restraining orders, online comments, or erotic fanfiction. Those aside, I'll be writing until I write my will.
           </p>
         </div>
       </div>

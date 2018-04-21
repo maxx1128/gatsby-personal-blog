@@ -8,37 +8,41 @@ class Stream extends Component {
     super(props);
     this.state = {
       styles: {},
-      callback: this.anim_length
+      anim_length: null,
+      callback: null
     }
   }
 
-  anim_length = 20000
+  get_range = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
 
-  get_random_left_position = () => `${Math.floor(Math.random() * 90) + 5}%`
-  get_random_font_size = () => `${Math.floor(Math.random() * 2) + 0.5}rem`
+  get_random_left_position = () => `${this.get_range(5, 95)}%`
+  get_random_font_size = () => `${this.get_range(0.5, 1.5)}rem`
 
   componentWillMount = () => {
-    const position = this.get_random_left_position(),
+    const anim_length = this.get_range(20000, 40000),
+          position = this.get_random_left_position(),
           font_size = this.get_random_font_size(),
-          delay = Math.floor(Math.random() * 5) + 1,
-          callback = (delay * 1000) + this.anim_length;
+          delay = Math.floor(Math.random() * 8) + 1,
+          callback = (delay * 1000) + anim_length;
 
     const styles = {
       left: position,
-      'animationDuration': `${this.anim_length / 1000}s`,
+      'animationDuration': `${anim_length / 1000}s`,
       'animationDelay': `${delay}s`,
       'fontSize': font_size
     };
 
     this.setState({
       styles: styles,
+      anim_length: anim_length,
       callback: callback
     });
   }
 
   update_styles = () => {
     const position = this.get_random_left_position(),
-          font_size = this.get_random_font_size();
+          font_size = this.get_random_font_size(),
+          anim_length = this.state.anim_length;
 
     let styles = this.state.styles;
 
@@ -47,7 +51,7 @@ class Stream extends Component {
 
     this.setState({
       styles: styles,
-      callback: this.anim_length
+      callback: anim_length
     });
   }
 
@@ -75,9 +79,14 @@ class Stream extends Component {
     const string = this.create_stream_array();
 
     return (
-      <span className={s.container} style={this.state.styles}>
-        {string}
-      </span>
+      <div>
+        <span className={s.container} style={this.state.styles}>
+          {string}
+        </span>
+        <span className={s.blurred} style={this.state.styles}>
+          {string}
+        </span>
+      </div>
     );
   }
 }

@@ -1,6 +1,7 @@
 $border: spacing() solid color(mono, light);
 $primary: color(primary);
 $secondary: color(secondary);
+$dark: color(mono, dark);
 
 @mixin square($color, $position) {
   display: flex;
@@ -39,6 +40,8 @@ $secondary: color(secondary);
 
 .square-secondary { @include square($secondary, ''); }
 .square-secondary-top-left { @include square($secondary, 'top-left'); }
+
+.square-dark { @include square($dark, ''); }
 
 // Float classes
 @mixin square-float($direction) {
