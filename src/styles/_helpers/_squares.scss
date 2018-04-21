@@ -46,7 +46,6 @@ $dark: color(mono, dark);
 // Float classes
 @mixin square-float($direction) {
   display: inline-block;
-  margin: 0;
   width: 100%;
 
   @include larger-than(md) {
@@ -56,12 +55,8 @@ $dark: color(mono, dark);
 
     @if ($direction == 'right') {
       margin-left: spacing();
-
-      // text-align: left;
     } @else {
       margin-right: spacing();
-
-      // text-align: right;
     }
   }
   

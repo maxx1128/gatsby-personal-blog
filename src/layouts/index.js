@@ -115,7 +115,7 @@ class Template extends React.Component {
 
           <div className={s_home.description}>
             <p>
-              I’m Max Antonucci, a front-end developer living and working in New Haven, CT. I code, read, make, philosophize, box, and sometimes breathe. Most of all, I write.
+              I’m Max Antonucci, a front-end developer living and working in New Haven, CT.
             </p>
           </div>
 

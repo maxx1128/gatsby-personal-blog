@@ -37,12 +37,16 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   filter: drop-shadow(0px 0px 5px color(mono, light));
+  z-index: 2;
 }
 
 .blurred {
   composes: container;
 
+  color: color(secondary);
+
   filter: blur(5px) drop-shadow(0px 0px 20px color(mono, light));
+  z-index: 1;
 }
 
 .visibleChar,

@@ -22,8 +22,6 @@ img { max-width: 100%; }
 figure img { margin: 0 auto; }
 
 blockquote:not([class]) {
-  margin: spacing(double) 0;
-
   font-size: type(font-size, h3);
   line-height: type(line-height, large);
   font-family: type(font-family, header);
@@ -42,8 +40,6 @@ blockquote:not([class]) {
     @include square-float('left');
     @include square(color(secondary), 'left');
   }
-
-  margin: spacing(double) 0;
 }
 
 blockquote:not([class]) cite {
