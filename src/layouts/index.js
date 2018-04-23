@@ -30,10 +30,10 @@ class Template extends React.Component {
           header_link        = <Link to={'/'}>{title}</Link>;
 
     return (is_home) ? (
-      <div>
-        <h1 className={s_home.header}>
-          {header_link}
-        </h1>
+      <div className={s_header.title}>
+        <h2 className={s_header.titleText}>
+          {title}
+        </h2>
         <small className={s_home.tagline}>
           {tagline}
         </small>
@@ -120,7 +120,7 @@ class Template extends React.Component {
           </div>
 
           <div className={s_home.reactrix}>
-            <Reactrix />
+            
           </div>
 
           <div className={s_home.photo_wrapper}>

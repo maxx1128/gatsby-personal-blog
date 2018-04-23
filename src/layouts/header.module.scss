@@ -1,19 +1,16 @@
 @import './../styles/styles.scss';
 
-$header-border-width: spacing(third);
+$header-border-width: spacing(quart);
 
 .container {
   display: flex;
   margin: 0 auto;
   max-width: breakpoint(lg);
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
 
-  @include larger-than(md) {
-    padding-left: spacing();
-    margin-bottom: spacing(double);
-    flex-wrap: wrap;
-  }
+  @include larger-than(md) { margin-bottom: spacing(); }
 }
 
 .title {
@@ -29,13 +26,5 @@ $header-border-width: spacing(third);
 
   & a { text-decoration: none; }
 
-  @include smaller-than(md) { font-size: type(font-size, h5); }
-}
-
-.menu {
-  padding: spacing(quart);
-
-  @include larger-than(md) {
-    border-left: $header-border-width solid color(secondary);
-  }
+  @include smaller-than(md) { font-size: type(font-size, h4); }
 }

@@ -5,19 +5,22 @@
   padding: spacing(half);
   grid-template-columns: 1fr minmax(auto, 115px);
   grid-template-rows: auto;
-  grid-gap: spacing(half);
+  grid-gap: spacing(quart);
   
-  @include larger-than(md) { min-height: 100vh; }
+  @include larger-than(md) {
+    min-height: 100vh;
+    grid-gap: spacing(half);
+  }
 }
 
 .title {
-  border: $border;
+  grid-column: 1 / -1;
+
+  color: color(secondary);
 }
 
 .header {
   margin: 0 0 spacing(third);
-
-  @include smaller-than(md) { font-size: type(font-size, h4); }
 }
 
 .tagline {
@@ -43,41 +46,40 @@
   z-index: -1;
 }
 
-.menu { align-self: center; }
+.menu {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  align-self: center;
+}
 
 .photo {
-  border: 3px solid color(mono, dark);
-  background-color: color(mono, light);
   width: 100%;
   height: auto;
 }
 
 .photo_wrapper {
-  display: none;
+  display: flex;
   margin: 0 auto;
+  grid-column: 1 / -1;
+  align-items: flex-start;
 
-  border: $border;
-  background-color: color(mono, light);
+  @include larger-than(md) { align-items: flex-end; }
 }
 
 @include larger-than(sm) {
   .wrapper {
     grid-template-columns: repeat(3, 1fr) 170px;
-    grid-template-rows: repeat(3, minmax(30px, auto)) 170px repeat(2, minmax(30px, auto));
+    grid-template-rows: repeat(3, minmax(30px, auto)) 170px repeat(2, minmax(30px, 1fr));
   }
 
   .title {
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
     grid-row: 1 / 2;
   }
 
   .menu {
-    padding-left: spacing(half);
-    margin-left: spacing();
     grid-column: 1 / 5;
     grid-row: 2 / 3;
-
-    border-left: spacing(half) solid color(primary);
   }
 
   .description {
@@ -91,22 +93,22 @@
     grid-row: 4 / 7;
   }
 
+  .photo { border: 3px solid color(mono, light); }
+
   .photo_wrapper {
-    display: flex;
     grid-column: 4 / 5;
     grid-row: 4 / 5;
-    align-items: flex-start;
   }
 }
 
 @include larger-than(lg) {
   .wrapper {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 130px 1fr repeat(5, minmax(30px, auto));
+    grid-template-rows: 130px 1fr repeat(2, minmax(30px, auto)) repeat(3, auto);
   }
 
   .title {
-    grid-column: 1 / 6;
+    grid-column: 1 / -1;
     grid-row: 1 / 2;
   }
 
@@ -121,7 +123,6 @@
   }
 
   .menu {
-    padding-left: spacing(half);
     grid-column: 11 / 13;
     grid-row: 6 / 8;
   }
@@ -129,6 +130,5 @@
   .photo_wrapper {
     grid-column: 10 / 12;
     grid-row: 1 / 3;
-    align-items: flex-end;
   }
 }
