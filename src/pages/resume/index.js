@@ -49,7 +49,7 @@ class ResumeIndex extends React.Component {
           skills = this.get_skills(),
           activities_awards = this.get_activities_awards(),
           title = "Places I've Worked",
-          tagline = "Where I've worked, what I've learned, and the tools I did it all with.";
+          tagline = "My professional life, all in one page";
 
     const resume = resume_data.map((resume, i) => (
         <ResumeItem
@@ -74,7 +74,7 @@ class ResumeIndex extends React.Component {
 
         <div className={s_page.content}>
           <p>
-            As a full-time adult, I have my own resume with an online version here. I can't bedazzle it like the copies I print, but it still has all the same info - companies, schools, skills, experience, and activities galore. Recruiters or stalkers who want more info can check out my <a href="https://www.linkedin.com/in/maxwellantonucci/" target="_blank">LinkedIn</a> profile.
+            Like all full-time adults, I have my resume with an online version with my basic work history, skills, and education. The short version is I studied journalism and wound up in coding. Recruiters or stalkers who want more info can check out my <a href="https://www.linkedin.com/in/maxwellantonucci/" target="_blank">LinkedIn</a> profile.
           </p>
         </div>
 

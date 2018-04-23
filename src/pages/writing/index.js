@@ -102,7 +102,7 @@ class WritingIndex extends React.Component {
 
   render() {
     const title = "Thoughts I've Saved",
-          tagline = "We all have thoughts. I wrote some here for safekeeping.",
+          tagline = "Musings written down for safekeeping",
           writing = this.get_all_writing();
 
     return (
@@ -120,7 +120,7 @@ class WritingIndex extends React.Component {
 
         <div className={s_page.content}>
           <p>
-            I still have some journalist in me, so I enjoy writing - both personal pieces here and professional (to some extent) ones elsewhere. I've grouped my favorites here, added filters for your convenience, and invite you to enrich your mind with them. Armchair and green tea not included.
+            Writing is a huge part of my life, ranging from newspaper articles, coding posts, or my personal blog. I've grouped my favorites here, added filters for your convenience, and invite you to enrich your mind with them. Armchair and green tea not included.
           </p>
 
           <div className={s.form_wrapper}>

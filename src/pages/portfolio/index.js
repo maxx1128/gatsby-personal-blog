@@ -45,7 +45,7 @@ const images = {
 class PortfolioIndex extends React.Component {
   render() {
     const title = "Projects I've Made",
-          tagline = "A collection of conspicious code I've created for companies, classrooms, or for creativity's sake.",
+          tagline = "Code for companies, classrooms, or creativity",
           project_data = get(this, 'props.data.allProjectsYaml.edges[0].node.projects');
 
     const projects = project_data.map((project, i) => (
@@ -77,7 +77,7 @@ class PortfolioIndex extends React.Component {
 
         <div className={s_page.content}>
           <p>
-            All projects of mine, big and small, are welcome to my portfolio page! Keep in mind that some, especially those hosted elsewhere, may be updated or taken down overtime. Chances are I'm too busy making new additions to catch them all. You can always find a more up-to-date look at my current work on my <a href="http://codepen.io/max1128/" target="_blank">CodePen</a> and <a href="https://github.com/maxx1128" target="_blank">Github</a> profiles.
+            All my projects are welcome to my portfolio page! Some, especially those hosted elsewhere, may not be there anymore. Chances are I'm too busy making new additions to catch them all. You can find smaller, more current bits of work on my <a href="http://codepen.io/max1128/" target="_blank">CodePen</a> and <a href="https://github.com/maxx1128" target="_blank">Github</a> profiles.
           </p>
         </div>
         
