@@ -120,7 +120,7 @@ class Template extends React.Component {
           </div>
 
           <div className={s_home.reactrix}>
-            
+            <Reactrix />
           </div>
 
           <div className={s_home.photo_wrapper}>

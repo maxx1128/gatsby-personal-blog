@@ -2,6 +2,7 @@
 
 .container {
   display: grid;
+  padding: 0;
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
   grid-gap: spacing(triple);
@@ -9,6 +10,7 @@
 
 @include larger-than(md) {
   .container {
+    padding: 0 spacing();
     grid-template-columns: repeat(2, 1fr);
   }
 

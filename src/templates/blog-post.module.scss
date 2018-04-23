@@ -26,7 +26,11 @@
   @include larger-than(lg) { padding-right: calc(100px + #{spacing()}); }
 }
 
-.title_header { margin: 0 0 spacing(double); }
+.title_header {
+  margin: 0 0 spacing(double);
+
+  @include smaller-than(md) { font-size: type(font-size, h3); }
+}
 
 .date { font-style: italic; }
 

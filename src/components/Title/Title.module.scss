@@ -9,6 +9,14 @@
   @include larger-than(md) { padding: 0 spacing(half); }
 }
 
-.header { margin: 0; }
+.header {
+  margin: 0;
 
-.subheader { margin-bottom: 0; }
+  @include smaller-than(md) { font-size: type(font-size, h3); }
+}
+
+.subheader {
+  margin-bottom: 0;
+
+  @include smaller-than(md) { font-size: type(font-size, h5); }
+}

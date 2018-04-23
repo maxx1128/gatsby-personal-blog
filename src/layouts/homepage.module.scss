@@ -15,8 +15,6 @@
 
 .title {
   grid-column: 1 / -1;
-
-  color: color(secondary);
 }
 
 .header {
@@ -25,6 +23,7 @@
 
 .tagline {
   margin: 0;
+
   font-style: italic;
 
   @include smaller-than(md) { display: none; }
@@ -63,7 +62,7 @@
   grid-column: 1 / -1;
   align-items: flex-start;
 
-  @include larger-than(md) { align-items: flex-end; }
+  // @include larger-than(md) { align-items: flex-end; }
 }
 
 @include larger-than(sm) {

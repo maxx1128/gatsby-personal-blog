@@ -3,11 +3,12 @@
 .wrapper {
   display: flex;
   padding: spacing(half) spacing();
-  margin: 0 auto spacing();
+  margin: 0 auto;
   max-width: breakpoint(lg);
   flex-direction: column;
 
   @include larger-than(md) {
+    margin-bottom: spacing(half);
     flex-direction: row;
     align-items: end;
     justify-content: space-between;
