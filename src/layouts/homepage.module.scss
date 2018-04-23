@@ -48,6 +48,8 @@
 .photo {
   border: 3px solid color(mono, dark);
   background-color: color(mono, light);
+  width: 100%;
+  height: auto;
 }
 
 .photo_wrapper {
@@ -58,10 +60,10 @@
   background-color: color(mono, light);
 }
 
-@include larger-than(md) {
+@include larger-than(sm) {
   .wrapper {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, minmax(30px, auto)) 1fr repeat(2, minmax(30px, auto));
+    grid-template-columns: repeat(3, 1fr) 170px;
+    grid-template-rows: repeat(3, minmax(30px, auto)) 170px repeat(2, minmax(30px, auto));
   }
 
   .title {
@@ -93,14 +95,14 @@
     display: flex;
     grid-column: 4 / 5;
     grid-row: 4 / 5;
-    align-self: end;
+    align-items: flex-start;
   }
 }
 
 @include larger-than(lg) {
   .wrapper {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, minmax(30px, auto)) 1fr repeat(5, minmax(30px, auto));
+    grid-template-rows: 130px 1fr repeat(5, minmax(30px, auto));
   }
 
   .title {
@@ -127,5 +129,6 @@
   .photo_wrapper {
     grid-column: 10 / 12;
     grid-row: 1 / 3;
+    align-items: flex-end;
   }
 }
