@@ -2,13 +2,13 @@
 
 .wrapper {
   display: grid;
-  padding: spacing(half);
   grid-template-columns: 1fr minmax(auto, 115px);
   grid-template-rows: auto;
   grid-gap: spacing(quart);
   
   @include larger-than(md) {
     min-height: 100vh;
+    padding: spacing(half);
     grid-gap: spacing(half);
   }
 }
@@ -30,19 +30,31 @@
 }
 
 .description {
-  composes: square-primary;
   display: flex;
+  padding: spacing();
   flex-direction: column;
   align-items: start;
   grid-column: 1 / -1;
+
+  p { margin: 0; }
+
+  @include larger-than(md) {
+    @include contra-color(color(primary));
+    justify-content: center;
+  }
+
+  @include larger-than(lg) { border: $border; }
 }
 
-.reactrix {
+.splash {
   display: none;
-  composes: square-dark;
   padding: 0;
 
+  background-color: color(mono, dark);
+
   z-index: -1;
+
+  @include larger-than(lg) { border: $border; }
 }
 
 .menu {
@@ -86,7 +98,7 @@
     grid-row: 3 / 4;
   }
 
-  .reactrix {
+  .splash {
     display: block;
     grid-column: 1 / 5;
     grid-row: 4 / 7;
@@ -116,7 +128,7 @@
     grid-row: 6 / 9;
   }
 
-  .reactrix {
+  .splash {
     grid-column: 3 / 11;
     grid-row: 2 / 7;
   }

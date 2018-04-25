@@ -1,6 +1,7 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
 
+import favicon from './favicon.ico'
 import profilePic from './../Bio/profile-pic.jpg'
 
 // Needs at least title, url, and tagline. descr and image are optional
@@ -24,6 +25,7 @@ class Head extends React.Component {
 
         <title>{title}</title>
         <meta name="description" content={descr} />
+        <link rel="shortcut icon" href={favicon} />
 
         <meta property="og:title" content={title} />
         <meta property="og:type" content="article" />

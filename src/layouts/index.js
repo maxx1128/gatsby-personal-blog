@@ -5,7 +5,6 @@ import Menu from './../components/Menu'
 import Head from './../components/Head'
 import Bio from './../components/Bio'
 import Footer from './../components/Footer'
-import Reactrix from './../components/Reactrix'
 import profile_pic from './../components/Bio/profile-pic.jpg'
 
 import './global.module.scss'
@@ -100,7 +99,7 @@ class Template extends React.Component {
       return ( 
         <div className={s_home.wrapper}>
           <Head
-            title={"My homepage!"}
+            title={"My Homepage"}
             url_path={this.props.location.pathname}
             tagline={tagline}
           />
@@ -115,12 +114,12 @@ class Template extends React.Component {
 
           <div className={s_home.description}>
             <p>
-              I’m Max Antonucci, a front-end developer living and working in New Haven, CT.
+              I’m Max Antonucci, a front-end developer living and working in New Haven, CT. Writing takes up most of my life, whether it's code, words, or tweets. The rest is reading, boxing, philosophizing, and often breathing.
             </p>
           </div>
 
-          <div className={s_home.reactrix}>
-            <Reactrix />
+          <div className={s_home.splash}>
+            
           </div>
 
           <div className={s_home.photo_wrapper}>
