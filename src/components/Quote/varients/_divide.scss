@@ -1,0 +1,100 @@
+$divide-white: #fffffc;
+$divide-button-width: 80px;
+
+@keyframes slide_in {
+  0% {
+    margin-left: $divide-button-width * -0.5;
+    opacity: 0;
+  }
+
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.quote--divide {
+  position: relative;
+
+  .quote__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quote__body,
+  .quote__author {
+    padding: $quote-padding-sm;
+    padding-left: (spacing(triple) * 2);
+    
+    overflow-y: scroll;
+
+    span {
+      opacity: 0;
+      animation: slide_in 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @include larger-than(md) {
+      padding: $quote-padding-md;
+      padding-left: (spacing(triple) * 2);
+    }
+  }
+
+  .quote__body {
+    display: flex;
+    padding-bottom: spacing(third);
+    flex: 0 0 60%;
+    align-items: end;
+
+    font-size: type(font-size, h5);
+    font-weight: type(font-weight, bold);
+
+    @include contra-color($divide-white);
+
+    @include larger-than(md) { font-size: type(font-size, h4); }
+  }
+
+  &.quote--long .quote__body {
+    font-size: type(font-size, h6);
+
+    @include larger-than(md) { font-size: type(font-size, h5); }
+  }
+
+  .quote__author {
+    flex: 0 0 40%;
+    padding-top: spacing(third);
+
+    font-style: italic;
+    font-size: type(font-size, small);
+
+    @include contra-color(color(mono, dark), $light: $divide-white);
+
+    span { animation-delay: 0.25s; }
+  }
+
+  .quote__button {
+    position: absolute;
+    top: calc(60% - (#{$divide-button-width / 2}));
+    left: spacing(half);
+
+    display: flex;
+    height: $divide-button-width;
+    width: $divide-button-width;
+    padding: spacing(third);
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #aaa;
+    border-radius: 100%;
+    text-align: center;
+    text-decoration: none;
+
+    @include contra-color(color(primary));
+  }
+}

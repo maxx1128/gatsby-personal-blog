@@ -3,5 +3,5 @@
 .container {
   min-height: 20rem;
 
-  @include larger-than(lg) { min-height: 24rem; }
+  @include larger-than(md) { min-height: 24rem; }
 }
