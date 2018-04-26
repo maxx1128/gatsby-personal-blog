@@ -1,0 +1,7 @@
+@import './../../styles/styles.scss';
+
+$quote-padding-sm: spacing();
+$quote-padding-sm-right: 190px;
+$quote-padding-lg: spacing(quad) spacing();
+
+@import './varients/test.scss';

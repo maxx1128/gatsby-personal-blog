@@ -1,0 +1,8 @@
+.quote--test {
+  padding: $quote-padding-sm;
+  padding-right: $quote-padding-sm-right;
+
+  @include larger-than(lg) { padding: $quote-padding-lg; }
+
+  .quote__body { color: color(primary); }
+}

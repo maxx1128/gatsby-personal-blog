@@ -9,7 +9,6 @@ import Title from './../../components/Title'
 
 class AboutIndex extends React.Component {
   render() {
-    
     const title = "Who I Am",
           tagline = "The story of my life, give or take a few years";
 
@@ -44,7 +43,7 @@ class AboutIndex extends React.Component {
           </p>
 
           <p>
-            I love writing, in all its forms, since it gets to the core of being alive. Our lives are defined most by the thoughts and ideas around us - about ourselves, others, work, society, and the reasons we're here. Writing is the best way to distill these to their purest form and share them. To affect major change in the lives of others. Even if it's something silly like <a taget="_blank" rel="noopener" href="https://codepen.io/max1128/pen/xEOLmg">writing code for a bizarre spiral animation.</a>
+            I love writing, in all its forms, since it gets to the core of being alive. Our lives are defined most by the thoughts and ideas around us - about ourselves, others, work, society, and the reasons we're here. Writing is the best way to distill these to their purest form and share them. To affect major change in the lives of others. Even if it's something silly like <a target="_blank" rel="noopener" href="https://codepen.io/max1128/pen/xEOLmg">writing code for a bizarre spiral animation.</a>
           </p>
 
           <p>

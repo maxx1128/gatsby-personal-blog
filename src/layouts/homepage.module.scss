@@ -36,6 +36,8 @@
   align-items: start;
   grid-column: 1 / -1;
 
+  z-index: 2;
+
   p { margin: 0; }
 
   @include larger-than(md) {
@@ -50,9 +52,7 @@
   display: none;
   padding: 0;
 
-  background-color: color(mono, dark);
-
-  z-index: -1;
+  z-index: 1;
 
   @include larger-than(lg) { border: $border; }
 }
@@ -73,6 +73,8 @@
   margin: 0 auto;
   grid-column: 1 / -1;
   align-items: flex-start;
+
+  z-index: 2;
 
   // @include larger-than(md) { align-items: flex-end; }
 }

@@ -1,0 +1,7 @@
+@import './../../styles/styles.scss';
+
+.container {
+  min-height: 20rem;
+
+  @include larger-than(lg) { min-height: 24rem; }
+}

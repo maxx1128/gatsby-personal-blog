@@ -5,6 +5,7 @@ import Menu from './../components/Menu'
 import Head from './../components/Head'
 import Bio from './../components/Bio'
 import Footer from './../components/Footer'
+import Quote from './../components/Quote'
 import profile_pic from './../components/Bio/profile-pic.jpg'
 
 import './global.module.scss'
@@ -119,7 +120,7 @@ class Template extends React.Component {
           </div>
 
           <div className={s_home.splash}>
-            
+            <Quote />
           </div>
 
           <div className={s_home.photo_wrapper}>
