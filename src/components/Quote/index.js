@@ -1,4 +1,5 @@
 import React from 'react';
+import fetch from 'isomorphic-fetch';
 
 import s from './quote.module.scss';
 import './quote_varients.scss';
@@ -15,9 +16,7 @@ class Quote extends React.Component {
     this.get_quote_data = this.get_quote_data.bind(this);
   }
 
-  componentWillMount() {
-    this.get_quote_data();
-  }
+  componentWillMount() { this.get_quote_data(); }
 
   get_quote_class = () => {
     const current_class = this.state.style;
