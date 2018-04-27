@@ -55,6 +55,8 @@ $divide-button-width: 80px;
     font-size: type(font-size, h5);
     font-weight: type(font-weight, bold);
 
+    span { margin-top: auto; }
+
     @include contra-color($divide-white);
 
     @include larger-than(md) { font-size: type(font-size, h4); }
@@ -75,7 +77,10 @@ $divide-button-width: 80px;
 
     @include contra-color(color(mono, dark), $light: $divide-white);
 
-    span { animation-delay: 0.25s; }
+    span {
+      margin-bottom: auto;
+      animation-delay: 0.25s;
+    }
   }
 
   .quote__button {

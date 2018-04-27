@@ -1,6 +1,7 @@
 @import './../../styles/styles.scss';
 
 .container {
+  height: 100%;
   min-height: 20rem;
 
   @include larger-than(md) { min-height: 24rem; }
