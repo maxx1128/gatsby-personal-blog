@@ -1,0 +1,76 @@
+$quote-bright-white: #faf3ea;
+$quote-bright-pink: #fabacb;
+$quote-bright-red: #d31603;
+$quote-bright-purple: #b65fcd;
+$quote-bright-blue: #00b2ff;
+
+$quote-bright-opacity: 0.35;
+
+.quote--bright {
+  position: relative;
+  padding: spacing(half);
+
+  font-style: italic;
+  text-transform: uppercase;
+  color: $quote-bright-white;
+  font-weight: type(font-weight, bold);
+
+  background-color: rgba($quote-bright-pink, 0.8);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23f012be' fill-opacity='0.09'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+
+  .quote__body {
+    padding: spacing() spacing() spacing(double);
+
+    font-size: type(font-size, h4);
+
+    background-color: rgba($quote-bright-red, $quote-bright-opacity);
+
+    &::before,
+    &::after {
+      position: absolute;
+
+      @include larger-than(md) { content: ''; }
+    }
+
+    &::before {
+      bottom: 10%;
+      left: 60%;
+      width: 150px;
+      height: 100px;
+
+      background-color: rgba($quote-bright-blue, $quote-bright-opacity);
+    }
+
+    &::after {
+      bottom: 20%;
+      left: 75%;
+      width: 100px;
+      height: 150px;
+
+      background-color: rgba($quote-bright-purple, $quote-bright-opacity);
+    }
+  }
+
+  &.quote--long .quote__body { font-size: type(font-size, h5); }
+
+  .quote__author {
+    display: inline-block;
+    padding: spacing(double) spacing();
+    margin-top: (spacing() * -1);
+    margin-left: spacing(oneHalf);
+
+    background-color: rgba($quote-bright-purple, $quote-bright-opacity);
+  }
+
+  .quote__button {
+    display: inline-block;
+    padding: spacing(double) spacing(half) spacing(half);
+    margin-top: (spacing() * -1);
+    margin-left: spacing(quad);
+
+    text-decoration: none;
+    color: $quote-bright-white;
+
+    background-color: rgba($quote-bright-blue, $quote-bright-opacity);
+  }
+}

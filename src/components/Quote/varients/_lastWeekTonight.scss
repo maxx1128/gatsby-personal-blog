@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+$lwt-red: #b70c2a;
+
+.quote--lastWeekTonight {
+  display: flex;
+  padding: spacing();
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  font-family: 'Quicksand', sans-serif;
+
+  background-size: cover;
+  box-shadow: $quote-bg-light;
+  background-position: top right;
+  background-image: url('./varients/lastWeekTonight.jpg');
+
+  .quote__content {
+    @include larger-than(md) { max-width: 75%; }
+    @include larger-than(lg) { max-width: 60%; }
+  }
+
+  .quote__body {
+    margin-bottom: spacing();
+
+    font-size: type(font-size, h3);
+
+    &::first-letter { font-size: 150%; }
+  }
+
+  &.quote--long .quote__body { font-size: type(font-size, h4); }
+
+  .quote__author {
+    position: relative;
+    margin-bottom: spacing();
+
+    &::after {
+      position: absolute;
+      top: -4px;
+      left: 12px;
+      padding: spacing(quart) spacing(half);
+
+      border-radius: spacing(third);
+      background-color: rgba($lwt-red, 0.85);
+
+      transform: rotate(-4deg);
+      content: "Jon Oliver";
+    }
+  }
+
+  .quote__button {
+    padding: spacing(third) spacing(half);
+
+    color: $lwt-red;
+    text-decoration: none;
+    font-weight: type(font-weight, bold);
+
+    border-radius: spacing(third);
+    box-shadow: container(box-shadow, 2);
+    background-color: color(mono, light);
+  }
+}

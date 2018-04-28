@@ -1,0 +1,37 @@
+.quote--anime2 {
+  position: relative;
+  display: flex;
+  padding: spacing();
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  background-size: cover;
+  background-position: center;
+  background-image: url('./varients/anime2.jpg');
+
+  .quote__content {
+    padding: spacing();
+    margin-bottom: spacing(triple);
+
+    background-color: rgba(230, 230, 255, 0.85);
+
+    @include larger-than(md) { max-width: 70%; }
+    @include larger-than(lg) { max-width: 60%; }
+  }
+
+  .quote__body {
+    margin-bottom: spacing(half);
+
+    font-size: type(font-size, h4);
+    font-weight: type(font-weight, light);
+  }
+
+  &.quote--long .quote__body { font-size: type(font-size, h5); }
+
+  .quote__button {
+    position: absolute;
+    right: spacing();
+    bottom: spacing(triple);
+  }
+}

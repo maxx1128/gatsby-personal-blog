@@ -1,6 +1,24 @@
 @import './../../styles/styles.scss';
 
 $quote-padding-sm: spacing();
-$quote-padding-md: spacing(triple) spacing();
+$quote-padding-md: spacing(triple) spacing() spacing(quad);
 
+// Use these with box shadow properties
+$quote-bg-dark-mild: inset 0 0 0 1000px rgba(0, 0, 0, 0.25);
+$quote-bg-light-mild: inset 0 0 0 1000px rgba(255, 255, 255, 0.25);
+
+$quote-bg-dark: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+$quote-bg-light: inset 0 0 0 1000px rgba(255, 255, 255, 0.5);
+
+$quote-bg-dark-heavy: inset 0 0 0 1000px rgba(0, 0, 0, 0.85);
+$quote-bg-light-heavy: inset 0 0 0 1000px rgba(255, 255, 255, 0.85);
+
+@import './varients/anime1.scss';
+@import './varients/anime2.scss';
+@import './varients/bright.scss';
+@import './varients/child.scss';
+@import './varients/computer.scss';
 @import './varients/divide.scss';
+@import './varients/explosion.scss';
+@import './varients/lastWeekTonight.scss';
+@import './varients/staircase.scss';

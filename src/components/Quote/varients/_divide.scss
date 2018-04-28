@@ -29,7 +29,7 @@ $divide-button-width: 80px;
 
   .quote__body,
   .quote__author {
-    padding: $quote-padding-sm;
+    padding: spacing();
     padding-left: (spacing(triple) * 2);
     
     overflow-y: scroll;
@@ -41,7 +41,7 @@ $divide-button-width: 80px;
     }
 
     @include larger-than(md) {
-      padding: $quote-padding-md;
+      padding: spacing();
       padding-left: (spacing(triple) * 2);
     }
   }

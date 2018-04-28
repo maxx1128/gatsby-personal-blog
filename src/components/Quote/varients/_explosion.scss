@@ -1,0 +1,18 @@
+.quote--explosion {
+  display: flex;
+  padding: spacing();
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background-size: cover;
+  background-position: center;
+  background-image: url('./varients/explosion.jpg');
+
+  .quote__content {
+    @include larger-than(md) { max-width: 75%; }
+    @include larger-than(lg) { max-width: 50%; }
+  }
+}

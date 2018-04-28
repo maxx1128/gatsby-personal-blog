@@ -1,0 +1,27 @@
+.quote--anime1 {
+  padding: spacing() 20% spacing() spacing(double);
+
+  color: color(mono, light);
+
+  background-size: cover;
+  background-position: 10% center;
+  background-image: url('./varients/anime1.jpg');
+
+  .quote__body {
+    margin: spacing() 0 spacing(double);
+
+    transform: rotate(-2deg);
+  }
+
+  .quote__author {
+    margin-bottom: spacing(triple);
+
+    transform: rotate(2deg);
+  }
+
+  .quote__button {
+    display: inline-block;
+
+    transform: rotate(35deg);
+  }
+}

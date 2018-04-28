@@ -1,0 +1,40 @@
+.quote--computer {
+  display: flex;
+  padding: spacing() 25%;
+  flex-direction: column;
+  align-items: start;
+
+  color: color(mono, light);
+
+  background-size: cover;
+  background-position: center;
+  background-image: url('./varients/computer.jpg');
+
+  .quote__content {
+    padding-top: spacing(half);
+    margin: 0 auto;
+  }
+
+  .quote__body {
+    margin-bottom: spacing(half);
+
+    font-size: type(font-size, p);
+    font-weight: type(font-weight, bold);
+  }
+
+  .quote__author {
+    margin-bottom: spacing(double);
+
+    font-size: type(font-size, tiny);
+
+    @include larger-than(md) { margin-bottom: spacing(triple); }
+  }
+
+  &.quote--long .quote__author {
+    margin-bottom: spacing();
+
+    @include larger-than(md) { margin-bottom: spacing(oneHalf); }
+  }
+
+  .quote__button { text-align: left; }
+}

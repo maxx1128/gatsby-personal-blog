@@ -1,0 +1,45 @@
+.quote--staircase {
+  display: flex;
+  padding: spacing() spacing() 0 spacing();
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: color(mono, light);
+
+  background-size: cover;
+  box-shadow: $quote-bg-dark;
+  background-position: center;
+  background-image: url('./varients/staircase.jpg');
+
+  .quote__body,
+  .quote__author {
+    text-align: center;
+  }
+
+  .quote__body {
+    padding: 0 spacing(double);
+    margin-bottom: spacing(third);
+
+    font-size: type(font-size, h4);
+    font-weight: type(font-weight, bold);
+  }
+
+  &.quote--long .quote__body { font-size: type(font-size, h5); }
+
+  .quote__content,
+  .quote__button { margin-top: auto }
+
+  .quote__button {
+    display: block;
+    padding: spacing(half);
+    width: 100%;
+
+    text-align: center;
+    text-decoration: none;
+
+    @include contra-color(color(secondary));
+
+    @include larger-than(md) { width: 50%; }
+  }
+}

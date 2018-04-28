@@ -22,8 +22,15 @@ class Quote extends React.Component {
     const current_class = this.state.style;
 
     const classes = [
-      'none',
-      'divide'
+      'anime1',
+      'anime2',
+      'bright',
+      'child',
+      'computer',
+      'divide',
+      'explosion',
+      'lastWeekTonight',
+      'staircase'
     ];
 
     const current_class_index = classes.indexOf(current_class);
@@ -70,7 +77,7 @@ class Quote extends React.Component {
     const quote_length = this.state.body_long ? 'quote--long' : 'quote--short';
 
     return (
-      <div className={`${s.container} ${quote_length} quote--${this.state.style}`}>
+      <div className={`${s.container} ${quote_length} quote--lastWeekTonight`}> {/*quote--${this.state.style}*/}
         
         <div className="quote__content">
           <div className="quote__body">

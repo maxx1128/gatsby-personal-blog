@@ -1,0 +1,46 @@
+.quote--child {
+  display: flex;
+  padding: spacing();
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-transform: uppercase;
+  font-family: 'Comic Sans MS', sans-serif;
+
+  background-size: cover;
+  box-shadow: $quote-bg-light-heavy;
+  background-position: center;
+  background-image: url('./varients/child.jpg');
+
+  .quote__content,
+  .quote__button { margin-top: auto; }
+
+  .quote__content {
+    color: rgb(160, 0, 190);
+
+    @include larger-than(md) { max-width: 66%; }
+  }
+
+  .quote__body {
+    margin-bottom: spacing();
+
+    text-align: center;
+    font-size: type(font-size, h4);
+    font-weight: type(font-weight, heavy);
+
+    transform: rotate(-2deg);
+
+    &.quote--long .quote__body { font-size: type(font-size, h5); }
+  }
+
+  .quote__author {
+    margin-bottom: spacing();
+
+    text-align: right;
+
+    transform: rotate(5deg);
+  }
+
+  &.quote--long .quote__body { font-size: type(font-size, h5); }
+}
