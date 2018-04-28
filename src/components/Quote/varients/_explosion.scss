@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Finger+Paint');
+
 .quote--explosion {
   display: flex;
   padding: spacing();
@@ -6,13 +8,46 @@
   justify-content: center;
 
   text-align: center;
+  font-family: 'Finger Paint', cursive;
 
   background-size: cover;
   background-position: center;
   background-image: url('./varients/explosion.jpg');
 
   .quote__content {
+    padding: spacing(half);
+
+    border-radius: 100%;
+    background: rgba(255,177,163,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,177,163,1) 0%, rgba(247,120,104,0.85) 25%, rgba(247,90,69,0.5) 50%, rgba(224,120,16,0.0) 75%, rgba(173,23,9,0.0) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,177,163,1)), color-stop(25%, rgba(247,120,104,0.85)), color-stop(50%, rgba(247,90,69,0.5)), color-stop(75%, rgba(224,120,16,0.0)), color-stop(100%, rgba(173,23,9,0.0)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,177,163,1) 0%, rgba(247,120,104,0.85) 25%, rgba(247,90,69,0.5) 50%, rgba(224,120,16,0.0) 75%, rgba(173,23,9,0.0) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,177,163,1) 0%, rgba(247,120,104,0.85) 25%, rgba(247,90,69,0.5) 50%, rgba(224,120,16,0.0) 75%, rgba(173,23,9,0.0) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,177,163,1) 0%, rgba(247,120,104,0.85) 25%, rgba(247,90,69,0.5) 50%, rgba(224,120,16,0.0) 75%, rgba(173,23,9,0.0) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,177,163,1) 0%, rgba(247,120,104,0.85) 25%, rgba(247,90,69,0.5) 50%, rgba(224,120,16,0.0) 75%, rgba(173,23,9,0.0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb1a3', endColorstr='#ad1709', GradientType=1 );
+
     @include larger-than(md) { max-width: 75%; }
     @include larger-than(lg) { max-width: 50%; }
   }
+
+  .quote__body {
+    margin-bottom: spacing(half);
+
+    font-size: type(font-size, h4);
+
+    &::first-letter { font-size: 150%; }
+  }
+
+  .quote__button {
+    padding: spacing(third) spacing(half);
+    margin-top: spacing();
+
+    border-radius: 100%;
+    background-color: rgba(#fff1e6, 0.6);
+
+    @include larger-than(md) { margin-left: 150px; }
+  }
+
+  &.quote--long .quote__body { font-size: type(font-size, h5); }
 }

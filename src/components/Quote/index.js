@@ -77,13 +77,11 @@ class Quote extends React.Component {
     const quote_length = this.state.body_long ? 'quote--long' : 'quote--short';
 
     return (
-      <div className={`${s.container} ${quote_length} quote--lastWeekTonight`}> {/*quote--${this.state.style}*/}
+      <div className={`${s.container} ${quote_length} quote--${this.state.style}`}> {/*quote--${this.state.style}*/}
         
         <div className="quote__content">
           <div className="quote__body">
-            <span>
-              "{this.state.body}"
-            </span>
+            <span dangerouslySetInnerHTML={{ __html: `"${this.state.body}"` }} />
           </div>
           <div className="quote__author">
             <span dangerouslySetInnerHTML={{ __html: `~ ${this.state.author}` }} />

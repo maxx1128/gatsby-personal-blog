@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
 .quote--computer {
   display: flex;
   padding: spacing() 25%;
@@ -5,12 +7,14 @@
   align-items: start;
 
   color: color(mono, light);
+  font-family: 'VT323', monospace;
 
   background-size: cover;
   background-position: center;
   background-image: url('./varients/computer.jpg');
 
   .quote__content {
+    width: 100%;
     padding-top: spacing(half);
     margin: 0 auto;
   }
@@ -18,14 +22,14 @@
   .quote__body {
     margin-bottom: spacing(half);
 
-    font-size: type(font-size, p);
+    font-size: type(font-size, h5);
     font-weight: type(font-weight, bold);
   }
 
   .quote__author {
     margin-bottom: spacing(double);
 
-    font-size: type(font-size, tiny);
+    font-size: type(font-size, h6);
 
     @include larger-than(md) { margin-bottom: spacing(triple); }
   }

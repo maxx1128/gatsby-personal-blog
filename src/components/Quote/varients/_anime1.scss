@@ -1,7 +1,10 @@
-.quote--anime1 {
-  padding: spacing() 20% spacing() spacing(double);
+@import url('https://fonts.googleapis.com/css?family=Over+the+Rainbow');
 
-  color: color(mono, light);
+.quote--anime1 {
+  padding: spacing() 10% spacing() spacing(double);
+
+  color: rgba(#7fdbff, 0.8);
+  font-family: 'Over the Rainbow', cursive;
 
   background-size: cover;
   background-position: 10% center;
@@ -10,17 +13,23 @@
   .quote__body {
     margin: spacing() 0 spacing(double);
 
-    transform: rotate(-2deg);
+    font-size: type(font-size, h5);
+
+    transform: rotate(-3deg);
   }
+
+  &.quote--long .quote__body { font-size: type(font-size, h6); }
 
   .quote__author {
     margin-bottom: spacing(triple);
 
-    transform: rotate(2deg);
+    transform: rotate(3deg);
   }
 
   .quote__button {
     display: inline-block;
+
+    font-style: italic;
 
     transform: rotate(35deg);
   }
