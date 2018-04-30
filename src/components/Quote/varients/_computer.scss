@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=VT323');
 
+@keyframes text_pop_in {
+  0% { opacity: 0; }
+
+  25% {
+    opacity: 1;
+    color: color(secondary);
+  }
+
+  50% { opacity: 0; }
+
+  75% {
+    opacity: 1;
+    color: color(primary);
+  }
+
+  100% {
+    opacity: 1;
+    color: color(mono, light);
+  }
+}
+
 .quote--computer {
   display: flex;
   padding: spacing() 25%;
@@ -12,6 +33,15 @@
   background-size: cover;
   background-position: center;
   background-image: url('./varients/computer.jpg');
+
+  .quote__body,
+  .quote__author,
+  .quote__button {
+    opacity: 0;
+
+    animation: text_pop_in 0.25s;
+    animation-fill-mode: forwards;
+  }
 
   .quote__content {
     width: 100%;
@@ -31,6 +61,8 @@
 
     font-size: type(font-size, h6);
 
+    animation-delay: 0.1s;
+
     @include larger-than(md) { margin-bottom: spacing(triple); }
   }
 
@@ -40,5 +72,9 @@
     @include larger-than(md) { margin-bottom: spacing(oneHalf); }
   }
 
-  .quote__button { text-align: left; }
+  .quote__button {
+    text-align: left;
+
+    animation-delay: 0.2s;
+  }
 }

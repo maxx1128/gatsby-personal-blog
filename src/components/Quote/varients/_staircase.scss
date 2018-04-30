@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Megrim');
 
+@keyframes pulse_in {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0) translateY(250px);
+  }
+
+  20% { opacity: 1; }
+
+  40% { opacity: 0; }
+
+  60% { opacity: 1; }
+
+  80% { opacity: 0; }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
 .quote--staircase {
   display: flex;
   padding: spacing() spacing() 0 spacing();
@@ -15,9 +35,11 @@
   background-position: center;
   background-image: url('./varients/staircase.jpg');
 
-  .quote__body,
-  .quote__author {
+  .quote__content {
     text-align: center;
+
+    animation: pulse_in 2s ease-in;
+    animation-fill-mode: forwards;
   }
 
   .quote__body {

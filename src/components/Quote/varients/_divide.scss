@@ -40,7 +40,7 @@ $divide-button-width: 80px;
 
     span {
       opacity: 0;
-      animation: slide_in 1s;
+      animation: slide_in 0.8s;
       animation-fill-mode: forwards;
     }
 
@@ -103,7 +103,14 @@ $divide-button-width: 80px;
     border-radius: 100%;
     text-align: center;
     text-decoration: none;
-
     @include contra-color(color(primary));
+
+    box-shadow: container(box-shadow, 2);
+    transition: box-shadow 0.5s;
+
+    @include hovers() {
+      box-shadow: container(box-shadow, 3);
+      transition: box-shadow 0.5s;
+    }
   }
 }

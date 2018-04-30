@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 
+@keyframes lwt_flip {
+  0% {
+    transform: scaleX(0);
+  }
+
+  50% {
+    transform: scaleX(-1);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
 $lwt-red: #b70c2a;
 
 .quote--lastWeekTonight {
@@ -21,6 +35,14 @@ $lwt-red: #b70c2a;
     @include larger-than(lg) { max-width: 60%; }
   }
 
+  .quote__body,
+  .quote__author,
+  .quote__button {
+    transform: scaleX(0);
+    animation: lwt_flip 0.75s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
   .quote__body {
     margin-bottom: spacing();
 
@@ -32,8 +54,13 @@ $lwt-red: #b70c2a;
   &.quote--long .quote__body { font-size: type(font-size, h4); }
 
   .quote__author {
+    display: inline-block;
     position: relative;
     margin-bottom: spacing();
+
+    text-align: center;
+
+    animation-delay: 0.5s;
 
     &::after {
       position: absolute;
@@ -59,5 +86,6 @@ $lwt-red: #b70c2a;
     border-radius: spacing(third);
     box-shadow: container(box-shadow, 2);
     background-color: color(mono, light);
+    animation-delay: 1s;
   }
 }

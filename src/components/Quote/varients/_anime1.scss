@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Over+the+Rainbow');
 
+@keyframes slide_down {
+  0% {
+    opacity: 0;
+    margin-top: -200px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
 .quote--anime1 {
   padding: spacing() 10% spacing() spacing(double);
 
@@ -9,6 +21,17 @@
   background-size: cover;
   background-position: 10% center;
   background-image: url('./varients/anime1.jpg');
+  overflow: hidden;
+
+  .quote__body,
+  .quote__author,
+  .quote__button {
+    margin-top: -300px;
+
+    opacity: 0;
+    animation: slide_down 1s ease-out;
+    animation-fill-mode: forwards;
+  }
 
   .quote__body {
     margin: spacing() 0 spacing(double);
@@ -23,6 +46,7 @@
   .quote__author {
     margin-bottom: spacing(triple);
 
+    animation-delay: 0.5s;
     transform: rotate(3deg);
   }
 
@@ -31,6 +55,7 @@
 
     font-style: italic;
 
+    animation-delay: 1s;
     transform: rotate(35deg);
   }
 }

@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Finger+Paint');
 
+@keyframes expand_in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  75% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .quote--explosion {
   display: flex;
   padding: spacing();
@@ -13,6 +30,14 @@
   background-size: cover;
   background-position: center;
   background-image: url('./varients/explosion.jpg');
+
+  .quote__content,
+  .quote__button {
+    opacity: 0;
+
+    animation: expand_in 0.6s ease-out;
+    animation-fill-mode: forwards;
+  }
 
   .quote__content {
     padding: spacing(half);
@@ -45,6 +70,8 @@
 
     border-radius: 100%;
     background-color: rgba(#fff1e6, 0.6);
+
+    animation-delay: 0.5s;
 
     @include larger-than(md) { margin-left: 150px; }
   }

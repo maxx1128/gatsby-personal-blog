@@ -2,6 +2,18 @@
 
 $anime2-sky: #00b2ff;
 
+@keyframes blur_in {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
 .quote--anime2 {
   position: relative;
   display: flex;
@@ -15,6 +27,14 @@ $anime2-sky: #00b2ff;
   background-size: cover;
   background-position: center;
   background-image: url('./varients/anime2.jpg');
+
+  .quote__content,
+  .quote__button {
+    opacity: 0;
+    filter: blur(4px);
+    animation: blur_in 1s;
+    animation-fill-mode: forwards;
+  }
 
   .quote__content {
     padding: spacing();
@@ -50,6 +70,7 @@ $anime2-sky: #00b2ff;
     border-radius: 3px;
     background-color: rgba($anime2-sky, 0.8);
 
+    animation-delay: 0.5s;
     transform: rotate(-16deg);
   }
 }

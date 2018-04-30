@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=East+Sea+Dokdo');
 
+$child-color: rgb(160, 0, 190);
+
+@keyframes body_slide {
+  0% { transform: translateX(-400px) rotate(179deg); }
+  100% { transform: translateX(0) rotate(-2deg); }
+}
+
+@keyframes author_slide {
+  0% { transform: translateX(400px) rotate(183deg); }
+  100% { transform: translateX(0) rotate(5deg); }
+}
+
 .quote--child {
   display: flex;
   padding: spacing();
@@ -14,12 +26,13 @@
   box-shadow: $quote-bg-light-heavy;
   background-position: center;
   background-image: url('./varients/child.jpg');
+  overflow: hidden;
 
   .quote__content,
   .quote__button { margin-top: auto; }
 
   .quote__content {
-    color: rgb(160, 0, 190);
+    color: $child-color;
 
     @include larger-than(md) { max-width: 66%; }
   }
@@ -31,7 +44,8 @@
     font-size: type(font-size, h4);
     font-weight: type(font-weight, heavy);
 
-    transform: rotate(-2deg);
+    animation: body_slide 1s ease-in-out;
+    animation-fill-mode: forwards;
 
     &.quote--long .quote__body { font-size: type(font-size, h5); }
   }
@@ -41,7 +55,28 @@
 
     text-align: right;
 
-    transform: rotate(5deg);
+    animation: author_slide 1.25s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .quote__button {
+    display: flex;
+    padding: spacing(quart) spacing(half);
+    align-items: center;
+
+    line-height: 1.5;
+    text-decoration: none;
+    color: color(mono, light);
+
+    border-radius: 100%;
+    background-color: $child-color;
+    box-shadow: container(box-shadow, 1);
+    transition: box-shadow 0.5s;
+
+    @include hovers() {
+      box-shadow: container(box-shadow, 2);
+      transition: box-shadow 0.5s;
+    }
   }
 
   &.quote--long .quote__body { font-size: type(font-size, h5); }
