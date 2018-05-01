@@ -9,13 +9,13 @@
     date: 2017/12/17
     image: 'puzzle_pieces'
     description:
-    link: http://maxwellantonucci.com/puzzle-pieces/
+    link: http://maxx1128.github.io/puzzle-pieces/
 
   - name: Monty Hall React App
     date: 2018/02/18
     image: 'monty_hall_react'
     description: "My first real experiment with a React app. Like all first experiments, my default idea is recreating the Monty Hall Dilemma."
-    link: http://maxwellantonucci.com/react-app-monty-python/
+    link: http://maxx1128.github.io/react-app-monty-python/
 
   - name: Monty Hall Vue App
     date: 2017/10/15
@@ -69,7 +69,7 @@
     date: 2015/10/15
     image: 'eeveelutions'
     description: 'I made this quiz to better understand the Angular framework, specifically its data-binding, Angular functions, and displaying the right views. Plus I used Flexbox to better control the responsiveness of certain elements with less CSS.'
-    link: http://maxwellantonucci.com/Which-Eeveelution-Are-You/
+    link: http://maxx1128.github.io/Which-Eeveelution-Are-You/
 
   - name: My Housing Matters
     date: 2015/05/03
