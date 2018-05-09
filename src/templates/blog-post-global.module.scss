@@ -17,7 +17,11 @@ hr {
   }
 }
 
-img { max-width: 100%; }
+img {
+  max-width: 100%;
+
+  box-shadow: container(box-shadow, 2) !important;
+}
 
 figure img { margin: 0 auto; }
 
@@ -25,6 +29,9 @@ blockquote:not([class]) {
   font-size: type(font-size, h3);
   line-height: type(line-height, large);
   font-family: type(font-family, header);
+
+  border-width: 0 !important;
+  box-shadow: container(box-shadow, 2);
 
   p {
     font-size: type(font-size, h4);

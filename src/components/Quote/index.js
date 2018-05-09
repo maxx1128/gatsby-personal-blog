@@ -8,9 +8,9 @@ class Quote extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      body: "Quote here!",
-      author: "Random McLorem",
-      style: "none"
+      body: "In the face of life's absurdity and horror, the only true weapon is our wit and observations.",
+      author: "Unknown",
+      style: "divide"
     };
 
     this.get_quote_data = this.get_quote_data.bind(this);

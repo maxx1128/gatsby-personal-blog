@@ -2,6 +2,7 @@
 title: "The May 1st Reboot"
 date:  2018-02-15
 icon:  codepen
+excerpt: "Two months after redesigning my site, a big event makes me do it all over again."
 path: "/may-1st-reboot/"
 ---
 

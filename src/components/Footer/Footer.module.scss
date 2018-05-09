@@ -61,15 +61,17 @@
   color: color(mono, light);
 
   background-color: color(action);
+  box-shadow: container(box-shadow, 1);
 
-  transition: background-color 0.25s;
+  transition: 0.25s;
 
   @include hovers() {
     color: color(mono, light);
 
     background-color: color(action, dark);
+    box-shadow: container(box-shadow, 2);
 
-    transition: background-color 0.5s;
+    transition: 0.5s;
   }
 }
 
@@ -88,6 +90,7 @@
   color: color(mono, light);
 
   background-color: color(secondary);
+  box-shadow: container(box-shadow, 1);
 
   @include larger-than(md) {
     margin-right: spacing();

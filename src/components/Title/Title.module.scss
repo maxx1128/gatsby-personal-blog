@@ -1,6 +1,9 @@
 @import './../../styles/styles.scss';
 
-.title_wrapper { composes: square-title; }
+.title_wrapper {
+  composes: square-title;
+  box-shadow: container(box-shadow, 2);
+}
 
 .title {
   margin: 0 auto;

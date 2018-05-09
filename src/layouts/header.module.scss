@@ -30,3 +30,5 @@ $header-border-width: spacing(quart);
 
   @include smaller-than(md) { font-size: type(font-size, h4); }
 }
+
+.tagline { font-style: italic; }

@@ -9,7 +9,7 @@ import profilePic from './../Bio/profile-pic.jpg'
 class Head extends React.Component {
 
   render() {
-    const title = `${this.props.title} | Maxwell Antonucci` || 'Maxwell Antonucci',
+    const title = this.props.title ? `${this.props.title} | Maxwell Antonucci` : 'Maxwell Antonucci',
           url = `https://www.maxwellantonucci.com${this.props.url_path}`,
           tagline = this.props.tagline || 'TAGLINE HERE',
           descr = this.props.descr || tagline,

@@ -20,15 +20,3 @@
 
   text-align: center;
 }
-
-.vertical {
-  @include larger-than(lg) {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: start;
-
-    text-align: left;
-
-    .list_item { margin-bottom: spacing(half); }
-  }
-}
