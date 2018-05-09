@@ -56,11 +56,13 @@ class Homepage extends React.Component {
             excerpt = is_article ?  post.description : post.node.frontmatter.excerpt,
             has_excerpt = (random_chance(5) ? excerpt : false),
             is_row_size = random_chance(5) ? true : false,
+            type_class = is_article ? s.article_type : s.blog_type,
             row_class = ((has_excerpt && is_row_size) ? (s.row_2) : (s.row_1)),
             column_class = ((has_excerpt && !is_row_size) ? (s.column_2) : (s.column_1));
 
       let post_data = {
         is_article: is_article,
+        type_class: type_class,
         title: title,
         excerpt: (has_excerpt ? excerpt : false),
         link: link,
@@ -73,7 +75,7 @@ class Homepage extends React.Component {
 
     const article_list = writing_items.map((article, i) => (
       <a
-        className={`${s.article_item} ${article.row} ${article.column}`}
+        className={`${s.article_item} ${article.type_class} ${article.row} ${article.column}`}
         key={i}
         href={article.link}
         target={article.is_article ? '_blank' : ''}

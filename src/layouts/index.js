@@ -37,6 +37,7 @@ class Template extends React.Component {
     return (
       <Menu
         data={menu_data}
+        current_path = {this.props.location.pathname}
       />
     )
   }

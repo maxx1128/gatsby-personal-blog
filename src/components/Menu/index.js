@@ -9,7 +9,7 @@ class Menu extends React.Component {
     const menu_items = this.props.data;
 
     return menu_items.map((menu, i) => (
-        <li key={i} className={s.list_item}>
+        <li key={i} className={`${s.list_item} ${(this.props.current_path === menu.link) ? s.active_link : ''}`}>
           <Link to={menu.link}>
             {menu.name}
           </Link>
