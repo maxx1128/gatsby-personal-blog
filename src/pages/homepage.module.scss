@@ -138,26 +138,7 @@
 
 .grid_img {
   width: 100%;
-  min-width: 100px;
   height: 100%;
-  min-height: 200px;
 
-  background-position: center;
-  background-size: cover;
+  object-fit: cover;
 }
-
-.grid_img_1 {
-  composes: grid_img;
-  background-image: url('./homepage_1.jpg');
-}
-
-.grid_img_2 {
-  composes: grid_img;
-  background-image: url('./homepage_2.jpg');
-}
-
-.grid_img_3 {
-  composes: grid_img;
-  background-image: url('./homepage_3.jpg');
-}
-

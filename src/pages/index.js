@@ -14,15 +14,15 @@ import s_page from './../layouts/page.module.scss'
 class Homepage extends React.Component {
   get_placeholder_items = () => {
     const item_1 = (
-      <div className={`${s.grid_img_1} ${s.row_1} ${s.column_1}`}></div>
+      <img className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_1} alt="" />
     );
     
     const item_2 = (
-      <div className={`${s.grid_img_2} ${s.row_1} ${s.column_1}`}></div>
+      <img className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_2} alt="" />
     );
 
     const item_3 = (
-      <div className={`${s.grid_img_3} ${s.row_1} ${s.column_1}`}></div>
+      <img className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_3} alt="" />
     );
     
     const item_4 = (
