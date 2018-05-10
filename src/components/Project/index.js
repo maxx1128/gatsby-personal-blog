@@ -5,10 +5,19 @@ const Project = ({ data, image }) => {
 
   return (
     <a href={data.link} target="_blank" rel="noopener" className={s.container}>
-      {<img className={s.image} src={image} alt={`Image for my '${data.name}' project`} />}
-      <h4 className={s.header}>
-        {data.name}
-      </h4>
+      <div className={s.image_container}>
+        <img src={image} alt={`Image for my '${data.name}' project`} />
+      </div>
+
+      <div className={s.text}>
+        <h4 className={s.header}>
+          {data.name}
+        </h4>
+
+        <p className={s.descr}>
+          {data.description}
+        </p>
+      </div>
     </a>
   )
 }

@@ -56,12 +56,6 @@ class PortfolioIndex extends React.Component {
       />
     ));
 
-    const grouped_projects = chunk(projects, 2).map((group, i) => (
-      <div key={i} className={s.two_row}>
-        {group}
-      </div>
-    ));
-
     return (
       <div>
         <Head
@@ -81,8 +75,8 @@ class PortfolioIndex extends React.Component {
           </p>
         </div>
         
-        <div className={`${s.projectContainer} ${s_page.content_large}`}>
-          {grouped_projects}
+        <div className={`${s_page.content_large} ${s.portfolio_wrapper}`}>
+          {projects}
         </div>
       </div>
     )

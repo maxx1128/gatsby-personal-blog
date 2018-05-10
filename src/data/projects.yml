@@ -8,49 +8,49 @@
   - name: Puzzle Pieces
     date: 2017/12/17
     image: 'puzzle_pieces'
-    description:
+    description: "I built out my previous site's front-end code using Brad Frost's Pattern Lab to arrange the base styles and components. While that site's been retired, I kept the library itself due to my love for Pattern Lab itself."
     link: http://maxx1128.github.io/puzzle-pieces/
 
   - name: Monty Hall React App
     date: 2018/02/18
     image: 'monty_hall_react'
-    description: "My first real experiment with a React app. Like all first experiments, my default idea is recreating the Monty Hall Dilemma."
+    description: "My first real experiment with a React app. Like all first experiments, my default idea is recreating the Monty Hall Dilemma. It was also my first time using CSS Modules, which were overkill for this small project but I now see their appeal for larger ones."
     link: http://maxx1128.github.io/react-app-monty-python/
 
   - name: Monty Hall Vue App
     date: 2017/10/15
     image: 'monty_hall_vue'
-    description: 
+    description: "I like Vue for being a simpler, yet still effective, JS framework for smaller projects. This is especially true for CodePen ones like this, with my default idea of making the Monty Hall Dilemma."
     link: https://codepen.io/max1128/pen/OxQYzW
 
   - name: Vue Commute Calculator
     date: 2017/11/10
     image: 'commute_calculator_vue'
-    description: 
+    description: "Another enjoyable Vue project in my spare time, where I wanted to make something goofy yet could give some insight. Putting in a few values shows you how much time you lose to commuting in more ways you'd ever want to know."
     link: https://codepen.io/max1128/pen/mBrKqR
 
   - name: Number Guessing Game
     date: 2016/01/08
     image: 'guess_the_number'
-    description: 
+    description: "One of my first JS framework projects was with Angular. It started as a simple game, but grew a lot more as I added more features like a hint system and changing the number limits. I don't use Angular much anymore, but it still was my first exposure to JS frameworks."
     link: https://codepen.io/max1128/pen/VvaLgr
 
   - name: Pure CSS Hypnotic Spiral
     date: 2016/10/22
     image: 'pure_css_hypnotic_spiral'
-    description: 
+    description: "Some random CSS experimenting with animations turned into one of my favorite pens of a complex spiral pattern. It's my only pen to be featured on CodePen's front page to date."
     link: https://codepen.io/max1128/pen/xEOLmg
 
   - name: Ace Attorney Staff Grid
     date: 2016/06/22
     image: 'ace_attorney_staff_grid'
-    description: 
+    description: "I enjoy working different interests into coding ideas. Here I worked in my love for the Ace Attorney Franchise into a 'Meet the Staff' page pattern."
     link: https://codepen.io/max1128/pen/KgzrGA
 
   - name: Longform Parallax Effect
     date: 2016/08/10
     image: 'longform_parallax_effect'
-    description: 
+    description: "I coded this effect to make long reading passages more interesting when planning a now-failed idea to write a book online with Jekyll. If I ever revive that idea, I'll certainly use this."
     link: https://codepen.io/max1128/pen/pbaxpK
 
   - name: EmberDex

@@ -1,63 +1,67 @@
 @import './../../styles/styles.scss';
 
 .container {
-  margin-bottom: spacing();
+  display: flex;
+  margin-bottom: spacing(triple);
+  flex-direction: column;
 
-  text-align: center;
-  text-decoration: none;
   color: color(mono, light);
+  text-decoration: none;
 
-  composes: square-primary;
+  background-color: color(primary);
+  box-shadow: container(box-shadow, 2);
 
-  &:nth-of-type(odd) { background-color: color(secondary); }
+  &:nth-of-type(3n) { background-color: color(secondary); }
 
-  @include hovers() { color: color(mono, light); }
-}
+  @include larger-than(md) {
+    margin-bottom: spacing(double);
+    flex-direction: row;
 
-.header { margin: 0; }
-
-.image { display: none; }
-
-@include larger-than(md) {
-  .container {
-    $indent-neg: spacing(oneHalf) * -2;
-
-    margin: 0;
-    justify-content: space-between;
-
-    .image { margin-bottom: $indent-neg; }
-
-    // Image on right side
     &:nth-of-type(even) {
       flex-direction: row-reverse;
 
-      text-align: left;
-
-      .image {
-        margin-right: $indent-neg;
-        margin-left: spacing();
-      }
-    }
-
-    // Image on left side
-    &:nth-of-type(odd) {
       text-align: right;
-
-      .image {
-        margin-right: spacing(oneHalf);
-        margin-left: $indent-neg;
-      }
     }
   }
 
-  .image {
-    display: block;
-    margin: spacing(oneHalf) * -1;
-    width: 100%;
-    max-width: 60%;
-    // height: auto;
-    align-self: flex-end;
+  @include hovers() {
+    color: color(mono, light);
 
-    border: $border;
+    .header { text-decoration: underline; }
   }
+}
+
+.image_container {
+  display: flex;
+  height: auto;
+  
+  flex: 1 1 100%;
+  align-items: start;
+
+  img { box-shadow: 0; }
+
+  @include larger-than(md) {
+    padding: spacing(oneHalf);
+    flex-basis: 40%;
+  }
+}
+
+.text {
+  padding: spacing();
+  flex: 1 1 100%;
+
+  @include larger-than(md) {
+    flex-basis: 60%;
+
+    .container:nth-of-type(odd) { padding-left: 0; }
+    .container:nth-of-type(even) { padding-right: 0; }
+  }
+}
+
+.header {
+  margin-top: 0;
+}
+
+.descr {
+  margin-bottom: 0;
 }
