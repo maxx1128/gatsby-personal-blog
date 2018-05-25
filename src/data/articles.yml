@@ -1,5 +1,10 @@
 - articles:
-  - name: The Career Adventures of Johnny JavaScript 
+  - name: Lessons Learned from a Failed CSS Talk
+    date: "2018-05-25"
+    link: https://dev.to/maxwell_dev/lessons-learned-from-a-failed-css-talk-41cc
+    description: "Despite confidence in my 'Maintainble CSS' talk, a lack of focus made it go long. Here's how I don't plan to repeat those mistakes."
+
+  - name: The Career Adventures of Johnny JavaScript
     date: "2018-04-05"
     link: https://dev.to/maxwell_dev/the-career-adventures-of-johnny-javascript-1cc3
     description: "What if instead of 'The Adventures of Johnny Bunko,' he had been a programmer by the name of Johnny JavaScript? How would these six career essentials have changed?"
@@ -24,17 +29,17 @@
     link: https://dev.to/maxwell_dev/takes-notes-on-everything-3io
     description: "With so much to keep learning as a junior dev, I've remembered not to trust my brain to hold onto all the new info."
 
-  - name: The Git Rebase Introduction I Wish I'd Had 
+  - name: The Git Rebase Introduction I Wish I'd Had
     date: "2017-09-24"
     link: https://dev.to/maxwell_dev/the-git-rebase-introduction-i-wish-id-had
     description: "If you don't know what rebasing in Git is, read this before it's too late. Especially if you love cupcakes!"
 
-  - name: Three Helpful Rules for Junior Devs 
+  - name: Three Helpful Rules for Junior Devs
     date: "2017-08-28"
     link: https://dev.to/maxwell_dev/three-helpful-rules-for-junior-devs
     description: "Part of being a junior dev is controlling the overwhelming pressure I put on myself to learn as much as possible."
 
-  - name: How to Make an Anime Newsletter 
+  - name: How to Make an Anime Newsletter
     date: "2017-07-30"
     link: https://dev.to/maxwell_dev/how-to-make-an-anime-newsletter
     description: "For my first web project that wasn't a website, I broke down a goal that involved Node, scheduled functions, the Twitter API, and a feed of anime wallpapers."

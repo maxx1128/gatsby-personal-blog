@@ -16,7 +16,7 @@ class Homepage extends React.Component {
     const item_1 = (
       <img className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_1} alt="" />
     );
-    
+
     const item_2 = (
       <img className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_2} alt="" />
     );
@@ -24,7 +24,7 @@ class Homepage extends React.Component {
     const item_3 = (
       <img className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_3} alt="" />
     );
-    
+
     const item_4 = (
       <div className={`${s.grid_quote} ${s.row_1} ${s.column_2}`}>
         "In the face of life's absurdity and horror, the only true weapon is our wit and observations."
@@ -43,7 +43,7 @@ class Homepage extends React.Component {
   get_writing_items = () => {
     let writing_items = [];
     const post_data = get(this, 'props.data.allMarkdownRemark.edges'),
-          article_data = get(this, 'props.data.allArticlesYaml.edges[0].node.articles').slice(1, 3),
+          article_data = get(this, 'props.data.allArticlesYaml.edges[0].node.articles').slice(0, 2),
           all_data = post_data.concat(article_data);
 
     const random_chance = (limit) => limit <= Math.floor((Math.random() * 10) + 1);
@@ -81,7 +81,7 @@ class Homepage extends React.Component {
         target={article.is_article ? '_blank' : ''}
         rel={article.is_article ? 'noopener' : ''}
       >
-        
+
         <h4>
           {article.title}
         </h4>
@@ -112,7 +112,7 @@ class Homepage extends React.Component {
 
 
     return (
-      <div>        
+      <div>
         <Head
           url_path={this.props.location.pathname}
           tagline={tagline}
@@ -168,7 +168,7 @@ export const pageQuery = graphql`
             link
             description
           }
-        } 
+        }
       }
     }
   }
