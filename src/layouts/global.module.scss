@@ -33,15 +33,13 @@ pre {
   background-color: color(mono, dark);
 }
 
-code,
-kbd,
-mark { padding: 2px 4px; }
-
 pre {
-  padding: spacing();
+  padding: spacing(half);
   max-width: 100vw;
 
   overflow-x: scroll;
+
+  @include larger-than(md) { padding: spacing(); }
 }
 
 mark {
