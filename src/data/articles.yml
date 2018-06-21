@@ -1,4 +1,9 @@
 - articles:
+  - name: It's Not About You
+    date: "2018-06-21"
+    link: https://dev.to/maxwell_dev/its-not-about-you-53h3
+    description: When getting feedback from coworkers about your code, don't let your ego stop you from doing better.
+
   - name: Lessons Learned from a Failed CSS Talk
     date: "2018-05-25"
     link: https://dev.to/maxwell_dev/lessons-learned-from-a-failed-css-talk-41cc
