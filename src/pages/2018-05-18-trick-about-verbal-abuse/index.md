@@ -33,7 +33,7 @@ Think about it this way: being verbally abused over and over is horrible. Imagin
 
 This shows how verbal abuse can cause lots of health problems, so the words we use (and how we use them) matter. Elgin also points out that much physical violence is often rooted in verbal abuse. Domestic violence alone is often seeded in fights or humiliation between two spouses. It also applies to any other violence between family members. Or strangers on the street whose verbal argument turns physical.
 
-Don't believe that words and communication are harmless to people. They are not. They can cause any amount of health or violence issues. We don't see the wounds right away, but that doesn't mean they're there.
+Don't believe that words and communication are harmless to people. They are not. They can cause any amount of health or violence issues. We don't see the wounds right away, but that doesn't mean they're not there.
 
 ### 2) Verbal Abuse is About Getting a Reaction
 
@@ -80,11 +80,11 @@ A common way to frame this is starting the sentence with something like "Isn't i
 
 This neutral language does two things. It stops the personal attack, and pivots the conversation to something else. The abuser wants to make it personal and angry. This victim shows they won't play their game without inviting another attack.
 
-> Abusers want conversations to bepersonal and emotional. Use neutral and abstract language to avoid this.
+> Abusers want conversations to be personal and emotional. Use neutral and abstract language to avoid this.
 
 #### Use the Boring Baroque Response
 
-Some abusers will try and bulldoze over the above moves and keep attacking. More often they'll ask a question but not care about the answer - they only ask to get a reaction. If they keep attacking, one response is to **give a neutral response that's as long and boring as possible.** If they're force the victim's have, the victim can show the abuser it won't be fun. It'll be a tedious waste of time. Elgin calls this the "Boring Baroque Response."
+Some abusers will try and bulldoze over the above moves and keep attacking. More often they'll ask a question but not care about the answer - they only ask to get a reaction. If they keep attacking, one response is to **give a neutral response that's as long and boring as possible.** If they force the victim's have, the victim can show the abuser it won't be fun. It'll be a tedious waste of time. Elgin calls this the "Boring Baroque Response."
 
 Pretend the abuser from the above example keeps attacking about smoking habits. The victim start a long anecdote about what they've read on smoking, addiction, or whatever. The key is still neutral language and expression. Most abusers will tire and give up.
 
