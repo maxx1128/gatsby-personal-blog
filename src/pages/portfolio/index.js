@@ -24,6 +24,7 @@ import monty_hall_vue from "./images/monty_hall_vue.png";
 import pure_css_hypnotic_effect from "./images/pure_css_hypnotic_spiral.png";
 import puzzle_pieces from "./images/puzzle_pieces.png";
 import seeclickfix from "./images/seeclickfix.png";
+import vigenere_encryption from "./images/vigenere_encryption.png";
 
 const images = {
   'ace_attorney_lorem_ipsum': ace_attorney_lorem_ipsum,
@@ -39,7 +40,8 @@ const images = {
   'monty_hall_vue': monty_hall_vue,
   'pure_css_hypnotic_spiral': pure_css_hypnotic_effect,
   'puzzle_pieces': puzzle_pieces,
-  'seeclickfix': seeclickfix
+  'seeclickfix': seeclickfix,
+  'vigenere_encryption': vigenere_encryption
 };
 
 class PortfolioIndex extends React.Component {
@@ -74,7 +76,7 @@ class PortfolioIndex extends React.Component {
             All my projects are welcome to my portfolio page! Some, especially those hosted elsewhere, may not be there anymore. Chances are I'm too busy making new additions to catch them all. You can find smaller, more current bits of work on my <a href="http://codepen.io/max1128/" target="_blank">CodePen</a> and <a href="https://github.com/maxx1128" target="_blank">Github</a> profiles.
           </p>
         </div>
-        
+
         <div className={`${s_page.content_large} ${s.portfolio_wrapper}`}>
           {projects}
         </div>
@@ -97,7 +99,7 @@ export const portfolioQuery = graphql`
             description
             link
           }
-        } 
+        }
       }
     }
   }

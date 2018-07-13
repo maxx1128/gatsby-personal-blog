@@ -1,4 +1,10 @@
 - projects:
+  - name: Vigenere Encryption
+    date: 2018/06/20
+    image: 'vigenere_encryption'
+    description: "After some casual research on encryption methods, I decided to recreate one using Vue. The Vigenere method was both challenging and useful, and only took a few hours to get right. Use it to encrpyt messages, pass them along, and decrypt them with the key phrase you choose!"
+    link: https://codepen.io/max1128/full/VdyJmd/
+
   - name: SeeClickFix
     date: 2017/10/15
     image: 'seeclickfix'
