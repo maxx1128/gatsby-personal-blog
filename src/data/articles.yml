@@ -1,4 +1,9 @@
 - articles:
+  - name: The Shell Introduction I Wish I Had
+    date: "2018-07-16"
+    link: https://dev.to/maxwell_dev/the-shell-introduction-i-wish-i-had-551k
+    description: I write a letter to my past self about the Shell's importance I wish I'd focused on earlier in my career.
+
   - name: It's Not About You
     date: "2018-06-21"
     link: https://dev.to/maxwell_dev/its-not-about-you-53h3
