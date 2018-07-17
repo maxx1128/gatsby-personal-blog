@@ -2,14 +2,13 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Menu from './../components/Menu'
-import Head from './../components/Head'
 import Footer from './../components/Footer'
 
 import './global.module.scss'
 import s_header from './header.module.scss'
 
 class Template extends React.Component {
-  
+
   get_site_meta = () => {
     return get(this, 'props.data.site.siteMetadata')
   }
@@ -75,7 +74,7 @@ class Template extends React.Component {
     return (
       <div>
         {header}
-        
+
         {children()}
 
         {footer}
@@ -109,7 +108,7 @@ export const templateQuery = graphql`
             name
             link
           }
-        } 
+        }
       }
     }
     allSocialYaml {
@@ -121,7 +120,7 @@ export const templateQuery = graphql`
             icon
             text
           }
-        } 
+        }
       }
     }
   }
