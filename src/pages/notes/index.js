@@ -12,12 +12,15 @@ class NotesTemplate extends React.Component {
 
     const notes_items = notes_data.map((note, i) => {
       const title = get(note, 'node.frontmatter.date'),
+            link_id = title.replace(/ /g, '').replace(/,/g, ''),
             content = get(note, 'node.html');
 
       return (
         <article key={i}>
-          <h3>
-            {title}
+          <h3 id={link_id}>
+            <a href={`#${link_id}`}>
+              {title}
+            </a>
           </h3>
 
           <div dangerouslySetInnerHTML={{ __html: content }}></div>
@@ -29,8 +32,8 @@ class NotesTemplate extends React.Component {
   }
 
   render() {
-    const title = "Notes",
-          tagline = "Quips too short for blog posts",
+    const title = "Notes I've Scrawled",
+          tagline = "Quips and snippests too short for blog posts",
           notes = this.get_notes();
 
     return (
