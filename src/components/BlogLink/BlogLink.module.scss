@@ -1,25 +1,50 @@
 @import './../../styles/styles.scss';
 
 $random-blog-item-wrapper: '.container:nth-of-type(4n + 1)';
+$random-blog-item-wrapper-2: '.container:nth-of-type(5n + 2)';
+$random-blog-item-wrapper-3: '.container:nth-of-type(6n + 3)';
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  color: color(mono, light);
+
+  background-color: color(secondary);
+  box-shadow: container(box-shadow, 2);
+  transition: box-shadow 0.25s;
+
+  @include hovers() {
+    box-shadow: container(box-shadow, 3);
+    transition: box-shadow 0.5s;
+  }
+}
+
+#{$random-blog-item-wrapper} { background-color: color(primary); }
+#{$random-blog-item-wrapper-2} { background-color: color(action); }
+#{$random-blog-item-wrapper-3} { background-color: color(mono, dark); }
 
 .banner {
   position: relative;
   display: block;
-  padding: spacing();
+  padding: spacing() spacing() spacing(half);
 
   text-decoration: none;
   color: color(mono, light);
 
-  border-bottom: $border;
-  background-color: color(secondary);
-
-  #{$random-blog-item-wrapper} & { background-color: color(primary); }
+  border-bottom: 1px solid color(mono, light);
 
   @include hovers() { color: color(mono, light); }
+
+  &:focus {
+    outline: 2px dotted color(primary);
+    outline-offset: 2px;
+  }
 }
 
 .title {
   margin-top: 0;
+  margin-bottom: spacing(half);
 
   text-decoration: underline;
 }
@@ -44,7 +69,7 @@ $random-blog-item-wrapper: '.container:nth-of-type(4n + 1)';
   display: none;
   padding: spacing(half);
 
-  border: spacing(third) solid color(mono, light);
+  box-shadow: container(box-shadow, 2);
   background-color: color(primary);
 
   z-index: 1;
@@ -52,12 +77,20 @@ $random-blog-item-wrapper: '.container:nth-of-type(4n + 1)';
   #{$random-blog-item-wrapper} & {
     background-color: color(secondary);
   }
+
+  #{$random-blog-item-wrapper-2} & {
+    background-color: color(mono, dark);
+  }
+
+  #{$random-blog-item-wrapper-3} & {
+    background-color: color(action);
+  }
 }
 
 .excerpt {
-  padding: 0 spacing();
-
-  #{$random-blog-item-wrapper} & { border-color: color(primary); }
+  padding: spacing();
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 @include larger-than(sm) {
@@ -72,21 +105,8 @@ $random-blog-item-wrapper: '.container:nth-of-type(4n + 1)';
 }
 
 @include larger-than(md) {
-  .banner {
-    padding-right: spacing(triple);
-    padding-left: spacing(oneHalf);
-
-    border-bottom-width: 0;
-  }
-
   .icon {
     top: spacing() * -1;
     right: spacing() * -1;
-  }
-
-  .excerpt {
-    padding: spacing();
-
-    border-left: spacing(half) solid color(secondary);
   }
 }
