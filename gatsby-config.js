@@ -46,6 +46,12 @@ module.exports = {
               path: `./src/data/`,
             },
           },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              rel: "noopener"
+            }
+          }
         ],
       },
     },
