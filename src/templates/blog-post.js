@@ -1,7 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
-import get from 'lodash/get'
 import Icon from './../components/FeatherIcon'
 
 import './blog-post-global.module.scss'
@@ -40,7 +37,7 @@ class BlogPostTemplate extends React.Component {
             url_path={this.props.location.pathname}
             tagline={post.frontmatter.excerpt || post.excerpt}
           />
-   
+
           <div className={s.content} dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
       </div>
