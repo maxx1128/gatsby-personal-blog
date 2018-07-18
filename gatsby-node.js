@@ -8,7 +8,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
-    const pages = []
     const blogPost = path.resolve("./src/templates/blog-post.js")
     resolve(
       graphql(
@@ -36,9 +35,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           createPage({
             path: edge.node.frontmatter.path,
             component: blogPost,
-            context: {
-              path: edge.node.frontmatter.path,
-            },
+            context: {},
           })
         })
       })
