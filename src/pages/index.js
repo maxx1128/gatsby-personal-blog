@@ -144,7 +144,13 @@ export default Homepage
 
 export const pageQuery = graphql`
   query HomepageQuery {
-    allMarkdownRemark(limit: 3, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      limit: 3,
+      sort: { fields: [frontmatter___date], order: DESC },
+      filter: {
+        frontmatter: { path: { ne: "/null/" } }
+      }
+    ){
       edges {
         node {
           excerpt

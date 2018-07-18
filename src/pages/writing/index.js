@@ -11,7 +11,7 @@ import Title from './../../components/Title'
 import BlogLink from './../../components/BlogLink'
 
 class WritingIndex extends React.Component {
-  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -169,7 +169,7 @@ class WritingIndex extends React.Component {
                 Oldest
               </label>
             </div>
-          </div>          
+          </div>
         </div>
 
         <section className={`${s.container} ${s_page.content_large}`}>
@@ -184,7 +184,12 @@ export default WritingIndex
 
 export const pageQuery = graphql`
   query WritingQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC },
+      filter: {
+        frontmatter: { path: { ne: "/null/" } }
+      }
+    ){
       edges {
         node {
           excerpt
@@ -208,7 +213,7 @@ export const pageQuery = graphql`
             link
             description
           }
-        } 
+        }
       }
     }
   }
