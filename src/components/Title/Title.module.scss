@@ -19,6 +19,7 @@
 }
 
 .subheader {
+  margin-top: spacing(oneHalf);
   margin-bottom: 0;
 
   @include smaller-than(md) { font-size: type(font-size, h5); }
