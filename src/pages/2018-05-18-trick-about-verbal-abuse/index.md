@@ -4,6 +4,7 @@ date:  2018-05-18
 icon:  edit-3
 excerpt: "Verbal abuse shouldn't be dismissed as silly or unimportant. There's easy ways to recognize and handle it."
 path: "/3-lessons-about-verbal-abuse/"
+postType: post
 ---
 
 A few months ago I read about [emotional abuse tactics Trump used in a presidential debate](https://everydayfeminism.com/2016/09/trump-emotional-abuse-tactics/). That got me curious about the nature of verbal and emotional abuse. How it can damage our minds and well-beings so much, yet it's rarely talked about. Whenever it comes up, people less familiar with it often dismiss it as "people being too sensitive."

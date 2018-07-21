@@ -4,6 +4,7 @@ date         : 2018-01-09
 icon         : cast
 excerpt      : ""
 path         : "/most-thoughts-are-useless/"
+postType: post
 ---
 
 How many of your thoughts from yesterday can you specifically remember?

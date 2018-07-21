@@ -65,7 +65,7 @@ export const pageQuery = graphql`
   query NotesQuery {
     allMarkdownRemark(
       filter: {
-        frontmatter: { path: { eq: "/null/" } }
+        frontmatter: { postType: { ne: "post" } }
       },
       sort: { fields: [frontmatter___date], order: DESC }
     ){
@@ -74,6 +74,7 @@ export const pageQuery = graphql`
           html
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            path
           }
         }
       }

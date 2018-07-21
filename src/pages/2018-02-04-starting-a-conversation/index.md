@@ -4,6 +4,7 @@ date:  2018-02-06
 icon:  edit-3
 path: "/dont-just-start-a-conversation/"
 excerpt: "People 'just trying to start a conversation' are never worth listening to."
+postType: post
 ---
 
 * "I'm just trying to start a conversation."

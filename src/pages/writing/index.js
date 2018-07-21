@@ -187,7 +187,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC },
       filter: {
-        frontmatter: { path: { ne: "/null/" } }
+        frontmatter: { postType: { eq: "post" } }
       }
     ){
       edges {

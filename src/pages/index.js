@@ -148,7 +148,7 @@ export const pageQuery = graphql`
       limit: 3,
       sort: { fields: [frontmatter___date], order: DESC },
       filter: {
-        frontmatter: { path: { ne: "/null/" } }
+        frontmatter: { postType: { eq: "post" } }
       }
     ){
       edges {

@@ -18,6 +18,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             node {
               frontmatter {
                 path
+                postType
               }
             }
           }

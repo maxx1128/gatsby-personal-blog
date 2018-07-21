@@ -4,6 +4,7 @@ date:   2016-07-01
 path:   "/death-dogs-distance/"
 excerpt: Being so close to death is terrifying, but being far away from it is even worse.
 featured-img: ./featured.png
+postType: post
 ---
 
 I've never been scared of death itself, only the times where it's on the horizon.
@@ -51,5 +52,3 @@ There was no longer any fear, uncertainty, or distance. There were lots of feeli
 Being a short distance from death is terrible, but a huge distance is worse. There's no terrible feelings, but no good ones either. When it comes to death, we shouldn't regret having to close that distance with others or with ourselves.
 
 Because avoiding death forever means avoiding life forever. Like a life with a loyal, quirky, and lovable dog that you will miss immensely but will have no regrets about.
-
-

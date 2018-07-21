@@ -4,6 +4,7 @@ date       : 2017-12-21
 icon       : edit-3
 excerpt    : ""
 path       : "/attention-is-a-currency/"
+postType: post
 ---
 
 Something I always marvel at with today's society is just how in-demand everyone's attention is. In many cases it's in more demanded, and more easily wasted, than our money.
@@ -26,7 +27,7 @@ You may see why this is a bad thing.
 
 ### Spend Your Attention Wisely
 
-This is all why I see my attention as something to be used extra carefully. It's finite and can improve or destroy our lives, depending on how it's spent. 
+This is all why I see my attention as something to be used extra carefully. It's finite and can improve or destroy our lives, depending on how it's spent.
 
 So many of the same rules for handling our finances now apply to it:
 

@@ -5,6 +5,7 @@ categories   : personal philosophy
 excerpt      : I've found I'm not a happy person. I wouldn't have it any other way.
 path         : "/perfectly-unhappy-developer/"
 featured-img : ./featured.jpg
+postType: post
 ---
 
 To this day, one of my favorite online articles is The Oatmeal's comic on being ["Perfectly Unhappy."](http://theoatmeal.com/comics/unhappy) For a while I wasn't sure why. Could have been his usual humor and insight was better than usual. Or I read it for the first time while in a good mood.
@@ -38,7 +39,7 @@ All the things I love the most fit this in different ways:
 
 All these meet my definition of meaningful, so I'm drawn back to them. But they usually don't make me happy.
 
-They make me feel frustrated and inadequate, insecure and lost. 
+They make me feel frustrated and inadequate, insecure and lost.
 
 They make me feel astounded and intrigued, busy and complex.
 

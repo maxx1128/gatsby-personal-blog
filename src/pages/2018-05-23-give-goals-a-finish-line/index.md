@@ -4,6 +4,7 @@ date:  2018-05-23
 icon:  edit-3
 excerpt: "Inspirational-sounding goals seem good, but have gotten me nowhere. Measurable goals force me to step up and try."
 path: "/give-your-goals-a-finish-line/"
+postType: post
 ---
 
 For much of my life I've set goals I thought were good:

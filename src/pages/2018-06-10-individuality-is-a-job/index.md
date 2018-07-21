@@ -4,6 +4,7 @@ date:  2018-06-10
 icon:  cast
 excerpt: "Is uniqueness something natural for us, or does it take work?"
 path: "/individuality-is-a-job/"
+postType: post
 ---
 
 Is uniqueness something natural for us, or does it take work?
