@@ -12,13 +12,14 @@ class NotesTemplate extends React.Component {
 
     const notes_items = notes_data.map((note, i) => {
       const title = get(note, 'node.frontmatter.date'),
+            path = get(note, 'node.frontmatter.path'),
             link_id = title.replace(/ /g, '').replace(/,/g, ''),
             content = get(note, 'node.html');
 
       return (
         <article key={i}>
           <h3 id={link_id}>
-            <a href={`#${link_id}`}>
+            <a href={path}>
               {title}
             </a>
           </h3>
@@ -65,7 +66,7 @@ export const pageQuery = graphql`
   query NotesQuery {
     allMarkdownRemark(
       filter: {
-        frontmatter: { postType: { ne: "post" } }
+        frontmatter: { postType: { eq: "note" } }
       },
       sort: { fields: [frontmatter___date], order: DESC }
     ){

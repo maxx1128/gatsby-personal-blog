@@ -28,12 +28,18 @@
 }
 
 .title_header {
-  margin: 0 0 spacing(double);
+  margin: 0;
 
   @include smaller-than(md) { font-size: type(font-size, h3); }
+  @include larger-than(md) { margin: 0 0 spacing(); }
 }
 
-.date { font-style: italic; }
+.date {
+  display: block;
+  margin-top: spacing(oneHalf);
+
+  font-style: italic;
+}
 
 .content { padding: spacing(); }
 
