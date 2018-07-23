@@ -14,25 +14,25 @@ import s_page from './../layouts/page.module.scss'
 class Homepage extends React.Component {
   get_placeholder_items = () => {
     const item_1 = (
-      <img className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_1} alt="" />
+      <img key='item1' className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_1} alt="" />
     );
 
     const item_2 = (
-      <img className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_2} alt="" />
+      <img key='item2' className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_2} alt="" />
     );
 
     const item_3 = (
-      <img className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_3} alt="" />
+      <img key='item3' className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_3} alt="" />
     );
 
     const item_4 = (
-      <div className={`${s.grid_quote} ${s.row_1} ${s.column_2}`}>
+      <div key='item4' className={`${s.grid_quote} ${s.row_1} ${s.column_2}`}>
         "In the face of life's absurdity and horror, the only true weapon is our wit and observations."
       </div>
     );
 
     const quotes = (
-      <article className={s.quotes}>
+      <article key='quotes' className={s.quotes}>
         <Quote />
       </article>
     );
