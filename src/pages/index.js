@@ -3,6 +3,7 @@ import get from 'lodash/get'
 import Quote from './../components/Quote'
 import profile_pic from './../components/Bio/profile-pic.jpg'
 import Head from './../components/Head'
+import Link from 'gatsby-link'
 
 import home_img_1 from './homepage_1.jpg'
 import home_img_2 from './homepage_2.jpg'
@@ -31,13 +32,19 @@ class Homepage extends React.Component {
       </div>
     );
 
+    const item_5 = (
+      <Link key='item5' to='/notes/' className={`${s.grid_notes} ${s.row_1} ${s.column_1}`}>
+        Notes I've Scrawled
+      </Link>
+    );
+
     const quotes = (
       <article key='quotes' className={s.quotes}>
         <Quote />
       </article>
     );
 
-    return [item_1, item_2, item_3, item_4, quotes];
+    return [item_1, item_2, item_3, item_4, item_5, quotes];
   }
 
   get_writing_items = () => {
