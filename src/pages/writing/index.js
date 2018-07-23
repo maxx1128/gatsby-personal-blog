@@ -1,7 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
-import chunk from 'lodash/chunk'
 
 import s from './writing.module.scss'
 import s_page from './../../layouts/page.module.scss'
@@ -125,7 +123,7 @@ class WritingIndex extends React.Component {
 
           <div className={s.form_wrapper}>
             <div className={s.form}>
-              <label for="all" className={s.radio_label}>
+              <label htmlFor="all" className={s.radio_label}>
                 <input type="radio" value="all"
                   id="all"
                   checked={this.state.group === 'all'}
@@ -133,7 +131,7 @@ class WritingIndex extends React.Component {
                 />
                 Show All
               </label>
-              <label for="articles" className={s.radio_label}>
+              <label htmlFor="articles" className={s.radio_label}>
                 <input type="radio" value="articles"
                   id="articles"
                   checked={this.state.group === 'articles'}
@@ -141,7 +139,7 @@ class WritingIndex extends React.Component {
                 />
                 Articles
               </label>
-              <label for="blog" className={s.radio_label}>
+              <label htmlFor="blog" className={s.radio_label}>
                 <input type="radio" value="blog"
                   id="blog"
                   checked={this.state.group === 'blog'}
@@ -152,7 +150,7 @@ class WritingIndex extends React.Component {
             </div>
 
             <div className={s.form}>
-              <label for="desc" className={s.radio_label}>
+              <label htmlFor="desc" className={s.radio_label}>
                 <input type="radio" value="desc"
                   id="desc"
                   checked={this.state.order === 'desc'}
@@ -160,7 +158,7 @@ class WritingIndex extends React.Component {
                 />
                 Newest
               </label>
-              <label for="asc" className={s.radio_label}>
+              <label htmlFor="asc" className={s.radio_label}>
                 <input type="radio" value="asc"
                   id="asc"
                   checked={this.state.order === 'asc'}

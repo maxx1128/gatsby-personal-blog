@@ -1,5 +1,6 @@
 import React from 'react'
 import get from 'lodash/get'
+import Link from 'gatsby-link'
 
 import s_page from './../../layouts/page.module.scss'
 
@@ -19,9 +20,9 @@ class NotesTemplate extends React.Component {
       return (
         <article key={i}>
           <h3 id={link_id}>
-            <a href={path}>
+            <Link to={path}>
               {title}
-            </a>
+            </Link>
           </h3>
 
           <div dangerouslySetInnerHTML={{ __html: content }}></div>
