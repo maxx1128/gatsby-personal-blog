@@ -38,13 +38,25 @@ class Homepage extends React.Component {
       </Link>
     );
 
+    const item_6 = (
+      <a key='item6' href="https://github.com/maxx1128/Webdev-Study-Notes" target="_blank" rel="noopener" className={`${s.grid_studyRepo} ${s.row_1} ${s.column_1}`}>
+        <h4>
+          Study Repo
+        </h4>
+
+        <small>
+          My online notebook for programming, web development, nonfiction, and some fiction.
+        </small>
+      </a>
+    );
+
     const quotes = (
       <article key='quotes' className={s.quotes}>
         <Quote />
       </article>
     );
 
-    return [item_1, item_2, item_3, item_4, item_5, quotes];
+    return [item_1, item_2, item_3, item_4, item_5, item_6, quotes];
   }
 
   get_writing_items = () => {
@@ -80,26 +92,51 @@ class Homepage extends React.Component {
       writing_items.push(post_data);
     });
 
-    const article_list = writing_items.map((article, i) => (
-      <a
-        className={`${s.article_item} ${article.type_class} ${article.row} ${article.column}`}
-        key={i}
-        href={article.link}
-        target={article.is_article ? '_blank' : ''}
-        rel={article.is_article ? 'noopener' : ''}
-      >
+    // FIXME
+    // Make this a separate component later on
+    const article_list = writing_items.map(function(article, i){
+      if (article.is_article) {
+        return (
+          <a
+            className={`${s.article_item} ${article.type_class} ${article.row} ${article.column}`}
+            key={i}
+            href={article.link}
+            target='_blank'
+            rel='noopener'
+          >
 
-        <h4>
-          {article.title}
-        </h4>
+            <h4>
+              {article.title}
+            </h4>
 
-        {article.excerpt &&
-          <p>
-            {article.excerpt}
-          </p>
-        }
-      </a>
-    ));
+            {article.excerpt &&
+              <p>
+                {article.excerpt}
+              </p>
+            }
+          </a>
+        );
+      } else {
+        return (
+          <Link
+            className={`${s.article_item} ${article.type_class} ${article.row} ${article.column}`}
+            key={i}
+            to={article.link}
+          >
+
+            <h4>
+              {article.title}
+            </h4>
+
+            {article.excerpt &&
+              <p>
+                {article.excerpt}
+              </p>
+            }
+          </Link>
+        );
+      }
+    });
 
     return article_list;
   }
