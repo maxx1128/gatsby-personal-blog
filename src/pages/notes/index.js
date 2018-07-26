@@ -2,6 +2,7 @@ import React from 'react'
 import get from 'lodash/get'
 import Link from 'gatsby-link'
 
+import s from './notes.module.scss'
 import s_page from './../../layouts/page.module.scss'
 
 import Head from './../../components/Head'
@@ -12,18 +13,23 @@ class NotesTemplate extends React.Component {
     const notes_data = get(this, 'props.data.allMarkdownRemark.edges');
 
     const notes_items = notes_data.map((note, i) => {
-      const title = get(note, 'node.frontmatter.date'),
+      const title = get(note, 'node.frontmatter.title'),
             path = get(note, 'node.frontmatter.path'),
+            date = get(note, 'node.frontmatter.date'),
             link_id = title.replace(/ /g, '').replace(/,/g, ''),
             content = get(note, 'node.html');
 
       return (
         <article key={i}>
-          <h3 id={link_id}>
+          <h3>
             <Link to={path}>
               {title}
             </Link>
           </h3>
+
+          <h6 id={link_id} className={s.subheader}>
+            {date}
+          </h6>
 
           <div dangerouslySetInnerHTML={{ __html: content }}></div>
         </article>
@@ -76,6 +82,7 @@ export const pageQuery = graphql`
           html
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            title
             path
           }
         }
