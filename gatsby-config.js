@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "Max Antonucci",
+    description: "Journalist turned Full-time Coder, Part-time Ponderer",
     tagline: "Journalist turned Full-time Coder, Part-time Ponderer",
+    siteUrl: "http://www.maxwellantonucci.com/",
     author: "Max Antonucci",
     twitter: "Maxwell_Dev"
   },
@@ -71,6 +73,60 @@ module.exports = {
           `istok web\:400,400i,700`
         ]
       }
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  custom_elements: [{ "content:encoded": edge.node.frontmatter.excerpt }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: { fields: [frontmatter___date], order: DESC }
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      frontmatter {
+                        title
+                        icon
+                        path
+                        excerpt
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+          },
+        ],
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
