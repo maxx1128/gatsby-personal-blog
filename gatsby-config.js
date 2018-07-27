@@ -3,7 +3,7 @@ module.exports = {
     title: "Max Antonucci",
     description: "Journalist turned Full-time Coder, Part-time Ponderer",
     tagline: "Journalist turned Full-time Coder, Part-time Ponderer",
-    siteUrl: "http://www.maxwellantonucci.com/",
+    siteUrl: "http://www.maxwellantonucci.com",
     author: "Max Antonucci",
     twitter: "Maxwell_Dev"
   },
