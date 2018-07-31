@@ -34,7 +34,7 @@ class Homepage extends React.Component {
 
     const item_5 = (
       <Link key='item5' to='/notes/' className={`${s.grid_notes} ${s.row_1} ${s.column_1}`}>
-        "Notes I\'ve Scrawled"
+        Notes I’ve Scrawled
       </Link>
     );
 
@@ -164,7 +164,7 @@ class Homepage extends React.Component {
 
         <div className={s.title}>
           <div>
-            I’m Max Antonucci, a front-end developer living and working in New Haven, CT. Writing is most of my life, whether it's code, words, or tweets. The rest is reading, boxing, philosophizing, and often breathing.
+            I’m Max Antonucci, a front-end developer living and working in New Haven, CT. Writing is most of my life, whether it’s code, words, or tweets. The rest is reading, boxing, philosophizing, and often breathing.
           </div>
         </div>
 
