@@ -34,7 +34,7 @@ class Homepage extends React.Component {
 
     const item_5 = (
       <Link key='item5' to='/notes/' className={`${s.grid_notes} ${s.row_1} ${s.column_1}`}>
-        Notes I've Scrawled
+        "Notes I\'ve Scrawled"
       </Link>
     );
 
