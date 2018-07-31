@@ -1,6 +1,7 @@
 import React from 'react'
 import get from 'lodash/get'
 import Quote from './../components/Quote'
+import HomepageArticle from './../components/HomepageArticle'
 import profile_pic from './../components/Bio/profile-pic.jpg'
 import Head from './../components/Head'
 import Link from 'gatsby-link'
@@ -92,50 +93,16 @@ class Homepage extends React.Component {
       writing_items.push(post_data);
     });
 
-    // FIXME
-    // Make this a separate component later on
     const article_list = writing_items.map(function(article, i){
-      if (article.is_article) {
-        return (
-          <a
-            className={`${s.article_item} ${article.type_class} ${article.row} ${article.column}`}
-            key={i}
-            href={article.link}
-            target='_blank'
-            rel='noopener'
-          >
-
-            <h4>
-              {article.title}
-            </h4>
-
-            {article.excerpt &&
-              <p>
-                {article.excerpt}
-              </p>
-            }
-          </a>
-        );
-      } else {
-        return (
-          <Link
-            className={`${s.article_item} ${article.type_class} ${article.row} ${article.column}`}
-            key={i}
-            to={article.link}
-          >
-
-            <h4>
-              {article.title}
-            </h4>
-
-            {article.excerpt &&
-              <p>
-                {article.excerpt}
-              </p>
-            }
-          </Link>
-        );
-      }
+      return (
+        <HomepageArticle
+          classes={`${s.article_item} ${article.type_class} ${article.row} ${article.column}`}
+          key={i}
+          title={article.title}
+          excerpt={article.excerpt || false}
+          link={article.link}
+          external={article.is_article} />
+      );
     });
 
     return article_list;
