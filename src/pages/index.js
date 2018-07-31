@@ -151,7 +151,7 @@ class Homepage extends React.Component {
           writing_items = this.get_writing_items(),
           placheolder_items = this.get_placeholder_items(),
           all_items = writing_items.concat(placheolder_items),
-          suffled_items = shuffle(all_items);
+          shuffled_items = shuffle(all_items);
 
 
 
@@ -176,7 +176,7 @@ class Homepage extends React.Component {
               alt="Cartoon version of myself for my avatar"
             />
 
-            {all_items}
+            {shuffled_items}
           </section>
         </div>
       </div>
