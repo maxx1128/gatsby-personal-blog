@@ -20,7 +20,7 @@ class Homepage extends React.Component {
     );
 
     const item_2 = (
-      <img key='item2' className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_2} alt="" />
+      <img key='item2' className={`${s.grid_img} ${s.row_2} ${s.column_2}`} src={home_img_2} alt="" />
     );
 
     const item_3 = (
@@ -34,12 +34,6 @@ class Homepage extends React.Component {
     );
 
     const item_5 = (
-      <Link key='item5' to='/notes/' className={`${s.grid_notes} ${s.row_1} ${s.column_1}`}>
-        Notes I’ve Scrawled
-      </Link>
-    );
-
-    const item_6 = (
       <a key='item6' href="https://github.com/maxx1128/Webdev-Study-Notes" target="_blank" rel="noopener" className={`${s.grid_studyRepo} ${s.row_1} ${s.column_1}`}>
         <h4>
           Study Repo
@@ -57,13 +51,13 @@ class Homepage extends React.Component {
       </article>
     );
 
-    return [item_1, item_2, item_3, item_4, item_5, item_6, quotes];
+    return [item_1, item_2, item_3, item_4, item_5, quotes];
   }
 
   get_writing_items = () => {
     let writing_items = [];
     const post_data = get(this, 'props.data.allMarkdownRemark.edges'),
-          article_data = get(this, 'props.data.allArticlesYaml.edges[0].node.articles').slice(0, 2),
+          article_data = get(this, 'props.data.allArticlesYaml.edges[0].node.articles').slice(0, 3),
           all_data = post_data.concat(article_data);
 
     const random_chance = (limit) => limit <= Math.floor((Math.random() * 10) + 1);
@@ -73,15 +67,18 @@ class Homepage extends React.Component {
       const is_article = (post.node === undefined) ? true : false,
             link = is_article ? post.link : post.node.frontmatter.path,
             title = is_article ?  post.name : post.node.frontmatter.title,
+            is_note = (!is_article && post.node.frontmatter.postType === "note") ? true : false,
+            item_class = (is_note ? s.notes_item : s.article_item),
             excerpt = is_article ?  post.description : post.node.frontmatter.excerpt,
-            has_excerpt = (random_chance(5) ? excerpt : false),
+            has_excerpt = (!is_note && random_chance(5) ? excerpt : false),
             is_row_size = random_chance(5) ? true : false,
-            type_class = is_article ? s.article_type : s.blog_type,
+            type_class = is_article ? s.article_type : (is_note ? s.note_type : s.blog_type),
             row_class = ((has_excerpt && is_row_size) ? (s.row_2) : (s.row_1)),
             column_class = ((has_excerpt && !is_row_size) ? (s.column_2) : (s.column_1));
 
       let post_data = {
         is_article: is_article,
+        item_class: item_class,
         type_class: type_class,
         title: title,
         excerpt: (has_excerpt ? excerpt : false),
@@ -96,7 +93,7 @@ class Homepage extends React.Component {
     const article_list = writing_items.map(function(article, i){
       return (
         <HomepageArticle
-          classes={`${s.article_item} ${article.type_class} ${article.row} ${article.column}`}
+          classes={`${article.item_class} ${article.type_class} ${article.row} ${article.column}`}
           key={i}
           title={article.title}
           excerpt={article.excerpt || false}
@@ -156,17 +153,15 @@ export default Homepage
 export const pageQuery = graphql`
   query HomepageQuery {
     allMarkdownRemark(
-      limit: 3,
-      sort: { fields: [frontmatter___date], order: DESC },
-      filter: {
-        frontmatter: { postType: { eq: "post" } }
-      }
+      limit: 8,
+      sort: { fields: [frontmatter___date], order: DESC }
     ){
       edges {
         node {
           excerpt
           html
           frontmatter {
+            postType
             title
             icon
             path

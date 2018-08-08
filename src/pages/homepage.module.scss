@@ -3,7 +3,6 @@
 @mixin notebook_paper_bg() {
   padding: spacing() spacing() spacing() spacing(oneHalf);
 
-  text-align: right;
   text-decoration: none;
   font-family: type(font-family, mono);
 
@@ -101,7 +100,25 @@
 
     background-color: color(primary);
   }
+}
 
+.notes_item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  font-size: type(font-size, h5);
+
+  @include notebook_paper_bg();
+
+  @include hovers() { text-decoration: none; }
+
+  h4 { margin: spacing(half) 0; }
+}
+
+.article_item,
+.notes_item {
   &::after {
     position: absolute;
     top: 5px;
@@ -120,6 +137,10 @@
 
 .blog_type {
   &::after { content: 'blog post'; }
+}
+
+.note_type {
+  &::after { content: 'note'; }
 }
 
 .row_1 {
@@ -157,18 +178,6 @@
   border: spacing(half) solid color(mono, light);
 
   &:first-line { font-size: type(font-size, h3); }
-}
-
-.grid_notes {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-
-  font-size: type(font-size, h5);
-
-  @include notebook_paper_bg();
-
-  @include hovers() { text-decoration: none; }
 }
 
 .grid_studyRepo {
