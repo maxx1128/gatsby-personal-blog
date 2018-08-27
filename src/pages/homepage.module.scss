@@ -156,6 +156,31 @@
   @include larger-than(sm) { grid-column: span 2; }
 }
 
+.timeline {
+  & > div {
+    height: 100%;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    iframe { flex: 1 1 auto; }
+  }
+}
+
+.no_timeline_header { margin-top: 0; }
+
+.no_timeline_container {
+  display: flex;
+  padding: spacing();
+  align-items: center;
+  justify-content: center;
+
+  background-color: color(mono, light);
+}
+
+.hidden_timeline { display: none !important; }
+
 .quotes {
   grid-column: span 3;
   grid-row: span 2;

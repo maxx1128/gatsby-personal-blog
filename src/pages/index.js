@@ -2,9 +2,9 @@ import React from 'react'
 import get from 'lodash/get'
 import Quote from './../components/Quote'
 import HomepageArticle from './../components/HomepageArticle'
+import Timeline from './../components/TwitterTimeline'
 import profile_pic from './../components/Bio/profile-pic.jpg'
 import Head from './../components/Head'
-import Link from 'gatsby-link'
 
 import home_img_1 from './homepage_1.jpg'
 import home_img_2 from './homepage_2.jpg'
@@ -14,6 +14,13 @@ import s from './homepage.module.scss'
 import s_page from './../layouts/page.module.scss'
 
 class Homepage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      twitter: false
+    };
+  }
+
   get_placeholder_items = () => {
     const item_1 = (
       <img key='item1' className={`${s.grid_img} ${s.row_1} ${s.column_1}`} src={home_img_1} alt="" />
@@ -45,13 +52,17 @@ class Homepage extends React.Component {
       </a>
     );
 
+    const timeline = (
+      <Timeline />
+    );
+
     const quotes = (
       <article key='quotes' className={s.quotes}>
         <Quote />
       </article>
     );
 
-    return [item_1, item_2, item_3, item_4, item_5, quotes];
+    return [item_1, item_2, item_3, item_4, item_5, quotes, timeline];
   }
 
   get_writing_items = () => {
