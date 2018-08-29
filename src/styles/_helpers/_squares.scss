@@ -46,20 +46,22 @@ $dark: color(mono, dark);
 // Float classes
 @mixin square-float($direction) {
   display: inline-block;
-  width: 100%;
+  width: calc(100% + #{spacing(double)});
+  margin: 0 (spacing() * -1) spacing(double);
 
   @include larger-than(md) {
+    width: 100%;
     margin-#{$direction}: spacing(quad) * -1;
     float: #{$direction};
     max-width: 60%;
 
     @if ($direction == 'right') {
-      margin-left: spacing();
+      margin-left: spacing(oneHalf);
     } @else {
-      margin-right: spacing();
+      margin-right: spacing(oneHalf);
     }
   }
-  
+
   @include larger-than(lg) {
     margin-#{$direction}: -8rem;
     max-width: 70%;
