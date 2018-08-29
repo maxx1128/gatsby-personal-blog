@@ -12,10 +12,10 @@ class TwitterTimeline extends React.Component {
   }
 
   render() {
-    const quote_length = this.state.body_long ? 'quote--long' : 'quote--short';
+    const grid_classes = this.state.rendered ? `${s.row_2} ${s.column_2} ${s.timeline_rendered}` : `${s.row_1} ${s.column_1}`;
 
     return (
-      <div className={`${s.row_2} ${s.column_2} ${s.timeline}`}>
+      <div className={`${grid_classes} ${s.timeline}`}>
 
         { !this.state.rendered && (
           <div className={(this.state.rendered ? '' : s.no_timeline_container)}>
