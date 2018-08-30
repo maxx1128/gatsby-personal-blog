@@ -82,6 +82,16 @@
 
   background-color: color(mono, dark);
 
+  transition: box-shadow 0.5s;
+
+  @include hovers() {
+    color: color(mono, light);
+
+    box-shadow: container(box-shadow, 2);
+
+    transition: box-shadow 0.5s;
+  }
+
   h4 {
     margin: 0;
 
@@ -90,9 +100,7 @@
 
   p { margin: spacing() 0 0; }
 
-  &:nth-of-type(odd) {
-    background-color: color(primary);
-  }
+  &:nth-of-type(4n) { background-color: color(primary); }
 }
 
 .notes_item {
