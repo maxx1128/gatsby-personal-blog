@@ -42,12 +42,12 @@ class Homepage extends React.Component {
 
     const item_5 = (
       <a key='item6' href="https://www.notebook.maxwellantonucci.com" target="_blank" rel="noopener" className={`${s.grid_studyRepo} ${s.row_1} ${s.column_1}`}>
-        <h4>
+        <h3>
           Online Notebook
-        </h4>
+        </h3>
 
         <small>
-          Notes I've taken on programming, web development, nonfiction, fiction, and whatever else.
+          Notes I've taken on programming, front-end development, nonfiction, fiction, and whatever else.
         </small>
       </a>
     );

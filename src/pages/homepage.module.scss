@@ -211,7 +211,11 @@
 .grid_studyRepo {
   @include notebook_paper_bg();
 
-  h4 { margin-top: 0; }
+  h3 {
+    margin-top: 0;
+
+    font-weight: type(font-weight, extraBold);
+  }
 
   small { margin-bottom: 0; }
 }
