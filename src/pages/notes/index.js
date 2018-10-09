@@ -41,7 +41,7 @@ class NotesTemplate extends React.Component {
 
   render() {
     const title = "Notes I've Scrawled",
-          tagline = "Quips and snippets too short for blog posts",
+          tagline = "Personal quips and nonsensical snippets",
           notes = this.get_notes();
 
     return (
