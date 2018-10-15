@@ -1,4 +1,9 @@
 - articles:
+  - name: Seven Things to Do Before Asking For Help
+    date: "2018-10-15"
+    link: https://dev.to/maxwell_dev/seven-things-to-do-before-asking-for-help-2fo0
+    description: Asking for help is important, but so is learning how to give problems your best shot beforehand.
+
   - name: The Shell Introduction I Wish I Had
     date: "2018-07-16"
     link: https://dev.to/maxwell_dev/the-shell-introduction-i-wish-i-had-551k
