@@ -1,4 +1,9 @@
 - articles:
+  - name: The Web Accessibility Introduction I Wish I Had
+    date: "2018-10-23"
+    link: https://dev.to/maxwell_dev/the-web-accessibility-introduction-i-wish-i-had-4ope
+    description: Another message to my past self, this time on the importance of accessibility, how to achieve it, and how to test it.
+
   - name: Seven Things to Do Before Asking For Help
     date: "2018-10-15"
     link: https://dev.to/maxwell_dev/seven-things-to-do-before-asking-for-help-2fo0
