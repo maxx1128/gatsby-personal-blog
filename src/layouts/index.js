@@ -5,6 +5,7 @@ import Menu from './../components/Menu'
 import Footer from './../components/Footer'
 
 import './global.module.scss'
+import './prism.scss';
 import s_header from './header.module.scss'
 
 class Template extends React.Component {

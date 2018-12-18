@@ -24,22 +24,11 @@ body {
   overflow-x: hidden;
 }
 
-code,
-kbd,
-pre {
+kbd {
   color: color(mono, light);
   font-family: type(font-family, mono);
 
   background-color: color(mono, dark);
-}
-
-pre {
-  padding: spacing(half);
-  max-width: 100vw;
-
-  overflow-x: scroll;
-
-  @include larger-than(md) { padding: spacing(); }
 }
 
 mark {
