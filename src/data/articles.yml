@@ -1,4 +1,9 @@
 - articles:
+  - name: My First Taste of Ruby Task Automation in 22 Lines
+    date: "2018-12-21"
+    link: https://dev.to/maxwell_dev/my-first-taste-of-ruby-task-automation-in-22-lines-3gib
+    description: Automation has always been a sensitive spot in my coding career, but I finally took a solid first step.
+  
   - name: You Can Be a Casual Blogger
     date: "2018-11-05"
     link: https://dev.to/maxwell_dev/you-can-be-a-casual-blogger-ff0
